@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\selectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\selectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\selectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\selectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\mainscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\mainscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\mainscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\mainscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\timeextendform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\timeextendform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\timeextendform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\timeextendform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\ucinfocomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\ucinfocomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\ucinfouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\ucinfouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\ucinfocomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\ucinfocomputer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\ucinfouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\ucinfouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +74,153 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\Form1.cs",
-              "RelativeDocumentMoniker": "DBMSProject\\Form1.cs",
-              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\Form1.cs",
-              "RelativeToolTip": "DBMSProject\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "DocumentIndex": 5,
+              "Title": "TimeExtendForm.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\TimeExtendForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\TimeExtendForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\TimeExtendForm.cs",
+              "RelativeToolTip": "DBMSProject\\TimeExtendForm.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAADwvxoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:14:49.558Z",
+              "WhenOpened": "2024-10-19T13:31:04.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\Form1.cs",
-              "RelativeDocumentMoniker": "DBMSProject\\Form1.cs",
-              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\Form1.cs [Design]",
-              "RelativeToolTip": "DBMSProject\\Form1.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "MainScreenForm.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\MainScreenForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\MainScreenForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\MainScreenForm.cs",
+              "RelativeToolTip": "DBMSProject\\MainScreenForm.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAswE4AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:14:39.023Z",
+              "WhenOpened": "2024-10-18T03:04:44.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SelectForm.cs [Design]",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\SelectForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\SelectForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\SelectForm.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\SelectForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T01:19:16.651Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SelectForm.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\SelectForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\SelectForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\SelectForm.cs",
+              "RelativeToolTip": "DBMSProject\\SelectForm.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAwwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T01:33:07.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainScreenForm.cs [Design]",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\MainScreenForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\MainScreenForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\MainScreenForm.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\MainScreenForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T01:36:11.664Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\LoginForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\LoginForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\LoginForm.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T00:51:08.186Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TimeExtendForm.cs [Design]",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\TimeExtendForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\TimeExtendForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\TimeExtendForm.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\TimeExtendForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:24:36.177Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UCInfoComputer.cs [Design]",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoComputer.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\UCInfoComputer.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoComputer.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\UCInfoComputer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:42:23.225Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UCInfoUser.cs [Design]",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoUser.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\UCInfoUser.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoUser.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\UCInfoUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T02:39:31.339Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UCInfoComputer.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoComputer.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\UCInfoComputer.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoComputer.cs",
+              "RelativeToolTip": "DBMSProject\\UCInfoComputer.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwBYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:55:34.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UCInfoUser.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoUser.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\UCInfoUser.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\UCInfoUser.cs",
+              "RelativeToolTip": "DBMSProject\\UCInfoUser.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAIwBcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T12:44:59.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\LoginForm.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\LoginForm.cs",
+              "ToolTip": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\LoginForm.cs",
+              "RelativeToolTip": "DBMSProject\\LoginForm.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAADwvxIAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T01:18:13.656Z",
+              "EditorCaption": ""
             }
           ]
         }

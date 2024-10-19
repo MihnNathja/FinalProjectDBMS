@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
+        }
+        SelectForm selectForm = new SelectForm();
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            selectForm.ShowDialog();
         }
     }
 }

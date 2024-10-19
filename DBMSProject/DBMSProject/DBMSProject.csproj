@@ -46,26 +46,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreenForm.Designer.cs">
+      <DependentUpon>MainScreenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeExtendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeExtendForm.Designer.cs">
+      <DependentUpon>TimeExtendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInfoComputer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInfoComputer.Designer.cs">
+      <DependentUpon>UCInfoComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInfoUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInfoUser.Designer.cs">
+      <DependentUpon>UCInfoUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreenForm.resx">
+      <DependentUpon>MainScreenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeExtendForm.resx">
+      <DependentUpon>TimeExtendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInfoComputer.resx">
+      <DependentUpon>UCInfoComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInfoUser.resx">
+      <DependentUpon>UCInfoUser.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +124,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\MainScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\categoryManagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\PC.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
