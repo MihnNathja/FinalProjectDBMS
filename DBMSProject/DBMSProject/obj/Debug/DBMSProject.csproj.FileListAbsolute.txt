@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
@@ -15,3 +16,18 @@ D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debu
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCInfoComputer.resources
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.InvoiceForm.resources
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.ServicesForm.resources
+=======
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Form1.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.KhachHang.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.DichVu.resources
+>>>>>>> a7ba912fa06d8a8d9128e54a2eac298e0947e5de
