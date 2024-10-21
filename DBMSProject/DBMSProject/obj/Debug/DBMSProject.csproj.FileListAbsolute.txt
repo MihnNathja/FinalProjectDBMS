@@ -1,0 +1,13 @@
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Form1.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.KhachHang.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.DichVu.resources
