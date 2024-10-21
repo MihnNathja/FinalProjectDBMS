@@ -17,6 +17,7 @@ namespace DBMSProject
             InitializeComponent();
         }
         MainScreenForm mainScreenForm = new MainScreenForm();
+        ServicesForm servicesForm = new ServicesForm();
         private void MainScreenPtb_Click(object sender, EventArgs e)
         {
             mainScreenForm.addUser();
@@ -27,7 +28,8 @@ namespace DBMSProject
 
         private void categoryManagementPtb_Click(object sender, EventArgs e)
         {
-
+            servicesForm.addService();
+            servicesForm.ShowDialog();
         }
     }
 }

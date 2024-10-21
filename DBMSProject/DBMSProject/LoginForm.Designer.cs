@@ -91,7 +91,7 @@
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.Location = new System.Drawing.Point(245, 310);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(118, 34);
+            this.LoginBtn.Size = new System.Drawing.Size(138, 34);
             this.LoginBtn.TabIndex = 8;
             this.LoginBtn.Text = "Đăng nhập";
             this.LoginBtn.UseVisualStyleBackColor = false;

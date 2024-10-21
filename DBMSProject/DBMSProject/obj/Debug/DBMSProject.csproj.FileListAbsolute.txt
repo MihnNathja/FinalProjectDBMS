@@ -13,3 +13,5 @@ D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debu
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.TimeExtendForm.resources
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCInfoComputer.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.InvoiceForm.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.ServicesForm.resources

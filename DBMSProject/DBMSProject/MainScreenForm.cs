@@ -92,5 +92,14 @@ namespace DBMSProject
             DaThanhToanDtg.Rows.Add("HD0014", "Đã thanh toán", "400.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
             DaThanhToanDtg.Rows.Add("HD0015", "Đã thanh toán", "400.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
         }
+
+        private void ChuaThanhToanDtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == ChuaThanhToanDtg.Columns["btnChiTietCTT"].Index && e.RowIndex >= 0)
+            {
+                InvoiceForm invoiceForm = new InvoiceForm();
+                invoiceForm.ShowDialog();
+            }
+        }
     }
 }
