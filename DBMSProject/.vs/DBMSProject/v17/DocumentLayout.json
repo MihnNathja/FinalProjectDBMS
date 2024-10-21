@@ -3,15 +3,7 @@
   "WorkspaceRootPath": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\dichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -31,36 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\LoginForm.cs",
-              "RelativeDocumentMoniker": "DBMSProject\\LoginForm.cs",
-              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\LoginForm.cs [Design]",
-              "RelativeToolTip": "DBMSProject\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:33:30.138Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InvoiceForm.cs [Design]",
-              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\InvoiceForm.cs",
-              "RelativeDocumentMoniker": "DBMSProject\\InvoiceForm.cs",
-              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\InvoiceForm.cs [Design]",
-              "RelativeToolTip": "DBMSProject\\InvoiceForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:33:28.805Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DichVu.cs [Design]",
               "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\DichVu.cs",
               "RelativeDocumentMoniker": "DBMSProject\\DichVu.cs",
               "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\DichVu.cs [Design]",
               "RelativeToolTip": "DBMSProject\\DichVu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T14:33:27.003Z"
+              "WhenOpened": "2024-10-21T14:44:05.272Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

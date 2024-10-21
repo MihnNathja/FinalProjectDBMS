@@ -39,3 +39,4 @@ C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProjec
 C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.TimeExtendForm.resources
 C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCInfoComputer.resources
 C:\VUONG_LAP_QUE\Nam 3\HK I\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCInfoUser.resources
+>>>>>>> 5d8a93efeb5d5f84314ccc8d1d2641560c48fe9f

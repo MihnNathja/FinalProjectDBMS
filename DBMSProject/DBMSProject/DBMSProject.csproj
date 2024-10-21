@@ -134,6 +134,24 @@
     <Compile Include="XemHoaDon.Designer.cs">
       <DependentUpon>XemHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDichVu.Designer.cs">
+      <DependentUpon>UCDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu.Designer.cs">
+      <DependentUpon>DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemHoaDon.Designer.cs">
+      <DependentUpon>XemHoaDon.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
