@@ -77,6 +77,7 @@
             // 
             // txtServiceFee
             // 
+            this.txtServiceFee.Enabled = false;
             this.txtServiceFee.Location = new System.Drawing.Point(165, 112);
             this.txtServiceFee.Margin = new System.Windows.Forms.Padding(4);
             this.txtServiceFee.Name = "txtServiceFee";
@@ -86,6 +87,7 @@
             // 
             // txtRemainTime
             // 
+            this.txtRemainTime.Enabled = false;
             this.txtRemainTime.Location = new System.Drawing.Point(165, 70);
             this.txtRemainTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtRemainTime.Name = "txtRemainTime";
@@ -95,6 +97,7 @@
             // 
             // txtUseTime
             // 
+            this.txtUseTime.Enabled = false;
             this.txtUseTime.Location = new System.Drawing.Point(165, 34);
             this.txtUseTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtUseTime.Name = "txtUseTime";
@@ -206,7 +209,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // KhachHang
+            // FKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +220,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDichVu);
             this.Controls.Add(this.groupBox1);
-            this.Name = "KhachHang";
+            this.Name = "FKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhachHang";
             this.Load += new System.EventHandler(this.KhachHang_Load);
             this.groupBox1.ResumeLayout(false);
