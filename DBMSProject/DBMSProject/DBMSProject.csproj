@@ -56,6 +56,7 @@
     <Compile Include="DAO\ClassPhienDangNhapDAO.cs" />
     <Compile Include="DAO\ClassTaiKhoanDAO.cs" />
     <Compile Include="DAO\ClassUuDaiDAO.cs" />
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="FDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +140,12 @@
     <Compile Include="UCKhachHang.Designer.cs">
       <DependentUpon>UCKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCQuanLyDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQuanLyDichVu.Designer.cs">
+      <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FDichVu.resx">
       <DependentUpon>FDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +188,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCQuanLyDichVu.resx">
+      <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

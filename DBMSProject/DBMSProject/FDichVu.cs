@@ -16,5 +16,10 @@ namespace DBMSProject
         {
             InitializeComponent();
         }
+
+        private void FDichVu_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
