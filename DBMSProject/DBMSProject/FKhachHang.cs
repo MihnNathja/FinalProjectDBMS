@@ -27,5 +27,22 @@ namespace DBMSProject
             FDichVu dv = new FDichVu();
             dv.ShowDialog();
         }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
+            fDoiMatKhau.ShowDialog();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnXemHoaDon_Click(object sender, EventArgs e)
+        {
+            FThanhToanHoaDon fThanhToanHoaDon = new FThanhToanHoaDon();
+            fThanhToanHoaDon.ShowDialog();
+        }
     }
 }

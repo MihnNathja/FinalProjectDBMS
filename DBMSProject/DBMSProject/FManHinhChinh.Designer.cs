@@ -35,26 +35,31 @@
             this.SearchTxb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ĐangKyThanhVienTab = new System.Windows.Forms.TabPage();
-            this.QuanLyMayTab = new System.Windows.Forms.TabPage();
-            this.QuanLyGoiDichVuTab = new System.Windows.Forms.TabPage();
-            this.QuanLyUuDaiTab = new System.Windows.Forms.TabPage();
-            this.ThoatTab = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.userNametxb = new System.Windows.Forms.TextBox();
-            this.passwordtxb = new System.Windows.Forms.TextBox();
-            this.re_passwordtxb = new System.Windows.Forms.TextBox();
-            this.showPasswordtxb = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.re_passwordtxb = new System.Windows.Forms.TextBox();
+            this.passwordtxb = new System.Windows.Forms.TextBox();
+            this.userNametxb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.QuanLyMayTab = new System.Windows.Forms.TabPage();
             this.computerFlp = new System.Windows.Forms.FlowLayoutPanel();
+            this.QuanLyGoiDichVuTab = new System.Windows.Forms.TabPage();
             this.ThanhToanTab = new System.Windows.Forms.TabControl();
             this.ChuaThanhToanTab = new System.Windows.Forms.TabPage();
-            this.DaThanhToanTab = new System.Windows.Forms.TabPage();
             this.ChuaThanhToanDtg = new System.Windows.Forms.DataGridView();
+            this.DaThanhToanTab = new System.Windows.Forms.TabPage();
             this.DaThanhToanDtg = new System.Windows.Forms.DataGridView();
+            this.QuanLyUuDaiTab = new System.Windows.Forms.TabPage();
+            this.ThoatTab = new System.Windows.Forms.TabPage();
+            this.ChBHienThiMatKhau = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnThemUuDai = new System.Windows.Forms.Button();
+            this.btnXoaUuDai = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SelectMenuscript.SuspendLayout();
             this.QuanLyThanhVienTab.SuspendLayout();
             this.ĐangKyThanhVienTab.SuspendLayout();
@@ -62,9 +67,13 @@
             this.QuanLyGoiDichVuTab.SuspendLayout();
             this.ThanhToanTab.SuspendLayout();
             this.ChuaThanhToanTab.SuspendLayout();
-            this.DaThanhToanTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChuaThanhToanDtg)).BeginInit();
+            this.DaThanhToanTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DaThanhToanDtg)).BeginInit();
+            this.QuanLyUuDaiTab.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectMenuscript
@@ -133,9 +142,9 @@
             // 
             // ĐangKyThanhVienTab
             // 
+            this.ĐangKyThanhVienTab.Controls.Add(this.ChBHienThiMatKhau);
             this.ĐangKyThanhVienTab.Controls.Add(this.button2);
             this.ĐangKyThanhVienTab.Controls.Add(this.button1);
-            this.ĐangKyThanhVienTab.Controls.Add(this.showPasswordtxb);
             this.ĐangKyThanhVienTab.Controls.Add(this.re_passwordtxb);
             this.ĐangKyThanhVienTab.Controls.Add(this.passwordtxb);
             this.ĐangKyThanhVienTab.Controls.Add(this.userNametxb);
@@ -150,123 +159,6 @@
             this.ĐangKyThanhVienTab.TabIndex = 1;
             this.ĐangKyThanhVienTab.Text = "Đăng ký thành viên";
             this.ĐangKyThanhVienTab.UseVisualStyleBackColor = true;
-            // 
-            // QuanLyMayTab
-            // 
-            this.QuanLyMayTab.Controls.Add(this.computerFlp);
-            this.QuanLyMayTab.Location = new System.Drawing.Point(4, 25);
-            this.QuanLyMayTab.Name = "QuanLyMayTab";
-            this.QuanLyMayTab.Padding = new System.Windows.Forms.Padding(3);
-            this.QuanLyMayTab.Size = new System.Drawing.Size(1074, 488);
-            this.QuanLyMayTab.TabIndex = 2;
-            this.QuanLyMayTab.Text = "Quản lý máy";
-            this.QuanLyMayTab.UseVisualStyleBackColor = true;
-            // 
-            // QuanLyGoiDichVuTab
-            // 
-            this.QuanLyGoiDichVuTab.Controls.Add(this.ThanhToanTab);
-            this.QuanLyGoiDichVuTab.Location = new System.Drawing.Point(4, 25);
-            this.QuanLyGoiDichVuTab.Name = "QuanLyGoiDichVuTab";
-            this.QuanLyGoiDichVuTab.Padding = new System.Windows.Forms.Padding(3);
-            this.QuanLyGoiDichVuTab.Size = new System.Drawing.Size(1074, 488);
-            this.QuanLyGoiDichVuTab.TabIndex = 3;
-            this.QuanLyGoiDichVuTab.Text = "Quản lý gọi dịch vụ";
-            this.QuanLyGoiDichVuTab.UseVisualStyleBackColor = true;
-            // 
-            // QuanLyUuDaiTab
-            // 
-            this.QuanLyUuDaiTab.Location = new System.Drawing.Point(4, 25);
-            this.QuanLyUuDaiTab.Name = "QuanLyUuDaiTab";
-            this.QuanLyUuDaiTab.Padding = new System.Windows.Forms.Padding(3);
-            this.QuanLyUuDaiTab.Size = new System.Drawing.Size(1074, 488);
-            this.QuanLyUuDaiTab.TabIndex = 4;
-            this.QuanLyUuDaiTab.Text = "Quản lý ưu đãi";
-            this.QuanLyUuDaiTab.UseVisualStyleBackColor = true;
-            // 
-            // ThoatTab
-            // 
-            this.ThoatTab.Location = new System.Drawing.Point(4, 25);
-            this.ThoatTab.Name = "ThoatTab";
-            this.ThoatTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ThoatTab.Size = new System.Drawing.Size(1074, 488);
-            this.ThoatTab.TabIndex = 5;
-            this.ThoatTab.Text = "Quay lại trang chủ";
-            this.ThoatTab.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(422, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 32);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Thêm thành viên";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(214, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tên tài khoản:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(214, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Mật khẩu:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(214, 217);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Nhập lại mật khẩu:";
-            // 
-            // userNametxb
-            // 
-            this.userNametxb.Location = new System.Drawing.Point(441, 99);
-            this.userNametxb.Name = "userNametxb";
-            this.userNametxb.Size = new System.Drawing.Size(331, 22);
-            this.userNametxb.TabIndex = 4;
-            // 
-            // passwordtxb
-            // 
-            this.passwordtxb.Location = new System.Drawing.Point(441, 157);
-            this.passwordtxb.Name = "passwordtxb";
-            this.passwordtxb.PasswordChar = '*';
-            this.passwordtxb.Size = new System.Drawing.Size(331, 22);
-            this.passwordtxb.TabIndex = 5;
-            // 
-            // re_passwordtxb
-            // 
-            this.re_passwordtxb.Location = new System.Drawing.Point(441, 220);
-            this.re_passwordtxb.Name = "re_passwordtxb";
-            this.re_passwordtxb.PasswordChar = '*';
-            this.re_passwordtxb.Size = new System.Drawing.Size(331, 22);
-            this.re_passwordtxb.TabIndex = 6;
-            // 
-            // showPasswordtxb
-            // 
-            this.showPasswordtxb.AutoSize = true;
-            this.showPasswordtxb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showPasswordtxb.Location = new System.Drawing.Point(817, 158);
-            this.showPasswordtxb.Name = "showPasswordtxb";
-            this.showPasswordtxb.Size = new System.Drawing.Size(137, 24);
-            this.showPasswordtxb.TabIndex = 7;
-            this.showPasswordtxb.TabStop = true;
-            this.showPasswordtxb.Text = "Xem mật khẩu";
-            this.showPasswordtxb.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -292,6 +184,80 @@
             this.button1.Text = "Đăng ký";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // re_passwordtxb
+            // 
+            this.re_passwordtxb.Location = new System.Drawing.Point(441, 220);
+            this.re_passwordtxb.Name = "re_passwordtxb";
+            this.re_passwordtxb.Size = new System.Drawing.Size(331, 22);
+            this.re_passwordtxb.TabIndex = 6;
+            this.re_passwordtxb.UseSystemPasswordChar = true;
+            // 
+            // passwordtxb
+            // 
+            this.passwordtxb.Location = new System.Drawing.Point(441, 157);
+            this.passwordtxb.Name = "passwordtxb";
+            this.passwordtxb.Size = new System.Drawing.Size(331, 22);
+            this.passwordtxb.TabIndex = 5;
+            this.passwordtxb.UseSystemPasswordChar = true;
+            // 
+            // userNametxb
+            // 
+            this.userNametxb.Location = new System.Drawing.Point(441, 99);
+            this.userNametxb.Name = "userNametxb";
+            this.userNametxb.Size = new System.Drawing.Size(331, 22);
+            this.userNametxb.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(214, 217);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Nhập lại mật khẩu:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(214, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Mật khẩu:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(214, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tên tài khoản:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(422, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(240, 32);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Thêm thành viên";
+            // 
+            // QuanLyMayTab
+            // 
+            this.QuanLyMayTab.Controls.Add(this.computerFlp);
+            this.QuanLyMayTab.Location = new System.Drawing.Point(4, 25);
+            this.QuanLyMayTab.Name = "QuanLyMayTab";
+            this.QuanLyMayTab.Padding = new System.Windows.Forms.Padding(3);
+            this.QuanLyMayTab.Size = new System.Drawing.Size(1074, 488);
+            this.QuanLyMayTab.TabIndex = 2;
+            this.QuanLyMayTab.Text = "Quản lý máy";
+            this.QuanLyMayTab.UseVisualStyleBackColor = true;
+            // 
             // computerFlp
             // 
             this.computerFlp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -300,6 +266,17 @@
             this.computerFlp.Name = "computerFlp";
             this.computerFlp.Size = new System.Drawing.Size(1062, 476);
             this.computerFlp.TabIndex = 4;
+            // 
+            // QuanLyGoiDichVuTab
+            // 
+            this.QuanLyGoiDichVuTab.Controls.Add(this.ThanhToanTab);
+            this.QuanLyGoiDichVuTab.Location = new System.Drawing.Point(4, 25);
+            this.QuanLyGoiDichVuTab.Name = "QuanLyGoiDichVuTab";
+            this.QuanLyGoiDichVuTab.Padding = new System.Windows.Forms.Padding(3);
+            this.QuanLyGoiDichVuTab.Size = new System.Drawing.Size(1074, 488);
+            this.QuanLyGoiDichVuTab.TabIndex = 3;
+            this.QuanLyGoiDichVuTab.Text = "Quản lý gọi dịch vụ";
+            this.QuanLyGoiDichVuTab.UseVisualStyleBackColor = true;
             // 
             // ThanhToanTab
             // 
@@ -322,6 +299,16 @@
             this.ChuaThanhToanTab.Text = "Chưa thanh toán";
             this.ChuaThanhToanTab.UseVisualStyleBackColor = true;
             // 
+            // ChuaThanhToanDtg
+            // 
+            this.ChuaThanhToanDtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ChuaThanhToanDtg.Location = new System.Drawing.Point(6, 7);
+            this.ChuaThanhToanDtg.Name = "ChuaThanhToanDtg";
+            this.ChuaThanhToanDtg.RowHeadersWidth = 51;
+            this.ChuaThanhToanDtg.RowTemplate.Height = 24;
+            this.ChuaThanhToanDtg.Size = new System.Drawing.Size(760, 440);
+            this.ChuaThanhToanDtg.TabIndex = 1;
+            // 
             // DaThanhToanTab
             // 
             this.DaThanhToanTab.Controls.Add(this.DaThanhToanDtg);
@@ -333,16 +320,6 @@
             this.DaThanhToanTab.Text = "Đã thanh toán";
             this.DaThanhToanTab.UseVisualStyleBackColor = true;
             // 
-            // ChuaThanhToanDtg
-            // 
-            this.ChuaThanhToanDtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChuaThanhToanDtg.Location = new System.Drawing.Point(6, 7);
-            this.ChuaThanhToanDtg.Name = "ChuaThanhToanDtg";
-            this.ChuaThanhToanDtg.RowHeadersWidth = 51;
-            this.ChuaThanhToanDtg.RowTemplate.Height = 24;
-            this.ChuaThanhToanDtg.Size = new System.Drawing.Size(760, 440);
-            this.ChuaThanhToanDtg.TabIndex = 1;
-            // 
             // DaThanhToanDtg
             // 
             this.DaThanhToanDtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -353,15 +330,95 @@
             this.DaThanhToanDtg.Size = new System.Drawing.Size(760, 440);
             this.DaThanhToanDtg.TabIndex = 2;
             // 
-            // MainScreenForm
+            // QuanLyUuDaiTab
+            // 
+            this.QuanLyUuDaiTab.Controls.Add(this.panel2);
+            this.QuanLyUuDaiTab.Controls.Add(this.panel1);
+            this.QuanLyUuDaiTab.Location = new System.Drawing.Point(4, 25);
+            this.QuanLyUuDaiTab.Name = "QuanLyUuDaiTab";
+            this.QuanLyUuDaiTab.Padding = new System.Windows.Forms.Padding(3);
+            this.QuanLyUuDaiTab.Size = new System.Drawing.Size(1074, 488);
+            this.QuanLyUuDaiTab.TabIndex = 4;
+            this.QuanLyUuDaiTab.Text = "Quản lý ưu đãi";
+            this.QuanLyUuDaiTab.UseVisualStyleBackColor = true;
+            // 
+            // ThoatTab
+            // 
+            this.ThoatTab.Location = new System.Drawing.Point(4, 25);
+            this.ThoatTab.Name = "ThoatTab";
+            this.ThoatTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ThoatTab.Size = new System.Drawing.Size(1074, 488);
+            this.ThoatTab.TabIndex = 5;
+            this.ThoatTab.Text = "Quay lại trang chủ";
+            this.ThoatTab.UseVisualStyleBackColor = true;
+            this.ThoatTab.Enter += new System.EventHandler(this.ThoatTab_Enter);
+            // 
+            // ChBHienThiMatKhau
+            // 
+            this.ChBHienThiMatKhau.AutoSize = true;
+            this.ChBHienThiMatKhau.Location = new System.Drawing.Point(813, 159);
+            this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
+            this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
+            this.ChBHienThiMatKhau.TabIndex = 11;
+            this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnXoaUuDai);
+            this.panel1.Controls.Add(this.btnThemUuDai);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1065, 85);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(3, 94);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1065, 388);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnThemUuDai
+            // 
+            this.btnThemUuDai.Location = new System.Drawing.Point(294, 21);
+            this.btnThemUuDai.Name = "btnThemUuDai";
+            this.btnThemUuDai.Size = new System.Drawing.Size(132, 41);
+            this.btnThemUuDai.TabIndex = 0;
+            this.btnThemUuDai.Text = "Thêm ưu đãi";
+            this.btnThemUuDai.UseVisualStyleBackColor = true;
+            // 
+            // btnXoaUuDai
+            // 
+            this.btnXoaUuDai.Location = new System.Drawing.Point(466, 22);
+            this.btnXoaUuDai.Name = "btnXoaUuDai";
+            this.btnXoaUuDai.Size = new System.Drawing.Size(132, 41);
+            this.btnXoaUuDai.TabIndex = 1;
+            this.btnXoaUuDai.Text = "Xóa ưu đãi";
+            this.btnXoaUuDai.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(5, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1057, 382);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // FManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 519);
             this.Controls.Add(this.SelectMenuscript);
-            this.Name = "MainScreenForm";
+            this.Name = "FManHinhChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình chính";
+            this.Load += new System.EventHandler(this.FManHinhChinh_Load);
             this.SelectMenuscript.ResumeLayout(false);
             this.QuanLyThanhVienTab.ResumeLayout(false);
             this.QuanLyThanhVienTab.PerformLayout();
@@ -371,9 +428,13 @@
             this.QuanLyGoiDichVuTab.ResumeLayout(false);
             this.ThanhToanTab.ResumeLayout(false);
             this.ChuaThanhToanTab.ResumeLayout(false);
-            this.DaThanhToanTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChuaThanhToanDtg)).EndInit();
+            this.DaThanhToanTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DaThanhToanDtg)).EndInit();
+            this.QuanLyUuDaiTab.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,7 +457,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton showPasswordtxb;
         private System.Windows.Forms.TextBox re_passwordtxb;
         private System.Windows.Forms.TextBox passwordtxb;
         private System.Windows.Forms.Button button2;
@@ -407,5 +467,11 @@
         private System.Windows.Forms.TabPage DaThanhToanTab;
         private System.Windows.Forms.DataGridView ChuaThanhToanDtg;
         private System.Windows.Forms.DataGridView DaThanhToanDtg;
+        private System.Windows.Forms.CheckBox ChBHienThiMatKhau;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnThemUuDai;
+        private System.Windows.Forms.Button btnXoaUuDai;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

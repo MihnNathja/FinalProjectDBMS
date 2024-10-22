@@ -17,6 +17,18 @@ namespace DBMSProject
             InitializeComponent();
         }
 
+        public bool HideButton { get; set; } = false;
+        private void FChiTietHoaDon_Load(object sender, EventArgs e)
+        {
+            if (HideButton == true)
+            {
+                btnDaNhanThanToan.Visible = false;
+            }
+        }
 
+        private void btnXuatHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đã xuất hoá đơn");
+        }
     }
 }
