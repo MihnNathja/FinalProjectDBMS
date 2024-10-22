@@ -15,6 +15,10 @@ namespace DBMSProject
         public FManHinhChinh()
         {
             InitializeComponent();
+
+            ChuaThanhToanDtg.CellClick += ChuaThanhToanDtg_CellContentClick;
+            // Dùng tạm hàm gọi chi tiết hóa đơn của chưa thanh toán
+            DaThanhToanDtg.CellClick += ChuaThanhToanDtg_CellContentClick;
         }
         public void addUser() 
         {
@@ -95,10 +99,37 @@ namespace DBMSProject
 
         private void ChuaThanhToanDtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == ChuaThanhToanDtg.Columns["btnChiTietCTT"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == ChuaThanhToanDtg.Columns["btnChiTiet"].Index && e.RowIndex >= 0)
             {
                 FChiTietHoaDon invoiceForm = new FChiTietHoaDon();
                 invoiceForm.ShowDialog();
+            }
+        }
+
+        private void FManHinhChinh_Load(object sender, EventArgs e)
+        {
+            SelectMenuscript.SelectedIndex = 0;
+        }
+
+        private void ThoatTab_Enter(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra trạng thái của CheckBox
+            if (ChBHienThiMatKhau.Checked)
+            {
+                // Hiển thị mật khẩu
+                passwordtxb.UseSystemPasswordChar = false;
+                re_passwordtxb.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Ẩn mật khẩu
+                passwordtxb.UseSystemPasswordChar = true;
+                re_passwordtxb.UseSystemPasswordChar = true;
             }
         }
     }
