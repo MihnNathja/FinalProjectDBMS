@@ -15,6 +15,7 @@ namespace DBMSProject
         public FManHinhChinh()
         {
             InitializeComponent();
+
         }
         public void addUser() 
         {
@@ -59,6 +60,7 @@ namespace DBMSProject
             btnChiTietCTT.Text = "Xem Chi Tiết";
             btnChiTietCTT.UseColumnTextForButtonValue = true;
             ChuaThanhToanDtg.Columns.Add(btnChiTietCTT);
+            ChuaThanhToanDtg.CellContentClick += ChuaThanhToanDtg_CellContentClick;
 
             ChuaThanhToanDtg.Rows.Add("HD001", "Chưa thanh toán", "150.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
             ChuaThanhToanDtg.Rows.Add("HD002", "Chưa thanh toán", "200.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
@@ -87,6 +89,8 @@ namespace DBMSProject
             btnChiTietDTT.Text = "Xem Chi Tiết";
             btnChiTietDTT.UseColumnTextForButtonValue = true;
             DaThanhToanDtg.Columns.Add(btnChiTietDTT);
+            DaThanhToanDtg.CellContentClick += DaThanhToanDtg_CellContentClick;
+
 
             DaThanhToanDtg.Rows.Add("HD001", "Đã thanh toán", "150.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
             DaThanhToanDtg.Rows.Add("HD002", "Đã thanh toán", "200.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
@@ -107,10 +111,46 @@ namespace DBMSProject
 
         private void ChuaThanhToanDtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == ChuaThanhToanDtg.Columns["btnChiTietCTT"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == ChuaThanhToanDtg.Columns["btnChiTiet"].Index && e.RowIndex >= 0)
             {
                 FChiTietHoaDon invoiceForm = new FChiTietHoaDon();
                 invoiceForm.ShowDialog();
+            }
+        }
+        private void DaThanhToanDtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == DaThanhToanDtg.Columns["btnChiTiet"].Index && e.RowIndex >= 0)
+            {
+                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon();
+                fChiTietHoaDon.HideButton =true;
+                fChiTietHoaDon.ShowDialog();
+            }
+        }
+
+        private void FManHinhChinh_Load(object sender, EventArgs e)
+        {
+            SelectMenuscript.SelectedIndex = 0;
+        }
+
+        private void ThoatTab_Enter(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra trạng thái của CheckBox
+            if (ChBHienThiMatKhau.Checked)
+            {
+                // Hiển thị mật khẩu
+                passwordtxb.UseSystemPasswordChar = false;
+                re_passwordtxb.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Ẩn mật khẩu
+                passwordtxb.UseSystemPasswordChar = true;
+                re_passwordtxb.UseSystemPasswordChar = true;
             }
         }
     }

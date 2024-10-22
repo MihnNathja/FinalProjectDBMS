@@ -38,9 +38,9 @@
             this.lblUseTime = new System.Windows.Forms.Label();
             this.lblTotalTime = new System.Windows.Forms.Label();
             this.btnDichVu = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnXemHoaDon = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -165,41 +165,44 @@
             this.btnDichVu.UseVisualStyleBackColor = false;
             this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
             // 
-            // button1
+            // btnXemHoaDon
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(198, 211);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Xem Hoá Đơn";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnXemHoaDon.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnXemHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemHoaDon.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnXemHoaDon.Location = new System.Drawing.Point(198, 211);
+            this.btnXemHoaDon.Name = "btnXemHoaDon";
+            this.btnXemHoaDon.Size = new System.Drawing.Size(148, 32);
+            this.btnXemHoaDon.TabIndex = 3;
+            this.btnXemHoaDon.Text = "Xem Hoá Đơn";
+            this.btnXemHoaDon.UseVisualStyleBackColor = false;
+            this.btnXemHoaDon.Click += new System.EventHandler(this.btnXemHoaDon_Click);
             // 
-            // button2
+            // btnDangXuat
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(197, 267);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Đăng xuất";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDangXuat.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDangXuat.Location = new System.Drawing.Point(197, 267);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(149, 32);
+            this.btnDangXuat.TabIndex = 5;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // button3
+            // btnDoiMatKhau
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(20, 267);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 32);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Đổi mật khẩu";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMatKhau.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(20, 267);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(149, 32);
+            this.btnDoiMatKhau.TabIndex = 4;
+            this.btnDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnDoiMatKhau.UseVisualStyleBackColor = false;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // pictureBox1
             // 
@@ -215,9 +218,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 665);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDangXuat);
+            this.Controls.Add(this.btnDoiMatKhau);
+            this.Controls.Add(this.btnXemHoaDon);
             this.Controls.Add(this.btnDichVu);
             this.Controls.Add(this.groupBox1);
             this.Name = "FKhachHang";
@@ -243,9 +246,9 @@
         private System.Windows.Forms.Label lblTotalTime;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnDichVu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnXemHoaDon;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

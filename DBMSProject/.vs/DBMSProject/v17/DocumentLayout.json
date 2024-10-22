@@ -3,6 +3,54 @@
   "WorkspaceRootPath": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\",
   "Documents": [
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fchitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fchitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fchitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fchitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fquanlydichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fquanlydichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fquanlydichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fquanlydichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fthanhtoanhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fthanhtoanhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fthanhtoanhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fthanhtoanhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|c:\\vuong_lap_que\\nam 3\\hk i\\dbms\\project\\finalprojectdbms\\dbmsproject\\dbmsproject\\fkhachhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fkhachhang.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
       "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|d:\\h\u1EC7 qu\u1EA3n tr\u1ECB csdl dbms\\finalprojectdbms\\dbmsproject\\dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,6 +65,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C145822D-6818-4F6E-B055-BAB9388C61ED}|DBMSProject\\DBMSProject.csproj|solutionrelative:dbmsproject\\fmanhinhchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> bdf35ff5433fe99bb5dddff66dd46f29d984ec10
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +75,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
+          "SelectedChildIndex": 2,
+=======
           "SelectedChildIndex": 3,
+>>>>>>> bdf35ff5433fe99bb5dddff66dd46f29d984ec10
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +95,162 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 2,
+              "Title": "FChiTietHoaDon.cs",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FChiTietHoaDon.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FChiTietHoaDon.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FChiTietHoaDon.cs",
+              "RelativeToolTip": "DBMSProject\\FChiTietHoaDon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:42:07.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FChiTietHoaDon.cs [Design]",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FChiTietHoaDon.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FChiTietHoaDon.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FChiTietHoaDon.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\FChiTietHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:42:03.285Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FManHinhChinh.cs",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FManHinhChinh.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FManHinhChinh.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FManHinhChinh.cs",
+              "RelativeToolTip": "DBMSProject\\FManHinhChinh.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGQAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:29:57.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FManHinhChinh.cs [Design]",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FManHinhChinh.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FManHinhChinh.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FManHinhChinh.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\FManHinhChinh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:29:49.867Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FQuanLy.cs [Design]",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FQuanLy.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FQuanLy.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FQuanLy.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\FQuanLy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:29:44.732Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FQuanLyDichVu.cs",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FQuanLyDichVu.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FQuanLyDichVu.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FQuanLyDichVu.cs",
+              "RelativeToolTip": "DBMSProject\\FQuanLyDichVu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:29:38.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FQuanLyDichVu.cs [Design]",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FQuanLyDichVu.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FQuanLyDichVu.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FQuanLyDichVu.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\FQuanLyDichVu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:29:30.597Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FKhachHang.cs",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FKhachHang.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FKhachHang.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FKhachHang.cs",
+              "RelativeToolTip": "DBMSProject\\FKhachHang.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:21:24.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FKhachHang.cs [Design]",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FKhachHang.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FKhachHang.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FKhachHang.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\FKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:21:22.231Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FThanhToanHoaDon.cs",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FThanhToanHoaDon.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FThanhToanHoaDon.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FThanhToanHoaDon.cs",
+              "RelativeToolTip": "DBMSProject\\FThanhToanHoaDon.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAwBsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:17:52.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FThanhToanHoaDon.cs [Design]",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FThanhToanHoaDon.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FThanhToanHoaDon.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FThanhToanHoaDon.cs [Design]",
+              "RelativeToolTip": "DBMSProject\\FThanhToanHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:15:16.567Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FKhachHang.Designer.cs",
+              "DocumentMoniker": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FKhachHang.Designer.cs",
+              "RelativeDocumentMoniker": "DBMSProject\\FKhachHang.Designer.cs",
+              "ToolTip": "C:\\VUONG_LAP_QUE\\Nam 3\\HK I\\DBMS\\project\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FKhachHang.Designer.cs",
+              "RelativeToolTip": "DBMSProject\\FKhachHang.Designer.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAkwMkAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T03:04:35.811Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1498,
+          "SelectedChildIndex": -1,
+          "Children": [
+=======
               "DocumentIndex": 0,
               "Title": "FManHinhChinh.cs",
               "DocumentMoniker": "D:\\H\u1EC7 qu\u1EA3n tr\u1ECB CSDL DBMS\\FinalProjectDBMS\\DBMSProject\\DBMSProject\\FManHinhChinh.cs",
@@ -53,6 +262,7 @@
               "WhenOpened": "2024-10-22T03:20:05.221Z",
               "EditorCaption": ""
             },
+>>>>>>> bdf35ff5433fe99bb5dddff66dd46f29d984ec10
             {
               "$type": "Document",
               "DocumentIndex": 2,
