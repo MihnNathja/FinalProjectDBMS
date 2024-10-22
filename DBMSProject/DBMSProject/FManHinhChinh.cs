@@ -32,6 +32,18 @@ namespace DBMSProject
             {
                 UCMayTinh ucInfoComputer = new UCMayTinh();
                 ucInfoComputer.Seriallbl.Text = (i + 1).ToString();
+                if (i % 2 == 0)
+                {
+                    ucInfoComputer.lblTinhTrang.Text = "Trống";
+                }
+                if(ucInfoComputer.lblTinhTrang.Text == "Trống")
+                {
+                    ucInfoComputer.btnThemThoiGian.Visible = false;
+                }
+                if (ucInfoComputer.lblTinhTrang.Text == "Đang sử dụng")
+                {
+                    ucInfoComputer.btnBaoTri.Visible = false;
+                }
                 computerFlp.Controls.Add(ucInfoComputer);
             }
         }

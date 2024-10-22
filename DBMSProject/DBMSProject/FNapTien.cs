@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBMSProject
 {
@@ -25,6 +26,19 @@ namespace DBMSProject
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Chưa có code gì đâu");
+        }
+
+        private void txbSoTienNap_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txbSoTienNap.Text, out decimal inputValue) && inputValue != 0)
+            {
+                decimal convertedValue = inputValue / 5000;
+                txbThoiGianQuyDoi.Text = convertedValue.ToString() +"h";
+            }
+            else
+            {
+                txbThoiGianQuyDoi.Text = "0h";
+            }
         }
     }
 }

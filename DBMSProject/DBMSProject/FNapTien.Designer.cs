@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.userNametxb = new System.Windows.Forms.TextBox();
-            this.moneyAddtxb = new System.Windows.Forms.TextBox();
-            this.timetxb = new System.Windows.Forms.TextBox();
+            this.txbTenTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txbSoTienNap = new System.Windows.Forms.TextBox();
+            this.txbThoiGianQuyDoi = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -79,28 +79,29 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Thời gian quy đổi:";
             // 
-            // userNametxb
+            // txbTenTaiKhoan
             // 
-            this.userNametxb.Enabled = false;
-            this.userNametxb.Location = new System.Drawing.Point(179, 56);
-            this.userNametxb.Name = "userNametxb";
-            this.userNametxb.Size = new System.Drawing.Size(181, 22);
-            this.userNametxb.TabIndex = 4;
+            this.txbTenTaiKhoan.Enabled = false;
+            this.txbTenTaiKhoan.Location = new System.Drawing.Point(179, 56);
+            this.txbTenTaiKhoan.Name = "txbTenTaiKhoan";
+            this.txbTenTaiKhoan.Size = new System.Drawing.Size(181, 22);
+            this.txbTenTaiKhoan.TabIndex = 4;
             // 
-            // moneyAddtxb
+            // txbSoTienNap
             // 
-            this.moneyAddtxb.Location = new System.Drawing.Point(179, 105);
-            this.moneyAddtxb.Name = "moneyAddtxb";
-            this.moneyAddtxb.Size = new System.Drawing.Size(181, 22);
-            this.moneyAddtxb.TabIndex = 5;
+            this.txbSoTienNap.Location = new System.Drawing.Point(179, 105);
+            this.txbSoTienNap.Name = "txbSoTienNap";
+            this.txbSoTienNap.Size = new System.Drawing.Size(181, 22);
+            this.txbSoTienNap.TabIndex = 5;
+            this.txbSoTienNap.TextChanged += new System.EventHandler(this.txbSoTienNap_TextChanged);
             // 
-            // timetxb
+            // txbThoiGianQuyDoi
             // 
-            this.timetxb.Enabled = false;
-            this.timetxb.Location = new System.Drawing.Point(179, 158);
-            this.timetxb.Name = "timetxb";
-            this.timetxb.Size = new System.Drawing.Size(181, 22);
-            this.timetxb.TabIndex = 6;
+            this.txbThoiGianQuyDoi.Enabled = false;
+            this.txbThoiGianQuyDoi.Location = new System.Drawing.Point(179, 158);
+            this.txbThoiGianQuyDoi.Name = "txbThoiGianQuyDoi";
+            this.txbThoiGianQuyDoi.Size = new System.Drawing.Size(181, 22);
+            this.txbThoiGianQuyDoi.TabIndex = 6;
             // 
             // button1
             // 
@@ -126,21 +127,21 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // TimeExtendForm
+            // FNapTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 253);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.timetxb);
-            this.Controls.Add(this.moneyAddtxb);
-            this.Controls.Add(this.userNametxb);
+            this.Controls.Add(this.txbThoiGianQuyDoi);
+            this.Controls.Add(this.txbSoTienNap);
+            this.Controls.Add(this.txbTenTaiKhoan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "TimeExtendForm";
+            this.Name = "FNapTien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gia hạn thời gian";
             this.ResumeLayout(false);
@@ -154,9 +155,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox userNametxb;
-        private System.Windows.Forms.TextBox moneyAddtxb;
-        private System.Windows.Forms.TextBox timetxb;
+        private System.Windows.Forms.TextBox txbTenTaiKhoan;
+        private System.Windows.Forms.TextBox txbSoTienNap;
+        private System.Windows.Forms.TextBox txbThoiGianQuyDoi;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

@@ -22,5 +22,21 @@ namespace DBMSProject
         {
             timeExtendForm.ShowDialog();
         }
+        bool checkBaoTri = false;
+        private void btnBaoTri_Click(object sender, EventArgs e)
+        {
+            if(checkBaoTri == false)
+            {
+                checkBaoTri = true;
+                lblTinhTrang.Text = "Đang bảo trì";
+                btnBaoTri.Text = "Đang bảo trì";
+            }
+            else
+            {
+                checkBaoTri = false;
+                lblTinhTrang.Text = "Trống";
+                btnBaoTri.Text = "Bảo trì";
+            }
+        }
     }
 }
