@@ -16,9 +16,6 @@ namespace DBMSProject
         {
             InitializeComponent();
 
-            ChuaThanhToanDtg.CellClick += ChuaThanhToanDtg_CellContentClick;
-            // Dùng tạm hàm gọi chi tiết hóa đơn của chưa thanh toán
-            DaThanhToanDtg.CellClick += ChuaThanhToanDtg_CellContentClick;
         }
         public void addUser() 
         {
@@ -51,6 +48,7 @@ namespace DBMSProject
             btnChiTietCTT.Text = "Xem Chi Tiết";
             btnChiTietCTT.UseColumnTextForButtonValue = true;
             ChuaThanhToanDtg.Columns.Add(btnChiTietCTT);
+            ChuaThanhToanDtg.CellContentClick += ChuaThanhToanDtg_CellContentClick;
 
             ChuaThanhToanDtg.Rows.Add("HD001", "Chưa thanh toán", "150.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
             ChuaThanhToanDtg.Rows.Add("HD002", "Chưa thanh toán", "200.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
@@ -79,6 +77,8 @@ namespace DBMSProject
             btnChiTietDTT.Text = "Xem Chi Tiết";
             btnChiTietDTT.UseColumnTextForButtonValue = true;
             DaThanhToanDtg.Columns.Add(btnChiTietDTT);
+            DaThanhToanDtg.CellContentClick += DaThanhToanDtg_CellContentClick;
+
 
             DaThanhToanDtg.Rows.Add("HD001", "Đã thanh toán", "150.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
             DaThanhToanDtg.Rows.Add("HD002", "Đã thanh toán", "200.000vnđ", DateTime.Now.ToString("dd/MM/yyyy"));
@@ -103,6 +103,15 @@ namespace DBMSProject
             {
                 FChiTietHoaDon invoiceForm = new FChiTietHoaDon();
                 invoiceForm.ShowDialog();
+            }
+        }
+        private void DaThanhToanDtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == DaThanhToanDtg.Columns["btnChiTiet"].Index && e.RowIndex >= 0)
+            {
+                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon();
+                fChiTietHoaDon.HideButton =true;
+                fChiTietHoaDon.ShowDialog();
             }
         }
 
