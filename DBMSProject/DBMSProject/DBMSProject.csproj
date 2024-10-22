@@ -46,6 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ClassChiTietHoaDonDAO.cs" />
+    <Compile Include="DAO\ClassDichVuDAO.cs" />
+    <Compile Include="DAO\ClassHoaDonDAO.cs" />
+    <Compile Include="DAO\ClassKhachHangDAO.cs" />
+    <Compile Include="DAO\ClassMayTinhDAO.cs" />
+    <Compile Include="DAO\ClassNapTienDAO.cs" />
+    <Compile Include="DAO\ClassNguoiQuanLyDAO.cs" />
+    <Compile Include="DAO\ClassPhienDangNhapDAO.cs" />
+    <Compile Include="DAO\ClassTaiKhoanDAO.cs" />
+    <Compile Include="DAO\ClassUuDaiDAO.cs" />
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="FDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +99,16 @@
     <Compile Include="FThanhToanHoaDon.Designer.cs">
       <DependentUpon>FThanhToanHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Object\ClassChiTietHoaDon.cs" />
+    <Compile Include="Object\ClassDichVu.cs" />
+    <Compile Include="Object\ClassHoaDon.cs" />
+    <Compile Include="Object\ClassKhachHang.cs" />
+    <Compile Include="Object\ClassMayTinh.cs" />
+    <Compile Include="Object\ClassNapTien.cs" />
+    <Compile Include="Object\ClassNguoiQuanLy.cs" />
+    <Compile Include="Object\ClassPhienDangNhap.cs" />
+    <Compile Include="Object\ClassTaiKhoan.cs" />
+    <Compile Include="Object\ClassUuDai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -130,6 +151,12 @@
     </Compile>
     <Compile Include="UCKhachHang.Designer.cs">
       <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuanLyDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQuanLyDichVu.Designer.cs">
+      <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FDichVu.resx">
       <DependentUpon>FDichVu.cs</DependentUpon>
@@ -179,6 +206,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCQuanLyDichVu.resx">
+      <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -207,5 +237,6 @@
   <ItemGroup>
     <None Include="images\PC.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

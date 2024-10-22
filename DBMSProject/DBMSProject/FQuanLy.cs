@@ -28,7 +28,6 @@ namespace DBMSProject
 
         private void categoryManagementPtb_Click(object sender, EventArgs e)
         {
-            servicesForm.addService();
             servicesForm.ShowDialog();
         }
     }

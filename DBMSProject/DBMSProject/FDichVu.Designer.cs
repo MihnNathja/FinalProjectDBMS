@@ -31,22 +31,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.ucDichVu3 = new DBMSProject.UCDichVu();
-            this.ucDichVu2 = new DBMSProject.UCDichVu();
-            this.ucDichVu1 = new DBMSProject.UCDichVu();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flpnlDichVu = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(478, 462);
+            this.label2.Location = new System.Drawing.Point(542, 517);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 23;
@@ -56,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(372, 462);
+            this.label1.Location = new System.Drawing.Point(436, 517);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 22;
@@ -64,36 +62,12 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(607, 445);
+            this.button6.Location = new System.Drawing.Point(671, 511);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(114, 42);
             this.button6.TabIndex = 21;
             this.button6.Text = "Gửi yêu cầu";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // ucDichVu3
-            // 
-            this.ucDichVu3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ucDichVu3.Location = new System.Drawing.Point(501, 139);
-            this.ucDichVu3.Name = "ucDichVu3";
-            this.ucDichVu3.Size = new System.Drawing.Size(173, 194);
-            this.ucDichVu3.TabIndex = 20;
-            // 
-            // ucDichVu2
-            // 
-            this.ucDichVu2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ucDichVu2.Location = new System.Drawing.Point(273, 139);
-            this.ucDichVu2.Name = "ucDichVu2";
-            this.ucDichVu2.Size = new System.Drawing.Size(173, 194);
-            this.ucDichVu2.TabIndex = 19;
-            // 
-            // ucDichVu1
-            // 
-            this.ucDichVu1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ucDichVu1.Location = new System.Drawing.Point(40, 139);
-            this.ucDichVu1.Name = "ucDichVu1";
-            this.ucDichVu1.Size = new System.Drawing.Size(173, 194);
-            this.ucDichVu1.TabIndex = 18;
             // 
             // button5
             // 
@@ -133,7 +107,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(607, 21);
+            this.button1.Location = new System.Drawing.Point(701, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 32);
             this.button1.TabIndex = 13;
@@ -145,20 +119,25 @@
             this.textBox1.Location = new System.Drawing.Point(40, 20);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(541, 33);
+            this.textBox1.Size = new System.Drawing.Size(628, 33);
             this.textBox1.TabIndex = 12;
+            // 
+            // flpnlDichVu
+            // 
+            this.flpnlDichVu.Location = new System.Drawing.Point(40, 120);
+            this.flpnlDichVu.Name = "flpnlDichVu";
+            this.flpnlDichVu.Size = new System.Drawing.Size(745, 374);
+            this.flpnlDichVu.TabIndex = 24;
             // 
             // FDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 522);
+            this.ClientSize = new System.Drawing.Size(817, 565);
+            this.Controls.Add(this.flpnlDichVu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.ucDichVu3);
-            this.Controls.Add(this.ucDichVu2);
-            this.Controls.Add(this.ucDichVu1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -167,6 +146,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "FDichVu";
             this.Text = "FDichVu";
+            this.Load += new System.EventHandler(this.FDichVu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,14 +157,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
-        private UCDichVu ucDichVu3;
-        private UCDichVu ucDichVu2;
-        private UCDichVu ucDichVu1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.FlowLayoutPanel flpnlDichVu;
     }
 }
