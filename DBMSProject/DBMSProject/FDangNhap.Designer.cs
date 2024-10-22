@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class LoginForm
+    partial class FDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +37,7 @@
             this.LoginBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BackgroundPtb = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundPtb)).BeginInit();
             this.SuspendLayout();
@@ -117,11 +118,25 @@
             this.BackgroundPtb.TabIndex = 1;
             this.BackgroundPtb.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(389, 310);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Đăng nhập";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 449);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.passwordTxb);
             this.Controls.Add(this.userNameTxb);
@@ -150,6 +165,7 @@
         private System.Windows.Forms.TextBox userNameTxb;
         private System.Windows.Forms.TextBox passwordTxb;
         private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

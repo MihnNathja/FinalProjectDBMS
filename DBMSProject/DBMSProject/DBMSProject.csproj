@@ -46,29 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InvoiceForm.cs">
+    <Compile Include="FDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InvoiceForm.Designer.cs">
-      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    <Compile Include="FDichVu.Designer.cs">
+      <DependentUpon>FDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="FChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="FChiTietHoaDon.Designer.cs">
+      <DependentUpon>FChiTietHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScreenForm.cs">
+    <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainScreenForm.Designer.cs">
-      <DependentUpon>MainScreenForm.cs</DependentUpon>
+    <Compile Include="FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang.cs">
+    <Compile Include="FManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <Compile Include="FManHinhChinh.Designer.cs">
+      <DependentUpon>FManHinhChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKhachHang.Designer.cs">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,62 +83,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SelectForm.cs">
+    <Compile Include="FQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectForm.Designer.cs">
-      <DependentUpon>SelectForm.cs</DependentUpon>
+    <Compile Include="FQuanLy.Designer.cs">
+      <DependentUpon>FQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServicesForm.cs">
+    <Compile Include="FQuanLyDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServicesForm.Designer.cs">
-      <DependentUpon>ServicesForm.cs</DependentUpon>
+    <Compile Include="FQuanLyDichVu.Designer.cs">
+      <DependentUpon>FQuanLyDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimeExtendForm.cs">
+    <Compile Include="FNapTien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TimeExtendForm.Designer.cs">
-      <DependentUpon>TimeExtendForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UCInfoComputer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCInfoComputer.Designer.cs">
-      <DependentUpon>UCInfoComputer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UCInfoUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCInfoUser.Designer.cs">
-      <DependentUpon>UCInfoUser.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="InvoiceForm.resx">
-      <DependentUpon>InvoiceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainScreenForm.resx">
-      <DependentUpon>MainScreenForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="UCDichVu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCDichVu.Designer.cs">
-      <DependentUpon>UCDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DichVu.Designer.cs">
-      <DependentUpon>DichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XemHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XemHoaDon.Designer.cs">
-      <DependentUpon>XemHoaDon.cs</DependentUpon>
+    <Compile Include="FNapTien.Designer.cs">
+      <DependentUpon>FNapTien.cs</DependentUpon>
     </Compile>
     <Compile Include="UCDichVu.cs">
       <SubType>UserControl</SubType>
@@ -140,51 +107,60 @@
     <Compile Include="UCDichVu.Designer.cs">
       <DependentUpon>UCDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DichVu.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UCMayTinh.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DichVu.Designer.cs">
-      <DependentUpon>DichVu.cs</DependentUpon>
+    <Compile Include="UCMayTinh.Designer.cs">
+      <DependentUpon>UCMayTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="XemHoaDon.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UCKhachHang.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="XemHoaDon.Designer.cs">
-      <DependentUpon>XemHoaDon.cs</DependentUpon>
+    <Compile Include="UCKhachHang.Designer.cs">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="FDichVu.resx">
+      <DependentUpon>FDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChiTietHoaDon.resx">
+      <DependentUpon>FChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FManHinhChinh.resx">
+      <DependentUpon>FManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKhachHang.resx">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectForm.resx">
-      <DependentUpon>SelectForm.cs</DependentUpon>
+    <EmbeddedResource Include="FQuanLy.resx">
+      <DependentUpon>FQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ServicesForm.resx">
-      <DependentUpon>ServicesForm.cs</DependentUpon>
+    <EmbeddedResource Include="FQuanLyDichVu.resx">
+      <DependentUpon>FQuanLyDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TimeExtendForm.resx">
-      <DependentUpon>TimeExtendForm.cs</DependentUpon>
+    <EmbeddedResource Include="FNapTien.resx">
+      <DependentUpon>FNapTien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCInfoComputer.resx">
-      <DependentUpon>UCInfoComputer.cs</DependentUpon>
+    <EmbeddedResource Include="UCDichVu.resx">
+      <DependentUpon>UCDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCInfoUser.resx">
-      <DependentUpon>UCInfoUser.cs</DependentUpon>
+    <EmbeddedResource Include="UCMayTinh.resx">
+      <DependentUpon>UCMayTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCKhachHang.resx">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UCDichVu.resx">
-      <DependentUpon>UCDichVu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DichVu.resx">
-      <DependentUpon>DichVu.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

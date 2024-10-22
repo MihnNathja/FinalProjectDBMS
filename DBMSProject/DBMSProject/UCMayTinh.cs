@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class LoginForm : Form
+    public partial class UCMayTinh : UserControl
     {
-        public LoginForm()
+        FNapTien timeExtendForm = new FNapTien();
+        public UCMayTinh()
         {
             InitializeComponent();
         }
-        SelectForm selectForm = new SelectForm();
-        private void LoginBtn_Click(object sender, EventArgs e)
+
+        private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
-            selectForm.ShowDialog();
+            timeExtendForm.ShowDialog();
         }
     }
 }

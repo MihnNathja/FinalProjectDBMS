@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class XemHoaDon : Form
+    public partial class FChiTietHoaDon : Form
     {
-        public XemHoaDon()
+        public FChiTietHoaDon()
         {
             InitializeComponent();
         }
+
+
     }
 }

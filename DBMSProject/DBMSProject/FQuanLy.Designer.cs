@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class SelectForm
+    partial class FQuanLy
     {
         /// <summary>
         /// Required designer variable.

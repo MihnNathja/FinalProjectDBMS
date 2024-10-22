@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class MainScreenForm : Form
+    public partial class FManHinhChinh : Form
     {   
-        public MainScreenForm()
+        public FManHinhChinh()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace DBMSProject
         {
             for (int i = 0; i < 9; i++)
             {
-                UCInfoUser ucInfoUser = new UCInfoUser();
+                UCKhachHang ucInfoUser = new UCKhachHang();
                 ucInfoUser.MaKHlbl.Text = (i+1).ToString();
                 UserFlp.Controls.Add(ucInfoUser);
             }
@@ -29,7 +29,7 @@ namespace DBMSProject
         {
             for (int i = 0; i < 9; i++)
             {
-                UCInfoComputer ucInfoComputer = new UCInfoComputer();
+                UCMayTinh ucInfoComputer = new UCMayTinh();
                 ucInfoComputer.Seriallbl.Text = (i + 1).ToString();
                 computerFlp.Controls.Add(ucInfoComputer);
             }
@@ -97,7 +97,7 @@ namespace DBMSProject
         {
             if (e.ColumnIndex == ChuaThanhToanDtg.Columns["btnChiTietCTT"].Index && e.RowIndex >= 0)
             {
-                InvoiceForm invoiceForm = new InvoiceForm();
+                FChiTietHoaDon invoiceForm = new FChiTietHoaDon();
                 invoiceForm.ShowDialog();
             }
         }

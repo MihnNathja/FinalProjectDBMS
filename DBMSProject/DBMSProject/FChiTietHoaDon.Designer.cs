@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class InvoiceForm
+    partial class FChiTietHoaDon
     {
         /// <summary>
         /// Required designer variable.

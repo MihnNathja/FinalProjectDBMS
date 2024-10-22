@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class SelectForm : Form
+    public partial class FQuanLy : Form
     {
-        public SelectForm()
+        public FQuanLy()
         {
             InitializeComponent();
         }
-        MainScreenForm mainScreenForm = new MainScreenForm();
-        ServicesForm servicesForm = new ServicesForm();
+        FManHinhChinh mainScreenForm = new FManHinhChinh();
+        FQuanLyDichVu servicesForm = new FQuanLyDichVu();
         private void MainScreenPtb_Click(object sender, EventArgs e)
         {
             mainScreenForm.addUser();

@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class UCInfoUser : UserControl
+    public partial class FNapTien : Form
     {
-        TimeExtendForm timeExtendForm = new TimeExtendForm();
-        public UCInfoUser()
+        public FNapTien()
         {
             InitializeComponent();
-            this.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        private void ThemThoiGianBtn_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            timeExtendForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chưa có code gì đâu");
         }
     }
 }

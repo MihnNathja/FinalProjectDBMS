@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class TimeExtendForm
+    partial class FNapTien
     {
         /// <summary>
         /// Required designer variable.

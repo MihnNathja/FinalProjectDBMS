@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class ServicesForm
+    partial class FQuanLyDichVu
     {
         /// <summary>
         /// Required designer variable.
