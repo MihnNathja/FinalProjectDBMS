@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class UCInfoUser
+    partial class UCKhachHang
     {
         /// <summary> 
         /// Required designer variable.

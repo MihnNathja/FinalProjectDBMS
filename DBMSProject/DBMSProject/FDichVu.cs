@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class DichVu : Form
+    public partial class FDichVu : Form
     {
-        public DichVu()
+        public FDichVu()
         {
             InitializeComponent();
         }

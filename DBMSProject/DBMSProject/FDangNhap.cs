@@ -10,21 +10,22 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class KhachHang : Form
+    public partial class FDangNhap : Form
     {
-        public KhachHang()
+        public FDangNhap()
         {
             InitializeComponent();
         }
-
-        private void KhachHang_Load(object sender, EventArgs e)
+        FQuanLy selectForm = new FQuanLy();
+        private void LoginBtn_Click(object sender, EventArgs e)
         {
-
+            selectForm.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FKhachHang kh = new FKhachHang();
+            kh.ShowDialog();
         }
     }
 }

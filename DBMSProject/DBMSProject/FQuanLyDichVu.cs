@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBMSProject
 {
-    public partial class ServicesForm : Form
+    public partial class FQuanLyDichVu : Form
     {
-        public ServicesForm()
+        public FQuanLyDichVu()
         {
             InitializeComponent();
         }

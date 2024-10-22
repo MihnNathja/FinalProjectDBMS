@@ -1,6 +1,6 @@
 ﻿namespace DBMSProject
 {
-    partial class MainScreenForm
+    partial class FManHinhChinh
     {
         /// <summary>
         /// Required designer variable.
