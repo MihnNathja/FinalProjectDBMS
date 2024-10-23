@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBMSProject.DAO;
+using DBMSProject.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,25 @@ namespace DBMSProject
 {
     public partial class FDoiMatKhau : Form
     {
+        int maTaiKhoanKhachHang;
         public FDoiMatKhau()
         {
             InitializeComponent();
         }
-
+        public FDoiMatKhau(int maTaiKhoanKhachHang)
+        {
+            InitializeComponent();
+            this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
+            ClassTaiKhoanDAO classTaiKhoan = new ClassTaiKhoanDAO();
+            txtTenTaiKhoan.Text = classTaiKhoan.GetTenTaiKhoan(maTaiKhoanKhachHang);
+        }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đổi mật khẩu thành công", "Notice");
+            ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(txtTenTaiKhoan.Text, txtMatKhau.Text);
+            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
+            classTaiKhoanDAO.DoiMatKhau(classTaiKhoan, txtMatKhau.Text);
+
+            
             this.Close();
         }
 

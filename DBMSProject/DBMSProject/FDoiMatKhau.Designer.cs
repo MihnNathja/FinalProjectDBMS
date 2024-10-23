@@ -70,6 +70,7 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(181, 22);
             this.txtMatKhauMoi.TabIndex = 15;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
             // 
             // txtMatKhau
             // 
@@ -77,12 +78,14 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(181, 22);
             this.txtMatKhau.TabIndex = 14;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.Enabled = false;
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(257, 68);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.ReadOnly = true;
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(181, 22);
             this.txtTenTaiKhoan.TabIndex = 13;
             // 
@@ -129,12 +132,22 @@
             // ChBHienThiMatKhau
             // 
             this.ChBHienThiMatKhau.AutoSize = true;
+
             this.ChBHienThiMatKhau.Location = new System.Drawing.Point(257, 198);
             this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
             this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
             this.ChBHienThiMatKhau.TabIndex = 19;
             this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
             this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
+
+            this.ChBHienThiMatKhau.Location = new System.Drawing.Point(257, 145);
+            this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
+            this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
+            this.ChBHienThiMatKhau.TabIndex = 18;
+            this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
+
             // 
             // FDoiMatKhau
             // 

@@ -12,9 +12,15 @@ namespace DBMSProject
 {
     public partial class FQuanLy : Form
     {
+        int maTaiKhoanNguoiQuanLy;
         public FQuanLy()
         {
             InitializeComponent();
+        }
+        public FQuanLy(int maTaiKhoanNguoiQuanLy)
+        {
+            InitializeComponent();
+            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
         FManHinhChinh mainScreenForm = new FManHinhChinh();
         FQuanLyDichVu servicesForm = new FQuanLyDichVu();
