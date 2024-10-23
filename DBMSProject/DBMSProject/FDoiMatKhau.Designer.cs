@@ -44,7 +44,7 @@
             // 
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Location = new System.Drawing.Point(294, 222);
+            this.btnThoat.Location = new System.Drawing.Point(294, 243);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 31);
             this.btnThoat.TabIndex = 17;
@@ -56,7 +56,7 @@
             // 
             this.btnXacNhan.BackColor = System.Drawing.Color.Cyan;
             this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXacNhan.Location = new System.Drawing.Point(140, 222);
+            this.btnXacNhan.Location = new System.Drawing.Point(140, 243);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(116, 31);
             this.btnXacNhan.TabIndex = 16;
@@ -82,6 +82,7 @@
             // 
             // txtTenTaiKhoan
             // 
+            this.txtTenTaiKhoan.Enabled = false;
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(257, 68);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.ReadOnly = true;
@@ -131,6 +132,14 @@
             // ChBHienThiMatKhau
             // 
             this.ChBHienThiMatKhau.AutoSize = true;
+
+            this.ChBHienThiMatKhau.Location = new System.Drawing.Point(257, 198);
+            this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
+            this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
+            this.ChBHienThiMatKhau.TabIndex = 19;
+            this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
+
             this.ChBHienThiMatKhau.Location = new System.Drawing.Point(257, 145);
             this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
             this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
@@ -138,6 +147,7 @@
             this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
             this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
             this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
+
             // 
             // FDoiMatKhau
             // 
