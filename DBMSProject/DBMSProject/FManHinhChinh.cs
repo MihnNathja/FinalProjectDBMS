@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBMSProject.DAO;
+using DBMSProject.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -130,6 +132,7 @@ namespace DBMSProject
         private void FManHinhChinh_Load(object sender, EventArgs e)
         {
             SelectMenuscript.SelectedIndex = 0;
+            LoadUuDai();
         }
 
         private void ThoatTab_Enter(object sender, EventArgs e)
@@ -152,6 +155,85 @@ namespace DBMSProject
                 passwordtxb.UseSystemPasswordChar = true;
                 re_passwordtxb.UseSystemPasswordChar = true;
             }
+        }
+        ClassUuDaiDAO uuDaiDAO = new ClassUuDaiDAO();
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (checkRong())
+            {
+                ClassUuDai ud = new ClassUuDai(0, txtTenUuDai.Text, 
+                    Convert.ToDouble(txtGiaTri.Text), Convert.ToDateTime(dtpThoiGianBatDau.Value),
+                    Convert.ToDateTime(dtpThoiGianKetThuc.Value), txtDieuKien.Text,
+                    Convert.ToInt32(txtSoLuong.Text), txtTinhTrang.Text); 
+                ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
+                uuDaiDAO.ThemUuDai(ud);
+
+                LoadUuDai();
+                MessageBox.Show("Thêm ưu đãi thành công");
+                return;
+            }
+            MessageBox.Show("Điền đầy đủ thông tin ưu đãi cần thêm");
+        }
+        private bool checkRong()
+        {
+            if (txtMaUuDai.Text == "" || txtTenUuDai.Text == "" || txtGiaTri.Text == "" || txtSoLuong.Text == "" 
+                || txtDieuKien.Text == "" || txtTinhTrang.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (checkRong())
+            {
+                ClassUuDai ud = new ClassUuDai(Convert.ToInt32(txtMaUuDai.Text), txtTenUuDai.Text,
+                    Convert.ToDouble(txtGiaTri.Text), Convert.ToDateTime(dtpThoiGianBatDau.Value),
+                    Convert.ToDateTime(dtpThoiGianKetThuc.Value), txtDieuKien.Text,
+                    Convert.ToInt32(txtSoLuong.Text), txtTinhTrang.Text);
+                ClassUuDaiDAO dichvuDao = new ClassUuDaiDAO();
+                uuDaiDAO.SuaUuDai(ud);
+
+                LoadUuDai();
+                MessageBox.Show("Sửa ưu đãi thành công");
+                return;
+            }
+            MessageBox.Show("Điền đầy đủ thông tin ưu đãi cần sửa");
+        }
+        private void LoadUuDai()
+        {
+            dgvQuanLyUuDai.DataSource = null;
+            dgvQuanLyUuDai.DataSource = uuDaiDAO.TruyXuatDanhSachUuDai();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            uuDaiDAO.XoaUuDai(Convert.ToInt32(txtMaUuDai.Text));
+            LoadUuDai();
+            MessageBox.Show("Xóa dịch vụ thành công");
+        }
+
+
+        private void dgvQuanLyUuDai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvQuanLyUuDai.Rows[e.RowIndex];
+
+                txtMaUuDai.Text = row.Cells["maUuDai"].Value.ToString();
+                txtTenUuDai.Text = row.Cells["tenUuDai"].Value.ToString();
+                txtGiaTri.Text = row.Cells["giaTri"].Value.ToString();
+                dtpThoiGianBatDau.Value = Convert.ToDateTime(row.Cells["thoiGianBatDau"].Value.ToString());
+                dtpThoiGianKetThuc.Value = Convert.ToDateTime(row.Cells["thoiGianKetThuc"].Value.ToString());
+                txtSoLuong.Text = row.Cells["soLuong"].Value.ToString();
+                txtDieuKien.Text = row.Cells["dieuKien"].Value.ToString();
+                txtTinhTrang.Text = row.Cells["tinhTrang"].Value.ToString();
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvQuanLyUuDai.DataSource = uuDaiDAO.TimKiemUuDai(txtTimKiem.Text.Trim());
         }
     }
 }
