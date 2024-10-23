@@ -1,6 +1,7 @@
 ﻿using DBMSProject.Object;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Principal;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DBMSProject.DAO
 {
-    internal class DBConnection
+    public class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public List<ClassDichVu> TruyXuatDanhSachDichVu(string sqlSTR)
@@ -23,7 +24,7 @@ namespace DBMSProject.DAO
                 List<ClassDichVu> listdv = new List<ClassDichVu>();
                 while (reader.Read())
                 {
-                    ClassDichVu dv = new ClassDichVu(Convert.ToInt32(reader["maDichVu"]), 
+                    ClassDichVu dv = new ClassDichVu(Convert.ToInt32(reader["maDichVu"]),
                         reader["tenDichVu"].ToString(), reader["loaiDichVu"].ToString(),
                         Convert.ToDouble(reader["donGia"]), Convert.ToInt32(reader["soLuong"]));
                     listdv.Add(dv);
@@ -37,6 +38,27 @@ namespace DBMSProject.DAO
                 return null;
             }
             finally
+            {
+                conn.Close();
+            }
+        }
+        public SqlConnection getConnection
+        {
+            get
+            {
+                return conn;
+            }
+        }
+        public void openConnection()
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+        }
+        public void closeConnection()
+        {
+            if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
             }

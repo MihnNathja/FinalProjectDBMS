@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBMSProject.DAO;
+using DBMSProject.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +24,15 @@ namespace DBMSProject
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
             timeExtendForm.ShowDialog();
+        }
+        public UCKhachHang UCKhachHangLoad(UCKhachHang ucKhachHang, ClassKhachHang classKhachHang)
+        {
+            ucKhachHang.lblMaKH.Text = classKhachHang.MaKhachHang.ToString();
+            ucKhachHang.lblTaiKhoan.Text = classKhachHang.TaiKhoan.ToString();
+            ucKhachHang.lblLoaiThanhVien.Text = classKhachHang.LoaiKhachHang.ToString();
+            ucKhachHang.lblThoiGianConLai.Text = classKhachHang.ThoiGianConLai.ToString();
+            ucKhachHang.lblDiemTichLuy.Text = classKhachHang.DiemTichLuy.ToString();
+            return ucKhachHang;
         }
     }
 }
