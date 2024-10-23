@@ -14,7 +14,8 @@ namespace DBMSProject.DAO
         /*public List<ClassDichVu> TruyXuatDanhSachDichVu(string loaiDichVu)
         {
             string sqlSTR = string.Format($"SELECT * FROM DichVu WHERE loaiDichVu = N'{loaiDichVu}'");
-            return dBConnection.TruyXuatDanhSachDichVu(sqlSTR);
+            List <ClassDichVu> list = new List<ClassDichVu>();
+            return list; // chỗ này t làm bừa, có merge code mà conflict thì xóa dùm
         }
         public ClassDichVuDAO() { }*/
     }

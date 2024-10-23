@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ChBHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -69,6 +70,7 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(181, 22);
             this.txtMatKhauMoi.TabIndex = 15;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
             // 
             // txtMatKhau
             // 
@@ -76,11 +78,13 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(181, 22);
             this.txtMatKhau.TabIndex = 14;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtTenTaiKhoan
             // 
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(257, 68);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
+            this.txtTenTaiKhoan.ReadOnly = true;
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(181, 22);
             this.txtTenTaiKhoan.TabIndex = 13;
             // 
@@ -124,11 +128,23 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Đổi mật khẩu";
             // 
+            // ChBHienThiMatKhau
+            // 
+            this.ChBHienThiMatKhau.AutoSize = true;
+            this.ChBHienThiMatKhau.Location = new System.Drawing.Point(257, 145);
+            this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
+            this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
+            this.ChBHienThiMatKhau.TabIndex = 18;
+            this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
+            // 
             // FDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 292);
+            this.Controls.Add(this.ChBHienThiMatKhau);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.txtMatKhauMoi);
@@ -156,5 +172,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox ChBHienThiMatKhau;
     }
 }

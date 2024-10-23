@@ -8,5 +8,20 @@ namespace DBMSProject.Object
 {
     internal class ClassNguoiQuanLy
     {
+        int maNguoiQuanLy;
+        int maTaiKhoan;
+
+        public ClassNguoiQuanLy(int maNguoiQuanLy, int maTaiKhoan)
+        {
+            this.maNguoiQuanLy = maNguoiQuanLy;
+            this.maTaiKhoan = maTaiKhoan;
+        }
+        public ClassNguoiQuanLy()
+        {
+
+        }
+
+        public int MaNguoiQuanLy { get => maNguoiQuanLy; set => maNguoiQuanLy = value; }
+        public int MaTaiKhoan { get => maTaiKhoan; set => maTaiKhoan = value; }
     }
 }
