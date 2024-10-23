@@ -107,15 +107,19 @@ namespace DBMSProject.DAO
                     conn.Open();
 
                     // Tạo một đối tượng SqlCommand để gọi hàm SQL
-                    string SQL = "SELECT dbo.DoiMatKhau(@taiKhoan, @matKhau, @matKhauMoi)";
-                    using (SqlCommand cmd = new SqlCommand(SQL, conn))
+                    using (SqlCommand command = new SqlCommand("DoiMatKhau", conn))
                     {
-                        // Thêm tham số cho hàm
-                        cmd.Parameters.AddWithValue("@taiKhoan", classTaiKhoan.TenTaiKhoan);
-                        cmd.Parameters.AddWithValue("@matKhau", classTaiKhoan.MatKhau);
-                        cmd.Parameters.AddWithValue("@matKhauMoi", matKhauMoi);
+                        command.CommandType = CommandType.StoredProcedure;
 
-                        cmd.ExecuteScalar();
+                        // Thêm các tham số vào command
+                        command.Parameters.Add(new SqlParameter("@taiKhoan", classTaiKhoan.TenTaiKhoan));
+                        command.Parameters.Add(new SqlParameter("@matKhau", classTaiKhoan.MatKhau));
+                        command.Parameters.Add(new SqlParameter("@matKhauMoi", matKhauMoi));
+
+                        // Thực thi thủ tục
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Đổi mật khẩu thành công!");
                     }
                 }
                 catch (Exception ex)

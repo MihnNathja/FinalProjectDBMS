@@ -30,7 +30,7 @@ namespace DBMSProject
         {
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(txtTenTaiKhoan.Text, txtMatKhau.Text);
             ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
-            classTaiKhoanDAO.DoiMatKhau(classTaiKhoan, txtMatKhau.Text);
+            classTaiKhoanDAO.DoiMatKhau(classTaiKhoan, txtMatKhauMoi.Text);
 
             
             this.Close();
