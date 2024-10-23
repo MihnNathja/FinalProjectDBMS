@@ -12,9 +12,15 @@ namespace DBMSProject
 {
     public partial class FKhachHang : Form
     {
+        int maTaiKhoanKhachHang;
         public FKhachHang()
         {
             InitializeComponent();
+        }
+        public FKhachHang(int maTaiKhoanKhachHang)
+        {
+            InitializeComponent();
+            this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
         }
 
         private void KhachHang_Load(object sender, EventArgs e)
@@ -30,7 +36,7 @@ namespace DBMSProject
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
+            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau(maTaiKhoanKhachHang);
             fDoiMatKhau.ShowDialog();
         }
 
