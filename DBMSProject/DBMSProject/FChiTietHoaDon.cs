@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBMSProject.DAO;
+using DBMSProject.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace DBMSProject
 {
     public partial class FChiTietHoaDon : Form
     {
+        ClassChiTietHoaDonDAO chiTietHoaDonDAO = new ClassChiTietHoaDonDAO();
+        ClassChiTietHoaDon chiTietHoaDon;
         public FChiTietHoaDon()
         {
             InitializeComponent();
@@ -22,12 +26,30 @@ namespace DBMSProject
         {
             if (HideButton == true)
             {
-                btnDaNhanThanToan.Visible = false;
+                btnXuatHoaDon.Visible = false;
             }
         }
+        public void LoadChiTietHoaDon(int maHoaDon)
+        {
+            List<ClassChiTietHoaDon> danhSachChiTietHoaDon = chiTietHoaDonDAO.XemChiTietHoaDon(maHoaDon);
+            lblMaHoaDon.Text = danhSachChiTietHoaDon[0].MaHoaDon.ToString();  
+            lblMaMayTinh.Text = danhSachChiTietHoaDon[0].MaMayTinh.ToString();  
+            lblNgayTao.Text = danhSachChiTietHoaDon[0].ThoiGianTao.ToString();  
+            lblTenTaiKhoan.Text = danhSachChiTietHoaDon[0].TaiKhoan;  
+            lblTriGia.Text = danhSachChiTietHoaDon[0].TriGia.ToString() + "VNĐ";
 
+            dgvDichVuDaGoi.DataSource = danhSachChiTietHoaDon.Select(x => new
+            {
+                TenDichVu = x.TenDichVu,
+                SoLuong = x.SoLuong,
+                TongGiaTien = x.TongGiaTien
+            }).ToList();
+
+
+        }
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
         {
+            
             MessageBox.Show("Đã xuất hoá đơn");
         }
     }

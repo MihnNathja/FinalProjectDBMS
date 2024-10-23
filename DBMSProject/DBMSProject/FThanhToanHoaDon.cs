@@ -21,11 +21,5 @@ namespace DBMSProject
         {
             this.Close();
         }
-
-        private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Cảm ơn bạn đã sử dụng dịch vụ");
-            this.Close();
-        }
     }
 }

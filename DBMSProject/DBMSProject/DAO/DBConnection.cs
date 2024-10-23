@@ -1,7 +1,9 @@
 ﻿using DBMSProject.Object;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -13,7 +15,7 @@ namespace DBMSProject.DAO
     internal class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public List<ClassDichVu> TruyXuatDanhSachDichVu(string sqlSTR)
+        /*public List<ClassDichVu> TruyXuatDanhSachDichVu(string sqlSTR)
         {
             try
             {
@@ -40,6 +42,28 @@ namespace DBMSProject.DAO
             {
                 conn.Close();
             }
+        }*/
+        public SqlConnection getConnection
+        {
+            get
+            {
+                return conn;
+            }
         }
+        public void openConnection()
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+        }
+        public void closeConnection()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+        }
+
     }
 }

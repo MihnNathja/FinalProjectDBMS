@@ -11,11 +11,11 @@ namespace DBMSProject.DAO
     public class ClassDichVuDAO
     {
         DBConnection dBConnection = new DBConnection();
-        public List<ClassDichVu> TruyXuatDanhSachDichVu(string loaiDichVu)
+        /*public List<ClassDichVu> TruyXuatDanhSachDichVu(string loaiDichVu)
         {
             string sqlSTR = string.Format($"SELECT * FROM DichVu WHERE loaiDichVu = N'{loaiDichVu}'");
             return dBConnection.TruyXuatDanhSachDichVu(sqlSTR);
         }
-        public ClassDichVuDAO() { }
+        public ClassDichVuDAO() { }*/
     }
 }
