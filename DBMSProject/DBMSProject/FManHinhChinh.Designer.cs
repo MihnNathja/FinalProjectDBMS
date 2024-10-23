@@ -35,6 +35,7 @@
             this.SearchTxb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ĐangKyThanhVienTab = new System.Windows.Forms.TabPage();
+            this.ChBHienThiMatKhau = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.re_passwordtxb = new System.Windows.Forms.TextBox();
@@ -49,17 +50,16 @@
             this.QuanLyGoiDichVuTab = new System.Windows.Forms.TabPage();
             this.ThanhToanTab = new System.Windows.Forms.TabControl();
             this.ChuaThanhToanTab = new System.Windows.Forms.TabPage();
-            this.ChuaThanhToanDtg = new System.Windows.Forms.DataGridView();
+            this.dgvChuaThanhToan = new System.Windows.Forms.DataGridView();
             this.DaThanhToanTab = new System.Windows.Forms.TabPage();
-            this.DaThanhToanDtg = new System.Windows.Forms.DataGridView();
+            this.dgvDaThanhToan = new System.Windows.Forms.DataGridView();
             this.QuanLyUuDaiTab = new System.Windows.Forms.TabPage();
-            this.ThoatTab = new System.Windows.Forms.TabPage();
-            this.ChBHienThiMatKhau = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnThemUuDai = new System.Windows.Forms.Button();
-            this.btnXoaUuDai = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoaUuDai = new System.Windows.Forms.Button();
+            this.btnThemUuDai = new System.Windows.Forms.Button();
+            this.ThoatTab = new System.Windows.Forms.TabPage();
             this.SelectMenuscript.SuspendLayout();
             this.QuanLyThanhVienTab.SuspendLayout();
             this.ĐangKyThanhVienTab.SuspendLayout();
@@ -67,13 +67,13 @@
             this.QuanLyGoiDichVuTab.SuspendLayout();
             this.ThanhToanTab.SuspendLayout();
             this.ChuaThanhToanTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChuaThanhToanDtg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChuaThanhToan)).BeginInit();
             this.DaThanhToanTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DaThanhToanDtg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaThanhToan)).BeginInit();
             this.QuanLyUuDaiTab.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SelectMenuscript
@@ -159,6 +159,17 @@
             this.ĐangKyThanhVienTab.TabIndex = 1;
             this.ĐangKyThanhVienTab.Text = "Đăng ký thành viên";
             this.ĐangKyThanhVienTab.UseVisualStyleBackColor = true;
+            // 
+            // ChBHienThiMatKhau
+            // 
+            this.ChBHienThiMatKhau.AutoSize = true;
+            this.ChBHienThiMatKhau.Location = new System.Drawing.Point(813, 159);
+            this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
+            this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
+            this.ChBHienThiMatKhau.TabIndex = 11;
+            this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
+            this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
             // 
             // button2
             // 
@@ -285,50 +296,50 @@
             this.ThanhToanTab.Location = new System.Drawing.Point(0, 7);
             this.ThanhToanTab.Name = "ThanhToanTab";
             this.ThanhToanTab.SelectedIndex = 0;
-            this.ThanhToanTab.Size = new System.Drawing.Size(1074, 485);
+            this.ThanhToanTab.Size = new System.Drawing.Size(1061, 485);
             this.ThanhToanTab.TabIndex = 0;
             // 
             // ChuaThanhToanTab
             // 
-            this.ChuaThanhToanTab.Controls.Add(this.ChuaThanhToanDtg);
+            this.ChuaThanhToanTab.Controls.Add(this.dgvChuaThanhToan);
             this.ChuaThanhToanTab.Location = new System.Drawing.Point(4, 25);
             this.ChuaThanhToanTab.Name = "ChuaThanhToanTab";
             this.ChuaThanhToanTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ChuaThanhToanTab.Size = new System.Drawing.Size(1066, 456);
+            this.ChuaThanhToanTab.Size = new System.Drawing.Size(1053, 456);
             this.ChuaThanhToanTab.TabIndex = 0;
             this.ChuaThanhToanTab.Text = "Chưa thanh toán";
             this.ChuaThanhToanTab.UseVisualStyleBackColor = true;
             // 
-            // ChuaThanhToanDtg
+            // dgvChuaThanhToan
             // 
-            this.ChuaThanhToanDtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChuaThanhToanDtg.Location = new System.Drawing.Point(6, 7);
-            this.ChuaThanhToanDtg.Name = "ChuaThanhToanDtg";
-            this.ChuaThanhToanDtg.RowHeadersWidth = 51;
-            this.ChuaThanhToanDtg.RowTemplate.Height = 24;
-            this.ChuaThanhToanDtg.Size = new System.Drawing.Size(760, 440);
-            this.ChuaThanhToanDtg.TabIndex = 1;
+            this.dgvChuaThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChuaThanhToan.Location = new System.Drawing.Point(6, 7);
+            this.dgvChuaThanhToan.Name = "dgvChuaThanhToan";
+            this.dgvChuaThanhToan.RowHeadersWidth = 51;
+            this.dgvChuaThanhToan.RowTemplate.Height = 24;
+            this.dgvChuaThanhToan.Size = new System.Drawing.Size(1041, 440);
+            this.dgvChuaThanhToan.TabIndex = 1;
             // 
             // DaThanhToanTab
             // 
-            this.DaThanhToanTab.Controls.Add(this.DaThanhToanDtg);
+            this.DaThanhToanTab.Controls.Add(this.dgvDaThanhToan);
             this.DaThanhToanTab.Location = new System.Drawing.Point(4, 25);
             this.DaThanhToanTab.Name = "DaThanhToanTab";
             this.DaThanhToanTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DaThanhToanTab.Size = new System.Drawing.Size(1066, 456);
+            this.DaThanhToanTab.Size = new System.Drawing.Size(1053, 456);
             this.DaThanhToanTab.TabIndex = 1;
             this.DaThanhToanTab.Text = "Đã thanh toán";
             this.DaThanhToanTab.UseVisualStyleBackColor = true;
             // 
-            // DaThanhToanDtg
+            // dgvDaThanhToan
             // 
-            this.DaThanhToanDtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DaThanhToanDtg.Location = new System.Drawing.Point(6, 7);
-            this.DaThanhToanDtg.Name = "DaThanhToanDtg";
-            this.DaThanhToanDtg.RowHeadersWidth = 51;
-            this.DaThanhToanDtg.RowTemplate.Height = 24;
-            this.DaThanhToanDtg.Size = new System.Drawing.Size(760, 440);
-            this.DaThanhToanDtg.TabIndex = 2;
+            this.dgvDaThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDaThanhToan.Location = new System.Drawing.Point(6, 7);
+            this.dgvDaThanhToan.Name = "dgvDaThanhToan";
+            this.dgvDaThanhToan.RowHeadersWidth = 51;
+            this.dgvDaThanhToan.RowTemplate.Height = 24;
+            this.dgvDaThanhToan.Size = new System.Drawing.Size(1041, 440);
+            this.dgvDaThanhToan.TabIndex = 2;
             // 
             // QuanLyUuDaiTab
             // 
@@ -342,37 +353,6 @@
             this.QuanLyUuDaiTab.Text = "Quản lý ưu đãi";
             this.QuanLyUuDaiTab.UseVisualStyleBackColor = true;
             // 
-            // ThoatTab
-            // 
-            this.ThoatTab.Location = new System.Drawing.Point(4, 25);
-            this.ThoatTab.Name = "ThoatTab";
-            this.ThoatTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ThoatTab.Size = new System.Drawing.Size(1074, 488);
-            this.ThoatTab.TabIndex = 5;
-            this.ThoatTab.Text = "Quay lại trang chủ";
-            this.ThoatTab.UseVisualStyleBackColor = true;
-            this.ThoatTab.Enter += new System.EventHandler(this.ThoatTab_Enter);
-            // 
-            // ChBHienThiMatKhau
-            // 
-            this.ChBHienThiMatKhau.AutoSize = true;
-            this.ChBHienThiMatKhau.Location = new System.Drawing.Point(813, 159);
-            this.ChBHienThiMatKhau.Name = "ChBHienThiMatKhau";
-            this.ChBHienThiMatKhau.Size = new System.Drawing.Size(130, 20);
-            this.ChBHienThiMatKhau.TabIndex = 11;
-            this.ChBHienThiMatKhau.Text = "Hiển thị mật khẩu";
-            this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
-            this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnXoaUuDai);
-            this.panel1.Controls.Add(this.btnThemUuDai);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1065, 85);
-            this.panel1.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
@@ -380,24 +360,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1065, 388);
             this.panel2.TabIndex = 1;
-            // 
-            // btnThemUuDai
-            // 
-            this.btnThemUuDai.Location = new System.Drawing.Point(294, 21);
-            this.btnThemUuDai.Name = "btnThemUuDai";
-            this.btnThemUuDai.Size = new System.Drawing.Size(132, 41);
-            this.btnThemUuDai.TabIndex = 0;
-            this.btnThemUuDai.Text = "Thêm ưu đãi";
-            this.btnThemUuDai.UseVisualStyleBackColor = true;
-            // 
-            // btnXoaUuDai
-            // 
-            this.btnXoaUuDai.Location = new System.Drawing.Point(466, 22);
-            this.btnXoaUuDai.Name = "btnXoaUuDai";
-            this.btnXoaUuDai.Size = new System.Drawing.Size(132, 41);
-            this.btnXoaUuDai.TabIndex = 1;
-            this.btnXoaUuDai.Text = "Xóa ưu đãi";
-            this.btnXoaUuDai.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -409,11 +371,49 @@
             this.dataGridView1.Size = new System.Drawing.Size(1057, 382);
             this.dataGridView1.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnXoaUuDai);
+            this.panel1.Controls.Add(this.btnThemUuDai);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1065, 85);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnXoaUuDai
+            // 
+            this.btnXoaUuDai.Location = new System.Drawing.Point(466, 22);
+            this.btnXoaUuDai.Name = "btnXoaUuDai";
+            this.btnXoaUuDai.Size = new System.Drawing.Size(132, 41);
+            this.btnXoaUuDai.TabIndex = 1;
+            this.btnXoaUuDai.Text = "Xóa ưu đãi";
+            this.btnXoaUuDai.UseVisualStyleBackColor = true;
+            // 
+            // btnThemUuDai
+            // 
+            this.btnThemUuDai.Location = new System.Drawing.Point(294, 21);
+            this.btnThemUuDai.Name = "btnThemUuDai";
+            this.btnThemUuDai.Size = new System.Drawing.Size(132, 41);
+            this.btnThemUuDai.TabIndex = 0;
+            this.btnThemUuDai.Text = "Thêm ưu đãi";
+            this.btnThemUuDai.UseVisualStyleBackColor = true;
+            // 
+            // ThoatTab
+            // 
+            this.ThoatTab.Location = new System.Drawing.Point(4, 25);
+            this.ThoatTab.Name = "ThoatTab";
+            this.ThoatTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ThoatTab.Size = new System.Drawing.Size(1074, 488);
+            this.ThoatTab.TabIndex = 5;
+            this.ThoatTab.Text = "Quay lại trang chủ";
+            this.ThoatTab.UseVisualStyleBackColor = true;
+            this.ThoatTab.Enter += new System.EventHandler(this.ThoatTab_Enter);
+            // 
             // FManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 519);
+            this.ClientSize = new System.Drawing.Size(1077, 519);
             this.Controls.Add(this.SelectMenuscript);
             this.Name = "FManHinhChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -428,13 +428,13 @@
             this.QuanLyGoiDichVuTab.ResumeLayout(false);
             this.ThanhToanTab.ResumeLayout(false);
             this.ChuaThanhToanTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ChuaThanhToanDtg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChuaThanhToan)).EndInit();
             this.DaThanhToanTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DaThanhToanDtg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaThanhToan)).EndInit();
             this.QuanLyUuDaiTab.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -465,8 +465,8 @@
         private System.Windows.Forms.TabControl ThanhToanTab;
         private System.Windows.Forms.TabPage ChuaThanhToanTab;
         private System.Windows.Forms.TabPage DaThanhToanTab;
-        private System.Windows.Forms.DataGridView ChuaThanhToanDtg;
-        private System.Windows.Forms.DataGridView DaThanhToanDtg;
+        private System.Windows.Forms.DataGridView dgvChuaThanhToan;
+        private System.Windows.Forms.DataGridView dgvDaThanhToan;
         private System.Windows.Forms.CheckBox ChBHienThiMatKhau;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
