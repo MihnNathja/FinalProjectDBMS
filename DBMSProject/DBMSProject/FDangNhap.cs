@@ -25,27 +25,21 @@ namespace DBMSProject
         {
             
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(userNameTxb.Text, passwordTxb.Text);
-            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
-
+            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();           
 
             maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
             maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
-                FKhachHang kh = new FKhachHang(maTaiKhoanKhachHang);
 
-                // Mặc định tạm thời máy này có id là 1
-/*                ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
-                ClassKhachHang classKhachHang = classKhachHangDAO.getClassKhachHang(maTaiKhoanKhachHang);
 
+                // Mặc định tạm thời máy này có id là
+                
                 ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
                 classPhienDangNhapDAO.ThemPhienDangNhap(maTaiKhoanKhachHang);
-
-                ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();*/
-
-                
-
-                kh.ShowDialog();
+                FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang);
+                fKhachHang.ShowDialog();
             } 
             else if (maTaiKhoanNguoiQuanLy != -1)
             {
