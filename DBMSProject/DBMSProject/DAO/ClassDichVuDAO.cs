@@ -55,10 +55,19 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@donGia", dichvu.DonGia);
                 cmd.Parameters.AddWithValue("@soLuong", dichvu.SoLuong);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm dịch vụ thành công");
             }
             catch (Exception exc)
             {
-                MessageBox.Show("that bai (ThemDichVu)" + exc);
+                if (exc.Message.Contains("Dịch vụ đã tồn tại"))
+                {
+                    MessageBox.Show("Dịch vụ đã tồn tại");
+                }
+                else
+                {
+                    MessageBox.Show("that bai (ThemDichVu)" + exc);
+                }
+                
             }
             finally
             {
@@ -74,6 +83,7 @@ namespace DBMSProject.DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@maDichVu", madichvu));
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa dịch vụ thành công");
             }
             catch (Exception exc)
             {
@@ -97,6 +107,7 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@donGia", dichvu.DonGia);
                 cmd.Parameters.AddWithValue("@soLuong", dichvu.SoLuong);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa dịch vụ thành công");
             }
             catch (Exception exc)
             {

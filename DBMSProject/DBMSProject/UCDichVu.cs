@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMSProject.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,16 @@ namespace DBMSProject
         {
             InitializeComponent();
         }
-
+        public ClassDichVu Dichvu;
         private void UCDichVu_Load(object sender, EventArgs e)
         {
 
+        }
+        public void LoadUCDichVu(ClassDichVu dichvu)
+        {
+            lblTenDichVu.Text = dichvu.TenDichVu;
+            lblDonGia.Text = dichvu.DonGia.ToString();
+            Dichvu = dichvu;
         }
     }
 }

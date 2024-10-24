@@ -32,15 +32,6 @@ namespace DBMSProject
             {
                 FKhachHang kh = new FKhachHang(maTaiKhoanKhachHang);
 
-                // Mặc định tạm thời máy này có id là 1
-/*                ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
-                ClassKhachHang classKhachHang = classKhachHangDAO.getClassKhachHang(maTaiKhoanKhachHang);
-
-                ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
-                classPhienDangNhapDAO.ThemPhienDangNhap(maTaiKhoanKhachHang);
-
-                ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();*/
-
                 
 
                 kh.ShowDialog();

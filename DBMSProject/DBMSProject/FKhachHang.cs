@@ -13,6 +13,7 @@ namespace DBMSProject
     public partial class FKhachHang : Form
     {
         int maTaiKhoanKhachHang;
+        int maMayTinh = 1;
         public FKhachHang()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace DBMSProject
 
         private void btnDichVu_Click(object sender, EventArgs e)
         {
-            FDichVu dv = new FDichVu();
+            FDichVu dv = new FDichVu(maTaiKhoanKhachHang, maMayTinh);
             dv.ShowDialog();
         }
 
