@@ -33,11 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaKHlbl = new System.Windows.Forms.Label();
-            this.TaiKhoanLbl = new System.Windows.Forms.Label();
-            this.LoaiThanhVienLbl = new System.Windows.Forms.Label();
-            this.ThoiGianConLaiLbl = new System.Windows.Forms.Label();
-            this.DiemTichLuyLbl = new System.Windows.Forms.Label();
+            this.lblMaKH = new System.Windows.Forms.Label();
+            this.lblTaiKhoan = new System.Windows.Forms.Label();
+            this.lblLoaiThanhVien = new System.Windows.Forms.Label();
+            this.lblThoiGianConLai = new System.Windows.Forms.Label();
+            this.lblDiemTichLuy = new System.Windows.Forms.Label();
             this.ThemThoiGianBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,55 +93,55 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Điểm tích lũy:";
             // 
-            // MaKHlbl
+            // lblMaKH
             // 
-            this.MaKHlbl.AutoSize = true;
-            this.MaKHlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaKHlbl.Location = new System.Drawing.Point(158, 223);
-            this.MaKHlbl.Name = "MaKHlbl";
-            this.MaKHlbl.Size = new System.Drawing.Size(18, 20);
-            this.MaKHlbl.TabIndex = 6;
-            this.MaKHlbl.Text = "1";
+            this.lblMaKH.AutoSize = true;
+            this.lblMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaKH.Location = new System.Drawing.Point(158, 223);
+            this.lblMaKH.Name = "lblMaKH";
+            this.lblMaKH.Size = new System.Drawing.Size(18, 20);
+            this.lblMaKH.TabIndex = 6;
+            this.lblMaKH.Text = "1";
             // 
-            // TaiKhoanLbl
+            // lblTaiKhoan
             // 
-            this.TaiKhoanLbl.AutoSize = true;
-            this.TaiKhoanLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaiKhoanLbl.Location = new System.Drawing.Point(158, 261);
-            this.TaiKhoanLbl.Name = "TaiKhoanLbl";
-            this.TaiKhoanLbl.Size = new System.Drawing.Size(63, 20);
-            this.TaiKhoanLbl.TabIndex = 7;
-            this.TaiKhoanLbl.Text = "abcabc";
+            this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaiKhoan.Location = new System.Drawing.Point(158, 261);
+            this.lblTaiKhoan.Name = "lblTaiKhoan";
+            this.lblTaiKhoan.Size = new System.Drawing.Size(63, 20);
+            this.lblTaiKhoan.TabIndex = 7;
+            this.lblTaiKhoan.Text = "abcabc";
             // 
-            // LoaiThanhVienLbl
+            // lblLoaiThanhVien
             // 
-            this.LoaiThanhVienLbl.AutoSize = true;
-            this.LoaiThanhVienLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiThanhVienLbl.Location = new System.Drawing.Point(158, 297);
-            this.LoaiThanhVienLbl.Name = "LoaiThanhVienLbl";
-            this.LoaiThanhVienLbl.Size = new System.Drawing.Size(145, 20);
-            this.LoaiThanhVienLbl.TabIndex = 8;
-            this.LoaiThanhVienLbl.Text = "Thành viên thường";
+            this.lblLoaiThanhVien.AutoSize = true;
+            this.lblLoaiThanhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoaiThanhVien.Location = new System.Drawing.Point(158, 297);
+            this.lblLoaiThanhVien.Name = "lblLoaiThanhVien";
+            this.lblLoaiThanhVien.Size = new System.Drawing.Size(145, 20);
+            this.lblLoaiThanhVien.TabIndex = 8;
+            this.lblLoaiThanhVien.Text = "Thành viên thường";
             // 
-            // ThoiGianConLaiLbl
+            // lblThoiGianConLai
             // 
-            this.ThoiGianConLaiLbl.AutoSize = true;
-            this.ThoiGianConLaiLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThoiGianConLaiLbl.Location = new System.Drawing.Point(158, 333);
-            this.ThoiGianConLaiLbl.Name = "ThoiGianConLaiLbl";
-            this.ThoiGianConLaiLbl.Size = new System.Drawing.Size(63, 20);
-            this.ThoiGianConLaiLbl.TabIndex = 9;
-            this.ThoiGianConLaiLbl.Text = "1h59ph";
+            this.lblThoiGianConLai.AutoSize = true;
+            this.lblThoiGianConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGianConLai.Location = new System.Drawing.Point(158, 333);
+            this.lblThoiGianConLai.Name = "lblThoiGianConLai";
+            this.lblThoiGianConLai.Size = new System.Drawing.Size(63, 20);
+            this.lblThoiGianConLai.TabIndex = 9;
+            this.lblThoiGianConLai.Text = "1h59ph";
             // 
-            // DiemTichLuyLbl
+            // lblDiemTichLuy
             // 
-            this.DiemTichLuyLbl.AutoSize = true;
-            this.DiemTichLuyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiemTichLuyLbl.Location = new System.Drawing.Point(158, 369);
-            this.DiemTichLuyLbl.Name = "DiemTichLuyLbl";
-            this.DiemTichLuyLbl.Size = new System.Drawing.Size(36, 20);
-            this.DiemTichLuyLbl.TabIndex = 10;
-            this.DiemTichLuyLbl.Text = "150";
+            this.lblDiemTichLuy.AutoSize = true;
+            this.lblDiemTichLuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiemTichLuy.Location = new System.Drawing.Point(158, 369);
+            this.lblDiemTichLuy.Name = "lblDiemTichLuy";
+            this.lblDiemTichLuy.Size = new System.Drawing.Size(36, 20);
+            this.lblDiemTichLuy.TabIndex = 10;
+            this.lblDiemTichLuy.Text = "150";
             // 
             // ThemThoiGianBtn
             // 
@@ -166,23 +166,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // UCInfoUser
+            // UCKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ThemThoiGianBtn);
-            this.Controls.Add(this.DiemTichLuyLbl);
-            this.Controls.Add(this.ThoiGianConLaiLbl);
-            this.Controls.Add(this.LoaiThanhVienLbl);
-            this.Controls.Add(this.TaiKhoanLbl);
-            this.Controls.Add(this.MaKHlbl);
+            this.Controls.Add(this.lblDiemTichLuy);
+            this.Controls.Add(this.lblThoiGianConLai);
+            this.Controls.Add(this.lblLoaiThanhVien);
+            this.Controls.Add(this.lblTaiKhoan);
+            this.Controls.Add(this.lblMaKH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "UCInfoUser";
+            this.Name = "UCKhachHang";
             this.Size = new System.Drawing.Size(329, 416);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -198,11 +198,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label TaiKhoanLbl;
-        private System.Windows.Forms.Label LoaiThanhVienLbl;
-        private System.Windows.Forms.Label ThoiGianConLaiLbl;
-        private System.Windows.Forms.Label DiemTichLuyLbl;
         private System.Windows.Forms.Button ThemThoiGianBtn;
-        public System.Windows.Forms.Label MaKHlbl;
+        public System.Windows.Forms.Label lblMaKH;
+        public System.Windows.Forms.Label lblTaiKhoan;
+        public System.Windows.Forms.Label lblLoaiThanhVien;
+        public System.Windows.Forms.Label lblThoiGianConLai;
+        public System.Windows.Forms.Label lblDiemTichLuy;
     }
 }

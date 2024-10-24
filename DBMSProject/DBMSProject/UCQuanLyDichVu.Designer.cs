@@ -56,10 +56,11 @@
             this.dgvQuanLyDichVu.RowTemplate.Height = 24;
             this.dgvQuanLyDichVu.Size = new System.Drawing.Size(943, 402);
             this.dgvQuanLyDichVu.TabIndex = 0;
+            this.dgvQuanLyDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyDichVu_CellClick);
             // 
             // txtMaDichVu
             // 
-            this.txtMaDichVu.Location = new System.Drawing.Point(498, 38);
+            this.txtMaDichVu.Location = new System.Drawing.Point(508, 38);
             this.txtMaDichVu.Name = "txtMaDichVu";
             this.txtMaDichVu.Size = new System.Drawing.Size(100, 22);
             this.txtMaDichVu.TabIndex = 1;
@@ -86,9 +87,9 @@
             // 
             // txtTenDichVu
             // 
-            this.txtTenDichVu.Location = new System.Drawing.Point(142, 93);
+            this.txtTenDichVu.Location = new System.Drawing.Point(154, 93);
             this.txtTenDichVu.Name = "txtTenDichVu";
-            this.txtTenDichVu.Size = new System.Drawing.Size(100, 22);
+            this.txtTenDichVu.Size = new System.Drawing.Size(154, 22);
             this.txtTenDichVu.TabIndex = 6;
             // 
             // lblLoaiDichVu
@@ -103,7 +104,7 @@
             // 
             // txtLoaiDichVu
             // 
-            this.txtLoaiDichVu.Location = new System.Drawing.Point(749, 38);
+            this.txtLoaiDichVu.Location = new System.Drawing.Point(763, 36);
             this.txtLoaiDichVu.Name = "txtLoaiDichVu";
             this.txtLoaiDichVu.Size = new System.Drawing.Size(100, 22);
             this.txtLoaiDichVu.TabIndex = 8;
@@ -112,7 +113,7 @@
             // 
             this.lblDonGia.AutoSize = true;
             this.lblDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lblDonGia.Location = new System.Drawing.Point(277, 93);
+            this.lblDonGia.Location = new System.Drawing.Point(326, 95);
             this.lblDonGia.Name = "lblDonGia";
             this.lblDonGia.Size = new System.Drawing.Size(66, 20);
             this.lblDonGia.TabIndex = 11;
@@ -120,7 +121,7 @@
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(349, 93);
+            this.txtDonGia.Location = new System.Drawing.Point(406, 93);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(100, 22);
             this.txtDonGia.TabIndex = 10;
@@ -129,7 +130,7 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.lblSoLuong.Location = new System.Drawing.Point(494, 93);
+            this.lblSoLuong.Location = new System.Drawing.Point(550, 95);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(74, 20);
             this.lblSoLuong.TabIndex = 13;
@@ -137,7 +138,7 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(574, 93);
+            this.txtSoLuong.Location = new System.Drawing.Point(643, 93);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(100, 22);
             this.txtSoLuong.TabIndex = 12;
@@ -146,7 +147,7 @@
             // 
             this.btnThem.BackColor = System.Drawing.Color.Cyan;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(774, 89);
+            this.btnThem.Location = new System.Drawing.Point(788, 89);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 31);
             this.btnThem.TabIndex = 17;
@@ -180,11 +181,11 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(142, 38);
+            this.txtTimKiem.Location = new System.Drawing.Point(154, 38);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(201, 22);
             this.txtTimKiem.TabIndex = 20;
-            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 

@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Seriallbl = new System.Windows.Forms.Label();
+            this.lblSerial = new System.Windows.Forms.Label();
             this.lblTinhTrang = new System.Windows.Forms.Label();
             this.lblThoiGianDaDung = new System.Windows.Forms.Label();
             this.lblThoiGianConLai = new System.Windows.Forms.Label();
@@ -97,16 +97,16 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // Seriallbl
+            // lblSerial
             // 
-            this.Seriallbl.AutoSize = true;
-            this.Seriallbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Seriallbl.Location = new System.Drawing.Point(213, 63);
-            this.Seriallbl.Name = "Seriallbl";
-            this.Seriallbl.Size = new System.Drawing.Size(18, 20);
-            this.Seriallbl.TabIndex = 24;
-            this.Seriallbl.Text = "1";
-            this.Seriallbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSerial.AutoSize = true;
+            this.lblSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerial.Location = new System.Drawing.Point(213, 63);
+            this.lblSerial.Name = "lblSerial";
+            this.lblSerial.Size = new System.Drawing.Size(18, 20);
+            this.lblSerial.TabIndex = 24;
+            this.lblSerial.Text = "1";
+            this.lblSerial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTinhTrang
             // 
@@ -185,7 +185,7 @@
             this.Controls.Add(this.lblThoiGianConLai);
             this.Controls.Add(this.lblThoiGianDaDung);
             this.Controls.Add(this.lblTinhTrang);
-            this.Controls.Add(this.Seriallbl);
+            this.Controls.Add(this.lblSerial);
             this.Controls.Add(this.btnThemThoiGian);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblThoiGianDaDung;
         private System.Windows.Forms.Label lblThoiGianConLai;
-        public System.Windows.Forms.Label Seriallbl;
+        public System.Windows.Forms.Label lblSerial;
         private System.Windows.Forms.Label lblMaNguoiDung;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label lblTinhTrang;

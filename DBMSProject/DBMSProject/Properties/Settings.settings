@@ -7,7 +7,12 @@
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
+<<<<<<< HEAD
       <Value Profile="(Default)">Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True</Value>
+=======
+      <Value Profile="(Default)">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True</Value>
+
+>>>>>>> 2758256f5d590f36f90ad9018a8f585715f36244
     </Setting>
   </Settings>
 </SettingsFile>
