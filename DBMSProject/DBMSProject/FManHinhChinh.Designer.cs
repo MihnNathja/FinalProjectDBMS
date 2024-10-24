@@ -54,6 +54,8 @@
             this.DaThanhToanTab = new System.Windows.Forms.TabPage();
             this.dgvDaThanhToan = new System.Windows.Forms.DataGridView();
             this.QuanLyUuDaiTab = new System.Windows.Forms.TabPage();
+            this.dtpThoiGianKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dtpThoiGianBatDau = new System.Windows.Forms.DateTimePicker();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.lblTinhTrang = new System.Windows.Forms.Label();
             this.txtDieuKien = new System.Windows.Forms.TextBox();
@@ -75,8 +77,6 @@
             this.txtMaUuDai = new System.Windows.Forms.TextBox();
             this.dgvQuanLyUuDai = new System.Windows.Forms.DataGridView();
             this.ThoatTab = new System.Windows.Forms.TabPage();
-            this.dtpThoiGianBatDau = new System.Windows.Forms.DateTimePicker();
-            this.dtpThoiGianKetThuc = new System.Windows.Forms.DateTimePicker();
             this.SelectMenuscript.SuspendLayout();
             this.QuanLyThanhVienTab.SuspendLayout();
             this.ĐangKyThanhVienTab.SuspendLayout();
@@ -119,6 +119,7 @@
             this.QuanLyThanhVienTab.TabIndex = 0;
             this.QuanLyThanhVienTab.Text = "Quản lý thành viên";
             this.QuanLyThanhVienTab.UseVisualStyleBackColor = true;
+            this.QuanLyThanhVienTab.Enter += new System.EventHandler(this.QuanLyThanhVienTab_Enter);
             // 
             // UserFlp
             // 
@@ -391,6 +392,24 @@
             this.QuanLyUuDaiTab.Text = "Quản lý ưu đãi";
             this.QuanLyUuDaiTab.UseVisualStyleBackColor = true;
             // 
+            // dtpThoiGianKetThuc
+            // 
+            this.dtpThoiGianKetThuc.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtpThoiGianKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpThoiGianKetThuc.Location = new System.Drawing.Point(177, 143);
+            this.dtpThoiGianKetThuc.Name = "dtpThoiGianKetThuc";
+            this.dtpThoiGianKetThuc.Size = new System.Drawing.Size(163, 22);
+            this.dtpThoiGianKetThuc.TabIndex = 45;
+            // 
+            // dtpThoiGianBatDau
+            // 
+            this.dtpThoiGianBatDau.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtpThoiGianBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(177, 82);
+            this.dtpThoiGianBatDau.Name = "dtpThoiGianBatDau";
+            this.dtpThoiGianBatDau.Size = new System.Drawing.Size(163, 22);
+            this.dtpThoiGianBatDau.TabIndex = 44;
+            // 
             // txtTinhTrang
             // 
             this.txtTinhTrang.Location = new System.Drawing.Point(471, 82);
@@ -588,24 +607,6 @@
             this.ThoatTab.Text = "Quay lại trang chủ";
             this.ThoatTab.UseVisualStyleBackColor = true;
             this.ThoatTab.Enter += new System.EventHandler(this.ThoatTab_Enter);
-            // 
-            // dtpThoiGianBatDau
-            // 
-            this.dtpThoiGianBatDau.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.dtpThoiGianBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiGianBatDau.Location = new System.Drawing.Point(177, 82);
-            this.dtpThoiGianBatDau.Name = "dtpThoiGianBatDau";
-            this.dtpThoiGianBatDau.Size = new System.Drawing.Size(163, 22);
-            this.dtpThoiGianBatDau.TabIndex = 44;
-            // 
-            // dtpThoiGianKetThuc
-            // 
-            this.dtpThoiGianKetThuc.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.dtpThoiGianKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiGianKetThuc.Location = new System.Drawing.Point(177, 143);
-            this.dtpThoiGianKetThuc.Name = "dtpThoiGianKetThuc";
-            this.dtpThoiGianKetThuc.Size = new System.Drawing.Size(163, 22);
-            this.dtpThoiGianKetThuc.TabIndex = 45;
             // 
             // FManHinhChinh
             // 

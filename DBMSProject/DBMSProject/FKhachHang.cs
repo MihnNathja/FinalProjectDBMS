@@ -64,7 +64,7 @@ namespace DBMSProject
             int maKhachHang = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoan);
 
             classPhienDangNhap = classPhienDangNhapDAO.LapPhienDangNhap(maKhachHang);
-            string tenTaiKhoan = classPhienDangNhapDAO.getTenTaiKhoan(maKhachHang);
+            string tenTaiKhoan = classPhienDangNhapDAO.getTenTaiKhoan(maTaiKhoan);
             lblUserName.Text = tenTaiKhoan;
             TimeSpan thoiGianBatDau = classPhienDangNhap.ThoiGianBatDau;
             txtThoiGianBatDau.Text = thoiGianBatDau.ToString(@"hh\:mm\:ss");
