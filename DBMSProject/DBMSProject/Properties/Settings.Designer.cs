@@ -26,7 +26,8 @@ namespace DBMSProject.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOPOFCHIMSE\\MSSQLSERVER01;Initial Catalog=QuanLyDichVuQuanNet;Inte" +
+            "grated Security=True")]
         public string connStr {
             get {
                 return ((string)(this["connStr"]));
