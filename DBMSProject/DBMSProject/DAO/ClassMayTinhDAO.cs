@@ -18,6 +18,7 @@ namespace DBMSProject.DAO
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyMayTinhView", db.getConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();

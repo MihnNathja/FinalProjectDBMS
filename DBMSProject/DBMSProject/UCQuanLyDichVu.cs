@@ -54,7 +54,6 @@ namespace DBMSProject
                 dichvuDao.ThemDichVu(dichvu);
 
                 LoadDuLieu(dichvu.LoaiDichVu);
-                MessageBox.Show("Thêm dịch vụ thành công");
                 return;
             }
             MessageBox.Show("Điền đầy đủ thông tin dịch vụ cần thêm");
@@ -62,10 +61,25 @@ namespace DBMSProject
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
-            dichvuDao.XoaDichVu(Convert.ToInt32(txtMaDichVu.Text));
-            LoadDuLieu(txtLoaiDichVu.Text);
-            MessageBox.Show("Xóa dịch vụ thành công");
+            if (txtMaDichVu.Text != "")
+            {
+                ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
+                dichvuDao.XoaDichVu(Convert.ToInt32(txtMaDichVu.Text));
+                LoadDuLieu(txtLoaiDichVu.Text);
+                ClearTextBox();
+            }
+            else
+            {
+                MessageBox.Show("Điền mã dịch vụ cần xóa");
+            }
+        }
+        private void ClearTextBox()
+        {
+            txtMaDichVu.Text = "";
+            txtLoaiDichVu.Text = "";
+            txtDonGia.Text = "";
+            txtSoLuong.Text = "";
+            txtTenDichVu.Text = "";
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -77,7 +91,7 @@ namespace DBMSProject
                 dichvuDao.SuaDichVu(dichvu);
 
                 LoadDuLieu(dichvu.LoaiDichVu);
-                MessageBox.Show("Sửa dịch vụ thành công");
+                
                 return;
             }
             MessageBox.Show("Điền đầy đủ thông tin dịch vụ cần sửa");

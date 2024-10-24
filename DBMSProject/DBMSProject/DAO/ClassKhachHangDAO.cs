@@ -19,6 +19,7 @@ namespace DBMSProject.DAO
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyKhachHangView", db.getConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
@@ -56,6 +57,7 @@ namespace DBMSProject.DAO
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("sp_SearchKhachHangByTaiKhoan", db.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);
@@ -94,6 +96,7 @@ namespace DBMSProject.DAO
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("sp_AddKhachHang", db.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);

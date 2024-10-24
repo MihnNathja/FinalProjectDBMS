@@ -28,122 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnGuiYeuCau = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.flpnlDichVu = new System.Windows.Forms.FlowLayoutPanel();
+            this.DichVuDoAnView = new System.Windows.Forms.RadioButton();
+            this.DichVuThucUongView = new System.Windows.Forms.RadioButton();
+            this.DichVuTheCaoView = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label2
+            // lblTongTien
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(542, 517);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 25);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "000. VNĐ";
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.Location = new System.Drawing.Point(542, 507);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(54, 25);
+            this.lblTongTien.TabIndex = 23;
+            this.lblTongTien.Text = "VNĐ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(436, 517);
+            this.label1.Location = new System.Drawing.Point(419, 507);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Tổng tiền:";
             // 
-            // button6
+            // btnGuiYeuCau
             // 
-            this.button6.Location = new System.Drawing.Point(671, 511);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 42);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "Gửi yêu cầu";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGuiYeuCau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuiYeuCau.Location = new System.Drawing.Point(639, 500);
+            this.btnGuiYeuCau.Name = "btnGuiYeuCau";
+            this.btnGuiYeuCau.Size = new System.Drawing.Size(146, 42);
+            this.btnGuiYeuCau.TabIndex = 21;
+            this.btnGuiYeuCau.Text = "Gửi yêu cầu";
+            this.btnGuiYeuCau.UseVisualStyleBackColor = true;
+            this.btnGuiYeuCau.Click += new System.EventHandler(this.btnGuiYeuCau_Click);
             // 
-            // button5
+            // txtTimKiem
             // 
-            this.button5.Location = new System.Drawing.Point(40, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 32);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Tất cả";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(362, 72);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 32);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Thẻ cào";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(254, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 32);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Nước uống";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(146, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 32);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Đồ ăn";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(701, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 32);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(40, 20);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(628, 33);
-            this.textBox1.TabIndex = 12;
+            this.txtTimKiem.Location = new System.Drawing.Point(164, 29);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(621, 29);
+            this.txtTimKiem.TabIndex = 12;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // flpnlDichVu
             // 
+            this.flpnlDichVu.AutoScroll = true;
             this.flpnlDichVu.Location = new System.Drawing.Point(40, 120);
             this.flpnlDichVu.Name = "flpnlDichVu";
             this.flpnlDichVu.Size = new System.Drawing.Size(745, 374);
             this.flpnlDichVu.TabIndex = 24;
+            // 
+            // DichVuDoAnView
+            // 
+            this.DichVuDoAnView.AutoSize = true;
+            this.DichVuDoAnView.Checked = true;
+            this.DichVuDoAnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DichVuDoAnView.Location = new System.Drawing.Point(40, 74);
+            this.DichVuDoAnView.Name = "DichVuDoAnView";
+            this.DichVuDoAnView.Size = new System.Drawing.Size(79, 24);
+            this.DichVuDoAnView.TabIndex = 26;
+            this.DichVuDoAnView.TabStop = true;
+            this.DichVuDoAnView.Text = "Đồ ăn";
+            this.DichVuDoAnView.UseVisualStyleBackColor = true;
+            this.DichVuDoAnView.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // DichVuThucUongView
+            // 
+            this.DichVuThucUongView.AutoSize = true;
+            this.DichVuThucUongView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DichVuThucUongView.Location = new System.Drawing.Point(164, 74);
+            this.DichVuThucUongView.Name = "DichVuThucUongView";
+            this.DichVuThucUongView.Size = new System.Drawing.Size(117, 24);
+            this.DichVuThucUongView.TabIndex = 27;
+            this.DichVuThucUongView.Text = "Thức uống";
+            this.DichVuThucUongView.UseVisualStyleBackColor = true;
+            this.DichVuThucUongView.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // DichVuTheCaoView
+            // 
+            this.DichVuTheCaoView.AutoSize = true;
+            this.DichVuTheCaoView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DichVuTheCaoView.Location = new System.Drawing.Point(332, 74);
+            this.DichVuTheCaoView.Name = "DichVuTheCaoView";
+            this.DichVuTheCaoView.Size = new System.Drawing.Size(97, 24);
+            this.DichVuTheCaoView.TabIndex = 28;
+            this.DichVuTheCaoView.Text = "Thẻ cào";
+            this.DichVuTheCaoView.UseVisualStyleBackColor = true;
+            this.DichVuTheCaoView.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 25);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Tìm kiếm:";
             // 
             // FDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 565);
-            this.Controls.Add(this.flpnlDichVu);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.DichVuTheCaoView);
+            this.Controls.Add(this.DichVuThucUongView);
+            this.Controls.Add(this.DichVuDoAnView);
+            this.Controls.Add(this.flpnlDichVu);
+            this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnGuiYeuCau);
+            this.Controls.Add(this.txtTimKiem);
             this.Name = "FDichVu";
             this.Text = "FDichVu";
             this.Load += new System.EventHandler(this.FDichVu_Load);
@@ -154,15 +159,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnGuiYeuCau;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.FlowLayoutPanel flpnlDichVu;
+        private System.Windows.Forms.RadioButton DichVuDoAnView;
+        private System.Windows.Forms.RadioButton DichVuThucUongView;
+        private System.Windows.Forms.RadioButton DichVuTheCaoView;
+        private System.Windows.Forms.Label label2;
     }
 }

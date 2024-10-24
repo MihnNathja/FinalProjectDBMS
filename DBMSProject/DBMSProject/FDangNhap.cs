@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,19 +27,22 @@ namespace DBMSProject
         {
             
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(userNameTxb.Text, passwordTxb.Text);
-            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();           
+            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
+            
 
             maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
+            
             maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
 
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
 
-
+                ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO();
+                int maKhachHang = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
                 // Mặc định tạm thời máy này có id là
                 
                 ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
-                classPhienDangNhapDAO.ThemPhienDangNhap(maTaiKhoanKhachHang);
+                classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
                 FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang);
                 fKhachHang.ShowDialog();
             } 
