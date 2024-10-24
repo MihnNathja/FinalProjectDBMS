@@ -18,9 +18,16 @@ namespace DBMSProject
     {
         ClassChiTietHoaDonDAO chiTietHoaDonDAO = new ClassChiTietHoaDonDAO();
         ClassChiTietHoaDon chiTietHoaDon;
+        
+        List<ClassChiTietHoaDon> danhSachChiTietHoaDon;
         public FChiTietHoaDon()
         {
             InitializeComponent();
+        }
+        public FChiTietHoaDon(int maHoaDon)
+        {
+            InitializeComponent();
+            LoadChiTietHoaDon(maHoaDon);
         }
 
         public bool HideButton { get; set; } = false;
@@ -33,19 +40,16 @@ namespace DBMSProject
         }
         public void LoadChiTietHoaDon(int maHoaDon)
         {
-            List<ClassChiTietHoaDon> danhSachChiTietHoaDon = chiTietHoaDonDAO.XemChiTietHoaDon(maHoaDon);
-            lblMaHoaDon.Text = danhSachChiTietHoaDon[0].MaHoaDon.ToString();  
-            lblMaMayTinh.Text = danhSachChiTietHoaDon[0].MaMayTinh.ToString();  
-            lblNgayTao.Text = danhSachChiTietHoaDon[0].ThoiGianTao.ToString();  
-            lblTenTaiKhoan.Text = danhSachChiTietHoaDon[0].TaiKhoan;  
-            lblTriGia.Text = danhSachChiTietHoaDon[0].TriGia.ToString() + "VNĐ";
+            ClassHoaDon classHoaDon = chiTietHoaDonDAO.LayHoaDon(maHoaDon);
+            
+            lblMaHoaDon.Text = classHoaDon.MaHoaDon.ToString();
+            lblMaMayTinh.Text = classHoaDon.MaMayTinh.ToString();
+            lblNgayTao.Text = classHoaDon.ThoiGianTao.ToString();
+            lblTenTaiKhoan.Text = classHoaDon.MaKhachHang.ToString();
+            lblTriGia.Text = classHoaDon.TriGia.ToString() + "VNĐ";
 
-            dgvDichVuDaGoi.DataSource = danhSachChiTietHoaDon.Select(x => new
-            {
-                TenDichVu = x.TenDichVu,
-                SoLuong = x.SoLuong,
-                TongGiaTien = x.TongGiaTien
-            }).ToList();
+
+            dgvDichVuDaGoi.DataSource = chiTietHoaDonDAO.LayChiTietHoaDon(maHoaDon);
 
 
         }
