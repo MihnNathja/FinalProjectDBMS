@@ -14,8 +14,7 @@ namespace DBMSProject.DAO
 {
     internal class DBConnection
     {
-        public SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public SqlConnection getConnection
         {
             get
@@ -37,6 +36,5 @@ namespace DBMSProject.DAO
                 conn.Close();
             }
         }
-
     }
 }

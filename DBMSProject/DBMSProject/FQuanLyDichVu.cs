@@ -21,10 +21,9 @@ namespace DBMSProject
 
         private void ServiceTab_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClassDichVuDAO cdvDAO = new ClassDichVuDAO();
-           /* ucQuanLyDoAn.LoadDuLieu(cdvDAO.TruyXuatDanhSachDichVu(tabDichVu.SelectedTab.Text));
-            ucQuanLyThucUong.LoadDuLieu(cdvDAO.TruyXuatDanhSachDichVu(tabDichVu.SelectedTab.Text));
-            ucQuanLyTheCao.LoadDuLieu(cdvDAO.TruyXuatDanhSachDichVu(tabDichVu.SelectedTab.Text));*/
+            ucQuanLyDoAn.LoadDuLieu(tabDichVu.SelectedTab.Text);
+            ucQuanLyThucUong.LoadDuLieu(tabDichVu.SelectedTab.Text);
+            ucQuanLyTheCao.LoadDuLieu(tabDichVu.SelectedTab.Text);
         }
 
         private void FQuanLyDichVu_Load(object sender, EventArgs e)

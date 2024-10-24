@@ -29,62 +29,41 @@
         private void InitializeComponent()
         {
             this.tabDichVu = new System.Windows.Forms.TabControl();
-            this.DrinkingTab = new System.Windows.Forms.TabPage();
-            this.CardTab = new System.Windows.Forms.TabPage();
-            this.FoodTab = new System.Windows.Forms.TabPage();
+            this.DichVuDoAnView = new System.Windows.Forms.TabPage();
             this.ucQuanLyDoAn = new DBMSProject.UCQuanLyDichVu();
+            this.DichVuThucUongView = new System.Windows.Forms.TabPage();
             this.ucQuanLyThucUong = new DBMSProject.UCQuanLyDichVu();
+            this.DichVuTheCaoView = new System.Windows.Forms.TabPage();
             this.ucQuanLyTheCao = new DBMSProject.UCQuanLyDichVu();
             this.tabDichVu.SuspendLayout();
-            this.DrinkingTab.SuspendLayout();
-            this.CardTab.SuspendLayout();
-            this.FoodTab.SuspendLayout();
+            this.DichVuDoAnView.SuspendLayout();
+            this.DichVuThucUongView.SuspendLayout();
+            this.DichVuTheCaoView.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabDichVu
             // 
-            this.tabDichVu.Controls.Add(this.FoodTab);
-            this.tabDichVu.Controls.Add(this.DrinkingTab);
-            this.tabDichVu.Controls.Add(this.CardTab);
+            this.tabDichVu.Controls.Add(this.DichVuDoAnView);
+            this.tabDichVu.Controls.Add(this.DichVuThucUongView);
+            this.tabDichVu.Controls.Add(this.DichVuTheCaoView);
             this.tabDichVu.Location = new System.Drawing.Point(0, 0);
             this.tabDichVu.Name = "tabDichVu";
             this.tabDichVu.SelectedIndex = 0;
-            this.tabDichVu.Size = new System.Drawing.Size(1086, 618);
+            this.tabDichVu.Size = new System.Drawing.Size(1039, 618);
             this.tabDichVu.TabIndex = 0;
             this.tabDichVu.SelectedIndexChanged += new System.EventHandler(this.ServiceTab_SelectedIndexChanged);
             // 
-            // DrinkingTab
+            // DichVuDoAnView
             // 
-            this.DrinkingTab.Controls.Add(this.ucQuanLyThucUong);
-            this.DrinkingTab.Location = new System.Drawing.Point(4, 25);
-            this.DrinkingTab.Name = "DrinkingTab";
-            this.DrinkingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DrinkingTab.Size = new System.Drawing.Size(1078, 589);
-            this.DrinkingTab.TabIndex = 1;
-            this.DrinkingTab.Text = "Thức uống";
-            this.DrinkingTab.UseVisualStyleBackColor = true;
-            // 
-            // CardTab
-            // 
-            this.CardTab.Controls.Add(this.ucQuanLyTheCao);
-            this.CardTab.Location = new System.Drawing.Point(4, 25);
-            this.CardTab.Name = "CardTab";
-            this.CardTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CardTab.Size = new System.Drawing.Size(1078, 589);
-            this.CardTab.TabIndex = 2;
-            this.CardTab.Text = "Thẻ cào";
-            this.CardTab.UseVisualStyleBackColor = true;
-            // 
-            // FoodTab
-            // 
-            this.FoodTab.Controls.Add(this.ucQuanLyDoAn);
-            this.FoodTab.Location = new System.Drawing.Point(4, 25);
-            this.FoodTab.Name = "FoodTab";
-            this.FoodTab.Padding = new System.Windows.Forms.Padding(3);
-            this.FoodTab.Size = new System.Drawing.Size(1078, 589);
-            this.FoodTab.TabIndex = 0;
-            this.FoodTab.Text = "Đồ ăn";
-            this.FoodTab.UseVisualStyleBackColor = true;
+            this.DichVuDoAnView.Controls.Add(this.ucQuanLyDoAn);
+            this.DichVuDoAnView.Location = new System.Drawing.Point(4, 25);
+            this.DichVuDoAnView.Name = "DichVuDoAnView";
+            this.DichVuDoAnView.Padding = new System.Windows.Forms.Padding(3);
+            this.DichVuDoAnView.Size = new System.Drawing.Size(1031, 589);
+            this.DichVuDoAnView.TabIndex = 0;
+            this.DichVuDoAnView.Tag = "DichVuDoAnView";
+            this.DichVuDoAnView.Text = "Đồ ăn";
+            this.DichVuDoAnView.UseVisualStyleBackColor = true;
             // 
             // ucQuanLyDoAn
             // 
@@ -93,12 +72,34 @@
             this.ucQuanLyDoAn.Size = new System.Drawing.Size(1028, 576);
             this.ucQuanLyDoAn.TabIndex = 0;
             // 
+            // DichVuThucUongView
+            // 
+            this.DichVuThucUongView.Controls.Add(this.ucQuanLyThucUong);
+            this.DichVuThucUongView.Location = new System.Drawing.Point(4, 25);
+            this.DichVuThucUongView.Name = "DichVuThucUongView";
+            this.DichVuThucUongView.Padding = new System.Windows.Forms.Padding(3);
+            this.DichVuThucUongView.Size = new System.Drawing.Size(1078, 589);
+            this.DichVuThucUongView.TabIndex = 1;
+            this.DichVuThucUongView.Text = "Thức uống";
+            this.DichVuThucUongView.UseVisualStyleBackColor = true;
+            // 
             // ucQuanLyThucUong
             // 
             this.ucQuanLyThucUong.Location = new System.Drawing.Point(0, 0);
             this.ucQuanLyThucUong.Name = "ucQuanLyThucUong";
             this.ucQuanLyThucUong.Size = new System.Drawing.Size(1028, 576);
             this.ucQuanLyThucUong.TabIndex = 0;
+            // 
+            // DichVuTheCaoView
+            // 
+            this.DichVuTheCaoView.Controls.Add(this.ucQuanLyTheCao);
+            this.DichVuTheCaoView.Location = new System.Drawing.Point(4, 25);
+            this.DichVuTheCaoView.Name = "DichVuTheCaoView";
+            this.DichVuTheCaoView.Padding = new System.Windows.Forms.Padding(3);
+            this.DichVuTheCaoView.Size = new System.Drawing.Size(1078, 589);
+            this.DichVuTheCaoView.TabIndex = 2;
+            this.DichVuTheCaoView.Text = "Thẻ cào";
+            this.DichVuTheCaoView.UseVisualStyleBackColor = true;
             // 
             // ucQuanLyTheCao
             // 
@@ -118,9 +119,9 @@
             this.Text = "Quản lý danh mục";
             this.Load += new System.EventHandler(this.FQuanLyDichVu_Load);
             this.tabDichVu.ResumeLayout(false);
-            this.DrinkingTab.ResumeLayout(false);
-            this.CardTab.ResumeLayout(false);
-            this.FoodTab.ResumeLayout(false);
+            this.DichVuDoAnView.ResumeLayout(false);
+            this.DichVuThucUongView.ResumeLayout(false);
+            this.DichVuTheCaoView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -128,11 +129,11 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabDichVu;
-        private System.Windows.Forms.TabPage DrinkingTab;
-        private System.Windows.Forms.TabPage CardTab;
+        private System.Windows.Forms.TabPage DichVuThucUongView;
+        private System.Windows.Forms.TabPage DichVuTheCaoView;
         private UCQuanLyDichVu ucQuanLyThucUong;
         private UCQuanLyDichVu ucQuanLyTheCao;
-        private System.Windows.Forms.TabPage FoodTab;
+        private System.Windows.Forms.TabPage DichVuDoAnView;
         private UCQuanLyDichVu ucQuanLyDoAn;
     }
 }
