@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace DBMSProject.DAO
     public class ClassKhachHangDAO
     {
         DBConnection db = new DBConnection();
-
+        int maKH = FDangNhap.maTaiKhoanKhachHang;
         public List<ClassKhachHang> loadKhachHang()
         {
             try

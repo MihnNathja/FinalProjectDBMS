@@ -14,6 +14,8 @@ namespace DBMSProject
 {
     public partial class FDangNhap : Form
     {
+        public static int maTaiKhoanKhachHang;
+        public static int maTaiKhoanNguoiQuanLy;
         public FDangNhap()
         {
             InitializeComponent();
@@ -26,8 +28,8 @@ namespace DBMSProject
             ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
 
 
-            int maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
-            int maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+            maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
+            maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
                 FKhachHang kh = new FKhachHang(maTaiKhoanKhachHang);
@@ -62,6 +64,18 @@ namespace DBMSProject
         {
             FKhachHang kh = new FKhachHang();
             kh.ShowDialog();
+        }
+
+        private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChBHienThiMatKhau.Checked)
+            {
+                passwordTxb.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordTxb.UseSystemPasswordChar = true;
+            }
         }
     }
 }
