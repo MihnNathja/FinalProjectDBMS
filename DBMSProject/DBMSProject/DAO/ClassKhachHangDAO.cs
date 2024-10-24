@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,12 @@ namespace DBMSProject.DAO
     public class ClassKhachHangDAO
     {
         DBConnection db = new DBConnection();
-
+        int maKH = FDangNhap.maTaiKhoanKhachHang;
         public List<ClassKhachHang> loadKhachHang()
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyKhachHangView", db.getConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
@@ -55,6 +57,7 @@ namespace DBMSProject.DAO
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("sp_SearchKhachHangByTaiKhoan", db.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);
@@ -93,6 +96,7 @@ namespace DBMSProject.DAO
         {
             try
             {
+                db.openConnection();
                 SqlCommand cmd = new SqlCommand("sp_AddKhachHang", db.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);

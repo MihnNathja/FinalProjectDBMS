@@ -28,7 +28,6 @@ namespace DBMSProject
             ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
             List<ClassKhachHang> khachHangs = classKhachHangDAO.loadKhachHang();
             addFlowLayoutPanel(khachHangs);
-
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -128,7 +127,7 @@ namespace DBMSProject
                 uuDaiDAO.ThemUuDai(ud);
 
                 LoadUuDai();
-                MessageBox.Show("Thêm ưu đãi thành công");
+                
                 return;
             }
             MessageBox.Show("Điền đầy đủ thông tin ưu đãi cần thêm");
@@ -154,7 +153,7 @@ namespace DBMSProject
                 uuDaiDAO.SuaUuDai(ud);
 
                 LoadUuDai();
-                MessageBox.Show("Sửa ưu đãi thành công");
+                
                 return;
             }
             MessageBox.Show("Điền đầy đủ thông tin ưu đãi cần sửa");
@@ -169,10 +168,19 @@ namespace DBMSProject
         {
             uuDaiDAO.XoaUuDai(Convert.ToInt32(txtMaUuDai.Text));
             LoadUuDai();
-            MessageBox.Show("Xóa dịch vụ thành công");
+            
+            ClearTextBox();
         }
 
-
+        private void ClearTextBox()
+        {
+            txtMaUuDai.Text = "";
+            txtTenUuDai.Text = "";
+            txtGiaTri.Text = "";
+            txtSoLuong.Text = "";
+            txtDieuKien.Text = "";
+            txtTinhTrang.Text = "";
+        }
         private void dgvQuanLyUuDai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

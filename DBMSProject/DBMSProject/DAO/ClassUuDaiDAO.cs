@@ -59,10 +59,18 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@soLuong", UuDai.SoLuong);
                 cmd.Parameters.AddWithValue("@tinhTrang", UuDai.TinhTrang);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm ưu đãi thành công");
             }
             catch (Exception exc)
             {
-                MessageBox.Show("that bai (ThemUuDai)" + exc);
+                if (exc.Message.Contains("Ưu đãi đã tồn tại"))
+                {
+                    MessageBox.Show("Ưu đãi đã tồn tại");
+                }
+                else
+                {
+                    MessageBox.Show("that bai (ThemUuDai)" + exc);
+                }
             }
             finally
             {
@@ -78,6 +86,7 @@ namespace DBMSProject.DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@maUuDai", maUuDai));
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa dịch vụ thành công");
             }
             catch (Exception exc)
             {
@@ -104,6 +113,7 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@soLuong", UuDai.SoLuong);
                 cmd.Parameters.AddWithValue("@tinhTrang", UuDai.TinhTrang);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa ưu đãi thành công");
             }
             catch (Exception exc)
             {

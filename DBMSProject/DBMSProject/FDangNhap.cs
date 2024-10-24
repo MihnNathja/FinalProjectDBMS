@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +16,8 @@ namespace DBMSProject
 {
     public partial class FDangNhap : Form
     {
+        public static int maTaiKhoanKhachHang;
+        public static int maTaiKhoanNguoiQuanLy;
         public FDangNhap()
         {
             InitializeComponent();
@@ -26,17 +30,19 @@ namespace DBMSProject
             ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
             
 
-           
-            int maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
-            int maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+            maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
+            
+            maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
 
-
+                ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO();
+                int maKhachHang = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
                 // Mặc định tạm thời máy này có id là
                 
                 ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
-                classPhienDangNhapDAO.ThemPhienDangNhap(maTaiKhoanKhachHang);
+                classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
                 FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang);
                 fKhachHang.ShowDialog();
             } 
@@ -57,6 +63,18 @@ namespace DBMSProject
         {
             FKhachHang kh = new FKhachHang();
             kh.ShowDialog();
+        }
+
+        private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChBHienThiMatKhau.Checked)
+            {
+                passwordTxb.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwordTxb.UseSystemPasswordChar = true;
+            }
         }
     }
 }

@@ -7,9 +7,7 @@
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-
       <Value Profile="(Default)">Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True</Value>
-
     </Setting>
   </Settings>
 </SettingsFile>

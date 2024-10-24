@@ -14,7 +14,10 @@ namespace DBMSProject
 {
     public partial class UCMayTinh : UserControl
     {
+        ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
         FNapTien timeExtendForm = new FNapTien();
+        public static int maKHofUCMT;
+        public static string typeAdd;
         private Timer timer;
         private TimeSpan thoiGianConLai;
         private TimeSpan thoiGianDaDung;
@@ -31,6 +34,11 @@ namespace DBMSProject
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
+            int maKH = classTaiKhoanDAO.ChuyenDoiMaKhachHangSangMaTaiKhoan(Convert.ToInt32(lblMaNguoiDung.Text));
+            String taiKhoan = classTaiKhoanDAO.GetTenTaiKhoan(maKH);
+            timeExtendForm.loadTaiKhoangKH(taiKhoan);
+            maKHofUCMT = Convert.ToInt32(lblMaNguoiDung.Text);
+            typeAdd = "mayTinh";
             timeExtendForm.ShowDialog();
         }
         bool checkBaoTri = false;
