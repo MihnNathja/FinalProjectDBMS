@@ -45,6 +45,10 @@ namespace DBMSProject.DAO
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
                 return null;
             }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
         }
 
     }

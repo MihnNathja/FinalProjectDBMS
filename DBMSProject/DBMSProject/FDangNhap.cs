@@ -24,6 +24,8 @@ namespace DBMSProject
             
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(userNameTxb.Text, passwordTxb.Text);
             ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
+
+
             int maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
             int maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
@@ -34,6 +36,7 @@ namespace DBMSProject
                 ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
                 ClassKhachHang classKhachHang = classKhachHangDAO.getClassKhachHang(maTaiKhoanKhachHang);
                 ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
+                classPhienDangNhapDAO.ThemPhienDangNhap(maTaiKhoanKhachHang);
                 
 
                 kh.ShowDialog();
