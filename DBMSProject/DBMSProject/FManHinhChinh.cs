@@ -228,5 +228,10 @@ namespace DBMSProject
         {
             this.Close();
         }
+
+        private void QuanLyThanhVienTab_Enter(object sender, EventArgs e)
+        {
+            addUser();
+        }
     }
 }
