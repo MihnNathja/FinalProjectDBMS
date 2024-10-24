@@ -1,6 +1,7 @@
 ﻿using DBMSProject.Object;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -13,40 +14,37 @@ namespace DBMSProject.DAO
     internal class ClassHoaDonDAO
     {
         DBConnection dBConnection = new DBConnection();
-        public List<ClassHoaDon> LoadHoaDonChuaThanhToan()
+        public DataTable LoadHoaDonChuaThanhToan()
         {
             string sqlStr = string.Format("SELECT * FROM DichVuChuaThanhToanView");
             return TruyXuatHoaDon(sqlStr);
         }
-        public List<ClassHoaDon> LoadHoaDonDaThanhToan()
+        public DataTable LoadHoaDonDaThanhToan()
         {
             string sqlStr = string.Format("SELECT * FROM DichVuDaThanhToanView");
             return TruyXuatHoaDon(sqlStr);
         }
-        public List<ClassHoaDon> TruyXuatHoaDon(string sqlStr)
+        public DataTable TruyXuatHoaDon(string sqlStr)
         {
             try
             {
                 dBConnection.openConnection();
                 SqlCommand cmd = new SqlCommand(sqlStr, dBConnection.getConnection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                List<ClassHoaDon> listHoaDon = new List<ClassHoaDon>();
-                while (reader.Read())
-                {
-                    ClassHoaDon hoaDon = new ClassHoaDon(Convert.ToInt32(reader["maHoaDon"]),
-                        Convert.ToDateTime(reader["thoiGianTao"]), Convert.ToString(reader["trangThai"]),
-                        Convert.ToString(reader["tenTaiKhoan"]), Convert.ToDecimal(reader["triGia"]));
-                    listHoaDon.Add(hoaDon);
-                }
-                reader.Close();
-                return listHoaDon;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                return dataTable;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("that bai truy xuất hoá đơn" + ex.Message);
+                MessageBox.Show("Thất bại khi truy xuất hóa đơn: " + ex.Message);
                 return null;
             }
-            finally { dBConnection.closeConnection(); }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
         }
     }
     

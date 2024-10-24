@@ -10,25 +10,35 @@ namespace DBMSProject.Object
     {
         int maHoaDon;
         DateTime thoiGianTao;
+        int maKhachHang;
+        int maMayTinh;
         string trangThai;
-        string tenTaiKhoan;
         decimal triGia;
+        int? maUuDai;
 
       
-        public ClassHoaDon(int maHoaDon, DateTime thoiGianTao, string trangThai, string tenTaiKhoan, decimal triGia)
+        public ClassHoaDon()
         {
-            MaHoaDon = maHoaDon;
-            ThoiGianTao = thoiGianTao;
-            TrangThai = trangThai;
-            TenTaiKhoan = tenTaiKhoan;
-            TriGia = triGia;
+
+        }
+        public ClassHoaDon(int maHoaDon,  int maKhachHang,  int maMayTinh, DateTime thoiGianTao, string trangThai, decimal triGia, int? maUuDai)
+        {
+            this.maHoaDon = maHoaDon;
+            this.thoiGianTao = thoiGianTao;
+            this.maKhachHang = maKhachHang;
+            this.maMayTinh = maMayTinh;
+            this.trangThai = trangThai;
+            this.triGia = triGia;
+            this.maUuDai = maUuDai;
             
         }
 
-        public int MaHoaDon { get; set; }
-        public DateTime ThoiGianTao { get; set; }
-        public string TrangThai { get; set; }
-        public decimal TriGia { get; set; }
-        public string TenTaiKhoan { get ; set; }
+        public int MaHoaDon { get => maHoaDon; set => maHoaDon = value; }
+        public DateTime ThoiGianTao { get => thoiGianTao; set => thoiGianTao = value; }
+        public int MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
+        public int MaMayTinh { get => maMayTinh; set => maMayTinh = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
+        public decimal TriGia { get => triGia; set => triGia = value; }
+        public int? MaUuDai { get => maUuDai; set => maUuDai = value; }
     }
 }
