@@ -69,8 +69,9 @@ namespace DBMSProject
         {
             if (e.RowIndex >= 0)
             {
-                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon();
-                fChiTietHoaDon.HideButton = true;
+                int maHoaDon = (int)dgvChuaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
+                MessageBox.Show(maHoaDon.ToString());
+                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon);
                 fChiTietHoaDon.ShowDialog();
             }
         }
@@ -80,8 +81,7 @@ namespace DBMSProject
             {
                 int maHoaDon = (int)dgvDaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
                 MessageBox.Show(maHoaDon.ToString());
-                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon();
-                fChiTietHoaDon.LoadChiTietHoaDon(maHoaDon);
+                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon);
                 fChiTietHoaDon.ShowDialog();
             }
         }
@@ -90,6 +90,7 @@ namespace DBMSProject
         {
             SelectMenuscript.SelectedIndex = 0;
             dgvDaThanhToan.CellClick += dgvDaThanhToan_CellClick;
+            dgvChuaThanhToan.CellClick += dgvChuaThanhToan_CellClick;
             LoadUuDai();
         }
 
