@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DBMSProject.DAO
 {
-    internal class DBConnection
+    public class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public SqlConnection getConnection

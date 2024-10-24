@@ -5,15 +5,10 @@
     <Setting Name="connStr" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-<<<<<<< HEAD
   &lt;ConnectionString&gt;Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True</Value>
-=======
-  &lt;ConnectionString&gt;Data Source=DESKTOP-LCVENON\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-LCVENON\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True</Value>
->>>>>>> 8f12e78a07140190429ca13e3f9d0c8af3079d33
+
     </Setting>
   </Settings>
 </SettingsFile>

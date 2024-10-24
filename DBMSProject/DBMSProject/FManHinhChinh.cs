@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ using System.Windows.Forms;
 namespace DBMSProject
 {
     public partial class FManHinhChinh : Form
-    {   
+    {
+        DBConnection db = new DBConnection();
         ClassHoaDonDAO hoaDonDAO = new ClassHoaDonDAO();
         public FManHinhChinh()
         {
@@ -21,35 +23,40 @@ namespace DBMSProject
             
 
         }
-        
-        public void addUser() 
+        public void addUser()
         {
-            for (int i = 0; i < 9; i++)
+            ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
+            List<ClassKhachHang> khachHangs = classKhachHangDAO.loadKhachHang();
+            addFlowLayoutPanel(khachHangs);
+
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchValue = txbSearch.Text;
+            ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
+            List<ClassKhachHang> khachHangs = classKhachHangDAO.searchKhachHang(searchValue);
+            addFlowLayoutPanel(khachHangs);
+        }
+        public void addFlowLayoutPanel(List<ClassKhachHang> khachHangs)
+        {
+            UserFlp.Controls.Clear();
+            foreach (var item in khachHangs)
             {
-                UCKhachHang ucInfoUser = new UCKhachHang();
-                ucInfoUser.MaKHlbl.Text = (i+1).ToString();
-                UserFlp.Controls.Add(ucInfoUser);
+                UCKhachHang uCKhachHang = new UCKhachHang();
+                uCKhachHang.UCKhachHangLoad(uCKhachHang, item);
+                UserFlp.Controls.Add(uCKhachHang);
             }
         }
         public void addComputer()
         {
-            for (int i = 0; i < 9; i++)
+            ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO();
+            List<ClassMayTinh> mayTinhs = classMayTinhDAO.loadMayTinh();
+            computerFlp.Controls.Clear();
+            foreach (var item in mayTinhs)
             {
-                UCMayTinh ucInfoComputer = new UCMayTinh();
-                ucInfoComputer.Seriallbl.Text = (i + 1).ToString();
-                if (i % 2 == 0)
-                {
-                    ucInfoComputer.lblTinhTrang.Text = "Trống";
-                }
-                if(ucInfoComputer.lblTinhTrang.Text == "Trống")
-                {
-                    ucInfoComputer.btnThemThoiGian.Visible = false;
-                }
-                if (ucInfoComputer.lblTinhTrang.Text == "Đang sử dụng")
-                {
-                    ucInfoComputer.btnBaoTri.Visible = false;
-                }
-                computerFlp.Controls.Add(ucInfoComputer);
+                UCMayTinh ucMayTinh = new UCMayTinh();
+                ucMayTinh.UCMayTinhLoad(ucMayTinh, item);
+                computerFlp.Controls.Add(ucMayTinh);
             }
         }
         public void addBill()
@@ -97,14 +104,14 @@ namespace DBMSProject
             if (ChBHienThiMatKhau.Checked)
             {
                 // Hiển thị mật khẩu
-                passwordtxb.UseSystemPasswordChar = false;
-                re_passwordtxb.UseSystemPasswordChar = false;
+                txbPassword.UseSystemPasswordChar = false;
+                txbRe_password.UseSystemPasswordChar = false;
             }
             else
             {
                 // Ẩn mật khẩu
-                passwordtxb.UseSystemPasswordChar = true;
-                re_passwordtxb.UseSystemPasswordChar = true;
+                txbPassword.UseSystemPasswordChar = true;
+                txbRe_password.UseSystemPasswordChar = true; 
             }
         }
         ClassUuDaiDAO uuDaiDAO = new ClassUuDaiDAO();
@@ -185,6 +192,33 @@ namespace DBMSProject
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             dgvQuanLyUuDai.DataSource = uuDaiDAO.TimKiemUuDai(txtTimKiem.Text.Trim());
+        }
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            string username = txbUsername.Text;
+            string password = txbPassword.Text;
+            string rePassword = txbRe_password.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(rePassword))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+            }
+            else if (password != rePassword)
+            {
+                MessageBox.Show("Mật khẩu không khớp. Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                ClassKhachHangDAO khachHangDAO = new ClassKhachHangDAO();
+                string result = khachHangDAO.AddKhachHang(username, password);
+                MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

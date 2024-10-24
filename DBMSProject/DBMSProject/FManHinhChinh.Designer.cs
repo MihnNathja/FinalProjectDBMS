@@ -31,16 +31,16 @@
             this.SelectMenuscript = new System.Windows.Forms.TabControl();
             this.QuanLyThanhVienTab = new System.Windows.Forms.TabPage();
             this.UserFlp = new System.Windows.Forms.FlowLayoutPanel();
-            this.SearchBtn = new System.Windows.Forms.Button();
-            this.SearchTxb = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txbSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ĐangKyThanhVienTab = new System.Windows.Forms.TabPage();
             this.ChBHienThiMatKhau = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.re_passwordtxb = new System.Windows.Forms.TextBox();
-            this.passwordtxb = new System.Windows.Forms.TextBox();
-            this.userNametxb = new System.Windows.Forms.TextBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnDangKy = new System.Windows.Forms.Button();
+            this.txbRe_password = new System.Windows.Forms.TextBox();
+            this.txbPassword = new System.Windows.Forms.TextBox();
+            this.txbUsername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -109,8 +109,8 @@
             // QuanLyThanhVienTab
             // 
             this.QuanLyThanhVienTab.Controls.Add(this.UserFlp);
-            this.QuanLyThanhVienTab.Controls.Add(this.SearchBtn);
-            this.QuanLyThanhVienTab.Controls.Add(this.SearchTxb);
+            this.QuanLyThanhVienTab.Controls.Add(this.btnSearch);
+            this.QuanLyThanhVienTab.Controls.Add(this.txbSearch);
             this.QuanLyThanhVienTab.Controls.Add(this.label1);
             this.QuanLyThanhVienTab.Location = new System.Drawing.Point(4, 25);
             this.QuanLyThanhVienTab.Name = "QuanLyThanhVienTab";
@@ -129,21 +129,22 @@
             this.UserFlp.Size = new System.Drawing.Size(1055, 417);
             this.UserFlp.TabIndex = 3;
             // 
-            // SearchBtn
+            // btnSearch
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(346, 35);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
-            this.SearchBtn.TabIndex = 2;
-            this.SearchBtn.Text = "Tìm kiếm";
-            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(346, 35);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // SearchTxb
+            // txbSearch
             // 
-            this.SearchTxb.Location = new System.Drawing.Point(12, 35);
-            this.SearchTxb.Name = "SearchTxb";
-            this.SearchTxb.Size = new System.Drawing.Size(328, 22);
-            this.SearchTxb.TabIndex = 1;
+            this.txbSearch.Location = new System.Drawing.Point(12, 35);
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(328, 22);
+            this.txbSearch.TabIndex = 1;
             // 
             // label1
             // 
@@ -158,11 +159,11 @@
             // ĐangKyThanhVienTab
             // 
             this.ĐangKyThanhVienTab.Controls.Add(this.ChBHienThiMatKhau);
-            this.ĐangKyThanhVienTab.Controls.Add(this.button2);
-            this.ĐangKyThanhVienTab.Controls.Add(this.button1);
-            this.ĐangKyThanhVienTab.Controls.Add(this.re_passwordtxb);
-            this.ĐangKyThanhVienTab.Controls.Add(this.passwordtxb);
-            this.ĐangKyThanhVienTab.Controls.Add(this.userNametxb);
+            this.ĐangKyThanhVienTab.Controls.Add(this.btnThoat);
+            this.ĐangKyThanhVienTab.Controls.Add(this.btnDangKy);
+            this.ĐangKyThanhVienTab.Controls.Add(this.txbRe_password);
+            this.ĐangKyThanhVienTab.Controls.Add(this.txbPassword);
+            this.ĐangKyThanhVienTab.Controls.Add(this.txbUsername);
             this.ĐangKyThanhVienTab.Controls.Add(this.label5);
             this.ĐangKyThanhVienTab.Controls.Add(this.label4);
             this.ĐangKyThanhVienTab.Controls.Add(this.label3);
@@ -186,52 +187,54 @@
             this.ChBHienThiMatKhau.UseVisualStyleBackColor = true;
             this.ChBHienThiMatKhau.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhau_CheckedChanged);
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(616, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 31);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(616, 310);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(108, 31);
+            this.btnThoat.TabIndex = 10;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // button1
+            // btnDangKy
             // 
-            this.button1.BackColor = System.Drawing.Color.Cyan;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(469, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 31);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Đăng ký";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDangKy.BackColor = System.Drawing.Color.Cyan;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.Location = new System.Drawing.Point(469, 310);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(108, 31);
+            this.btnDangKy.TabIndex = 9;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
-            // re_passwordtxb
+            // txbRe_password
             // 
-            this.re_passwordtxb.Location = new System.Drawing.Point(441, 220);
-            this.re_passwordtxb.Name = "re_passwordtxb";
-            this.re_passwordtxb.Size = new System.Drawing.Size(331, 22);
-            this.re_passwordtxb.TabIndex = 6;
-            this.re_passwordtxb.UseSystemPasswordChar = true;
+            this.txbRe_password.Location = new System.Drawing.Point(441, 220);
+            this.txbRe_password.Name = "txbRe_password";
+            this.txbRe_password.Size = new System.Drawing.Size(331, 22);
+            this.txbRe_password.TabIndex = 6;
+            this.txbRe_password.UseSystemPasswordChar = true;
             // 
-            // passwordtxb
+            // txbPassword
             // 
-            this.passwordtxb.Location = new System.Drawing.Point(441, 157);
-            this.passwordtxb.Name = "passwordtxb";
-            this.passwordtxb.Size = new System.Drawing.Size(331, 22);
-            this.passwordtxb.TabIndex = 5;
-            this.passwordtxb.UseSystemPasswordChar = true;
+            this.txbPassword.Location = new System.Drawing.Point(441, 157);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.Size = new System.Drawing.Size(331, 22);
+            this.txbPassword.TabIndex = 5;
+            this.txbPassword.UseSystemPasswordChar = true;
             // 
-            // userNametxb
+            // txbUsername
             // 
-            this.userNametxb.Location = new System.Drawing.Point(441, 99);
-            this.userNametxb.Name = "userNametxb";
-            this.userNametxb.Size = new System.Drawing.Size(331, 22);
-            this.userNametxb.TabIndex = 4;
+            this.txbUsername.Location = new System.Drawing.Point(441, 99);
+            this.txbUsername.Name = "txbUsername";
+            this.txbUsername.Size = new System.Drawing.Size(331, 22);
+            this.txbUsername.TabIndex = 4;
             // 
             // label5
             // 
@@ -640,20 +643,20 @@
         private System.Windows.Forms.TabPage ĐangKyThanhVienTab;
         private System.Windows.Forms.TabPage QuanLyMayTab;
         private System.Windows.Forms.TabPage QuanLyGoiDichVuTab;
-        private System.Windows.Forms.Button SearchBtn;
-        private System.Windows.Forms.TextBox SearchTxb;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel UserFlp;
         private System.Windows.Forms.TabPage ThoatTab;
-        private System.Windows.Forms.TextBox userNametxb;
+        private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox re_passwordtxb;
-        private System.Windows.Forms.TextBox passwordtxb;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txbRe_password;
+        private System.Windows.Forms.TextBox txbPassword;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.FlowLayoutPanel computerFlp;
         private System.Windows.Forms.TabControl ThanhToanTab;
         private System.Windows.Forms.TabPage ChuaThanhToanTab;
