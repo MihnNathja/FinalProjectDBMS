@@ -77,7 +77,6 @@
             this.ThoatTab = new System.Windows.Forms.TabPage();
             this.dtpThoiGianBatDau = new System.Windows.Forms.DateTimePicker();
             this.dtpThoiGianKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.ThoatTab = new System.Windows.Forms.TabPage();
             this.SelectMenuscript.SuspendLayout();
             this.QuanLyThanhVienTab.SuspendLayout();
             this.ĐangKyThanhVienTab.SuspendLayout();
@@ -604,14 +603,6 @@
             this.dtpThoiGianKetThuc.Name = "dtpThoiGianKetThuc";
             this.dtpThoiGianKetThuc.Size = new System.Drawing.Size(163, 22);
             this.dtpThoiGianKetThuc.TabIndex = 45;
-            this.ThoatTab.Location = new System.Drawing.Point(4, 25);
-            this.ThoatTab.Name = "ThoatTab";
-            this.ThoatTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ThoatTab.Size = new System.Drawing.Size(1074, 488);
-            this.ThoatTab.TabIndex = 5;
-            this.ThoatTab.Text = "Quay lại trang chủ";
-            this.ThoatTab.UseVisualStyleBackColor = true;
-            this.ThoatTab.Enter += new System.EventHandler(this.ThoatTab_Enter);
             // 
             // FManHinhChinh
             // 
