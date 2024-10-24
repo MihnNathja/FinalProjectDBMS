@@ -28,7 +28,6 @@ namespace DBMSProject
             ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO();
             List<ClassKhachHang> khachHangs = classKhachHangDAO.loadKhachHang();
             addFlowLayoutPanel(khachHangs);
-
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {

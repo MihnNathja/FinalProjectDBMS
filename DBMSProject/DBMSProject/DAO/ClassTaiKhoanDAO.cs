@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Common;
 
 namespace DBMSProject.DAO
 {
     internal class ClassTaiKhoanDAO
     {
-        
+        DBConnection dBConnection = new DBConnection();
         public int KiemTraKhachHangDangNhap(ClassTaiKhoan classTaiKhoan)
         {
             
@@ -27,74 +28,61 @@ namespace DBMSProject.DAO
         }
         public int KiemTraDangNhap(ClassTaiKhoan classTaiKhoan, string SQLFunctionName)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+            try
             {
-                try
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand($"SELECT dbo.{SQLFunctionName}(@taiKhoan, @matKhau)", dBConnection.getConnection);
+                
+                // Thêm tham số cho hàm
+                cmd.Parameters.AddWithValue("@taiKhoan", classTaiKhoan.TenTaiKhoan);
+                cmd.Parameters.AddWithValue("@matKhau", classTaiKhoan.MatKhau);
+                // Thực thi câu lệnh và lấy giá trị trả về
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
                 {
-                    conn.Open();
-
-                    // Tạo một đối tượng SqlCommand để gọi hàm SQL
-                    string SQL = $"SELECT dbo.{SQLFunctionName}(@taiKhoan, @matKhau)";
-                    using (SqlCommand cmd = new SqlCommand(SQL, conn))
-                    {
-                        // Thêm tham số cho hàm
-                        cmd.Parameters.AddWithValue("@taiKhoan", classTaiKhoan.TenTaiKhoan);
-                        cmd.Parameters.AddWithValue("@matKhau", classTaiKhoan.MatKhau);
-                        // Thực thi câu lệnh và lấy giá trị trả về
-                        object result = cmd.ExecuteScalar();
-                        if (result != null && result != DBNull.Value)
-                        {
-                            // Chuyển đổi kết quả trả về thành int (maTaiKhoan)
-                            return Convert.ToInt32(result.ToString());
-                        }
-                        else
-                        {
-                            // Nếu không tìm thấy tài khoản hợp lệ
-                            return -1; // hoặc một giá trị khác để chỉ tài khoản không hợp lệ
-                        }
-                    }
+                    // Chuyển đổi kết quả trả về thành int (maTaiKhoan)
+                    return Convert.ToInt32(result.ToString());
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Lỗi: {ex.Message}");
-                    return -1; // Trả về -1 nếu có lỗi xảy ra
+                    return -1;
                 }
-                finally
-                {
-                    conn.Close();
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+                return -1; // Trả về -1 nếu có lỗi xảy ra
+            }
+            finally
+            {
+                dBConnection.closeConnection();
             }
         }
 
         public string GetTenTaiKhoan(int maTaiKhoan)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+            try
             {
-                try
-                {
-                    conn.Open();
+                dBConnection.openConnection();
 
-                    // Tạo một đối tượng SqlCommand để gọi hàm SQL
-                    string SQL = "SELECT dbo.GetTenTaiKhoan(@maTaiKhoan)";
-                    using (SqlCommand cmd = new SqlCommand(SQL, conn))
-                    {
-                        // Thêm tham số cho hàm
-                        cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
+                // Tạo một đối tượng SqlCommand để gọi hàm SQL
+                string SQL = "SELECT dbo.GetTenTaiKhoan(@maTaiKhoan)";
+                SqlCommand cmd = new SqlCommand(SQL, dBConnection.getConnection);
+                    // Thêm tham số cho hàm
+                cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
 
-                        // Thực thi câu lệnh và lấy giá trị trả về
-                        object result = cmd.ExecuteScalar();
-                        return result.ToString();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Lỗi: {ex.Message}");
-                    return ""; 
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                // Thực thi câu lệnh và lấy giá trị trả về
+                object result = cmd.ExecuteScalar();
+                return result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+                return "";
+            }
+            finally
+            {
+                dBConnection.closeConnection();
             }
         }
 
@@ -104,7 +92,7 @@ namespace DBMSProject.DAO
             {
                 try
                 {
-                    conn.Open();
+                    dBConnection.openConnection();
 
                     // Tạo một đối tượng SqlCommand để gọi hàm SQL
                     using (SqlCommand command = new SqlCommand("DoiMatKhau", conn))
@@ -128,10 +116,70 @@ namespace DBMSProject.DAO
                 }
                 finally
                 {
-                    conn.Close();
+                    dBConnection.closeConnection();
                 }
             }
         }
+        public int ChuyenDoiMaKhachHangSangMaTaiKhoan(int maKhachHang)
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+            {
+                try
+                {
+                    dBConnection.openConnection();
+                    using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", conn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new SqlParameter("@maKhachHang", maKhachHang));
+                        SqlParameter outputParam = new SqlParameter("@maTaiKhoan", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        command.Parameters.Add(outputParam);
+                        command.ExecuteNonQuery();
+                        int maTaiKhoan = (int)command.Parameters["@maTaiKhoan"].Value;
+                        return maTaiKhoan;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}");
+                    return -1; 
+                }
+                finally
+                {
+                    dBConnection.closeConnection();
+                }
+            }
+        }
+        public int ChuyenDoiMaTaiKhoanSangMaKhachHang(int maTaiKhoan)
+        {
+            
+            try
+            {
+                object maKhachHang = -1;
+                dBConnection.openConnection();
+
+                using (SqlCommand cmd = new SqlCommand("SELECT dbo.fn_LayMaKhachHang(@maTaiKhoan)", dBConnection.getConnection))
+                {
+                    cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
+
+                    maKhachHang = cmd.ExecuteScalar();
+                }
+
+                return Convert.ToInt32(maKhachHang);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất bại (LayMaKhachHang): " + ex);
+                return -1;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
+
         public ClassTaiKhoanDAO() { }
     }
 }

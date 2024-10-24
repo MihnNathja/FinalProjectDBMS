@@ -18,44 +18,65 @@ namespace DBMSProject.DAO
         {
 
         }
-        /*public int LayMayTinh()
+
+        public ClassPhienDangNhap LapPhienDangNhap(int maTaiKhoan)
         {
             try
             {
                 dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.LayPhienDangNhap(@maTaiKhoan)", dBConnection.getConnection);
+                cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                ClassPhienDangNhap classPhienDangNhap = new ClassPhienDangNhap
+                        (Convert.ToInt32(reader["maKhachHang"]), Convert.ToInt32(reader["maMayTinh"]),
+                         TimeSpan.Parse(reader["thoiGianBatDau"].ToString()), TimeSpan.Parse(reader["thoiGianSuDung"].ToString()),
+                         TimeSpan.Parse(reader["thoiGianConLai"].ToString())
+                         );
 
-                SqlCommand cmdLayMayTinh = new SqlCommand("LayMayTinhTrong", dBConnection.getConnection);
-                cmdLayMayTinh.CommandType = CommandType.StoredProcedure;
-                SqlDataReader readerMayTinh = cmdLayMayTinh.ExecuteReader();
 
-                int maMayTinh = -1;
-                
-                maMayTinh = Convert.ToInt32(readerMayTinh["maMayTinh"]);
-                
-                if (maMayTinh == -1)
-                {
-                    MessageBox.Show("Không có máy tính trống!", "Thông báo");
-                    readerMayTinh.Close();
-                    return -1;
-                }
-                else
-                {
-                    readerMayTinh.Close();
-                    return maMayTinh;
-                }
-                
+                return classPhienDangNhap;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi");
-                return -1;
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message + "\n" + ex.StackTrace, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
             finally
             {
                 dBConnection.closeConnection();
             }
-        }*/
+        }
+        public string getTenTaiKhoan(int maTaiKhoan)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT dbo.GetTenTaiKhoan(@maTaiKhoan)", dBConnection.getConnection);
+                cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
+                dBConnection.openConnection();
+                object result = cmd.ExecuteScalar();
 
+                if (result != null)
+                {
+                    return result.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy tài khoản với mã này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message + "\n" + ex.StackTrace, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
         public void ThemPhienDangNhap(int maKhachHang)
         {
             try
@@ -98,6 +119,28 @@ namespace DBMSProject.DAO
             {
                 dBConnection.closeConnection();
             }
+
         }
+        public void XoaPhienDangNhap(int maKhachHang, TimeSpan thoiGianConLai)
+        {
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("XoaPhienDangNhap", dBConnection.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
+                cmd.Parameters.AddWithValue("@thoiGianConLai", thoiGianConLai);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Bạn đã đăng xuất thành công!");
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi đăng xuất: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { dBConnection.closeConnection();}
+        }
+
     }
 }

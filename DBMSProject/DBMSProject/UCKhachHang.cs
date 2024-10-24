@@ -15,6 +15,8 @@ namespace DBMSProject
     public partial class UCKhachHang : UserControl
     {
         FNapTien timeExtendForm = new FNapTien();
+        public static int maKHofUCKH;
+        public static string typeAdd;
         public UCKhachHang()
         {
             InitializeComponent();
@@ -23,6 +25,9 @@ namespace DBMSProject
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
+            timeExtendForm.loadTaiKhoangKH(lblTaiKhoan.Text);
+            maKHofUCKH = Convert.ToInt32(lblMaKH.Text);
+            typeAdd = "khachHang";
             timeExtendForm.ShowDialog();
         }
         public UCKhachHang UCKhachHangLoad(UCKhachHang ucKhachHang, ClassKhachHang classKhachHang)

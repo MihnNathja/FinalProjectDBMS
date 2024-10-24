@@ -35,8 +35,8 @@
             this.txbTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.txbSoTienNap = new System.Windows.Forms.TextBox();
             this.txbThoiGianQuyDoi = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNapTien = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -103,37 +103,37 @@
             this.txbThoiGianQuyDoi.Size = new System.Drawing.Size(181, 22);
             this.txbThoiGianQuyDoi.TabIndex = 6;
             // 
-            // button1
+            // btnNapTien
             // 
-            this.button1.BackColor = System.Drawing.Color.Cyan;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(77, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Nạp tiền";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNapTien.BackColor = System.Drawing.Color.Cyan;
+            this.btnNapTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNapTien.Location = new System.Drawing.Point(77, 210);
+            this.btnNapTien.Name = "btnNapTien";
+            this.btnNapTien.Size = new System.Drawing.Size(75, 31);
+            this.btnNapTien.TabIndex = 7;
+            this.btnNapTien.Text = "Nạp tiền";
+            this.btnNapTien.UseVisualStyleBackColor = false;
+            this.btnNapTien.Click += new System.EventHandler(this.btnNapTien_Click);
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(190, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Location = new System.Drawing.Point(190, 210);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 31);
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FNapTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 253);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnNapTien);
             this.Controls.Add(this.txbThoiGianQuyDoi);
             this.Controls.Add(this.txbSoTienNap);
             this.Controls.Add(this.txbTenTaiKhoan);
@@ -158,7 +158,7 @@
         private System.Windows.Forms.TextBox txbTenTaiKhoan;
         private System.Windows.Forms.TextBox txbSoTienNap;
         private System.Windows.Forms.TextBox txbThoiGianQuyDoi;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNapTien;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
