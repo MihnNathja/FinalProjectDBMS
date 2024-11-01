@@ -44,6 +44,7 @@ namespace DBMSProject
                 ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
                 classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
                 FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang);
+                this.Hide();
                 fKhachHang.ShowDialog();
             } 
             else if (maTaiKhoanNguoiQuanLy != -1)
@@ -55,7 +56,7 @@ namespace DBMSProject
             {
                 MessageBox.Show("Không tìm thấy tài khoản");
             }
-            
+            this.Show();
 
         }
 

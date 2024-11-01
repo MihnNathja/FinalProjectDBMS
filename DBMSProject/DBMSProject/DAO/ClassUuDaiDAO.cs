@@ -63,14 +63,7 @@ namespace DBMSProject.DAO
             }
             catch (Exception exc)
             {
-                if (exc.Message.Contains("Ưu đãi đã tồn tại"))
-                {
-                    MessageBox.Show("Ưu đãi đã tồn tại");
-                }
-                else
-                {
-                    MessageBox.Show("that bai (ThemUuDai)" + exc);
-                }
+                MessageBox.Show(exc.Message);
             }
             finally
             {
