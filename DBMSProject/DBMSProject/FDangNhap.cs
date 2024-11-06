@@ -44,18 +44,20 @@ namespace DBMSProject
                 ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
                 classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
                 FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang);
+                this.Hide();
                 fKhachHang.ShowDialog();
             } 
             else if (maTaiKhoanNguoiQuanLy != -1)
             {
                 FQuanLy selectForm = new FQuanLy(maTaiKhoanNguoiQuanLy);
+                this.Hide();
                 selectForm.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Không tìm thấy tài khoản");
             }
-            
+            this.Show();
 
         }
 
