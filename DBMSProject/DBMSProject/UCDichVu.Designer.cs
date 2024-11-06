@@ -31,9 +31,9 @@
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
             this.lblDonGia = new System.Windows.Forms.Label();
             this.lblTenDichVu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbDichVu = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDichVu)).BeginInit();
             this.SuspendLayout();
             // 
             // nudSoLuong
@@ -63,13 +63,13 @@
             this.lblTenDichVu.TabIndex = 6;
             this.lblTenDichVu.Text = "Tên dịch vụ";
             // 
-            // pictureBox1
+            // ptbDichVu
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 150);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.ptbDichVu.Location = new System.Drawing.Point(0, 10);
+            this.ptbDichVu.Name = "ptbDichVu";
+            this.ptbDichVu.Size = new System.Drawing.Size(180, 96);
+            this.ptbDichVu.TabIndex = 5;
+            this.ptbDichVu.TabStop = false;
             // 
             // UCDichVu
             // 
@@ -79,12 +79,12 @@
             this.Controls.Add(this.nudSoLuong);
             this.Controls.Add(this.lblDonGia);
             this.Controls.Add(this.lblTenDichVu);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbDichVu);
             this.Name = "UCDichVu";
             this.Size = new System.Drawing.Size(180, 200);
             this.Load += new System.EventHandler(this.UCDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDichVu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,7 +93,7 @@
         #endregion
         private System.Windows.Forms.Label lblDonGia;
         private System.Windows.Forms.Label lblTenDichVu;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.NumericUpDown nudSoLuong;
+        public System.Windows.Forms.PictureBox ptbDichVu;
     }
 }

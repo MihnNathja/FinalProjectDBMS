@@ -34,10 +34,25 @@ namespace DBMSProject
         public void addFlowLayoutPanel(List<ClassDichVu> listdv)
         {
             flpnlDichVu.Controls.Clear();
+            string imageFolderPath = System.IO.Path.Combine(Application.StartupPath, "images");
             foreach (var item in listdv)
             {
                 UCDichVu uc = new UCDichVu();
                 uc.LoadUCDichVu(item);
+
+                switch (item.LoaiDichVu.Trim().ToLower())
+                {
+                    case "đồ ăn":
+                        uc.ptbDichVu.Image = Image.FromFile(System.IO.Path.Combine(imageFolderPath, "food.png"));
+                        break;
+                    case "thức uống":
+                        uc.ptbDichVu.Image = Image.FromFile(System.IO.Path.Combine(imageFolderPath, "drink.png"));
+                        break;
+                    case "thẻ cào":
+                        uc.ptbDichVu.Image = Image.FromFile(System.IO.Path.Combine(imageFolderPath, "card.png"));
+                        break;
+                }
+                uc.ptbDichVu.SizeMode = PictureBoxSizeMode.Zoom;
                 flpnlDichVu.Controls.Add(uc);
             }
         }
