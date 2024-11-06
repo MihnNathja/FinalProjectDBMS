@@ -52,7 +52,7 @@ namespace DBMSProject
                 lblTinhTrang.Text = "Đang bảo trì";
                 btnBaoTri.Text = "Đang bảo trì";
                 ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO();
-                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri");
+                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri", maTaiKhoanNguoiQuanLy);
             }
             else if (lblTinhTrang.Text == "Đang bảo trì")
             {
@@ -60,7 +60,7 @@ namespace DBMSProject
                 lblTinhTrang.Text = "Trống";
                 btnBaoTri.Text = "Bảo trì";
                 ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO();
-                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong");
+                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong", maTaiKhoanNguoiQuanLy);
             }
         }
         public UCMayTinh UCMayTinhLoad(UCMayTinh ucMayTinh, ClassMayTinh classMayTinh)
