@@ -13,7 +13,7 @@ namespace DBMSProject
 {
     public partial class FQuanLy : Form
     {
-        int maTaiKhoanNguoiQuanLy;
+        int maTaiKhoanNguoiQuanLy = 0;
         public FQuanLy()
         {
             InitializeComponent();
@@ -23,20 +23,20 @@ namespace DBMSProject
             InitializeComponent();
             this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
-        FManHinhChinh mainScreenForm = new FManHinhChinh();
-        FQuanLyDichVu servicesForm = new FQuanLyDichVu();
+        
+        
         private void MainScreenPtb_Click(object sender, EventArgs e)
         {
+            FManHinhChinh mainScreenForm = new FManHinhChinh(maTaiKhoanNguoiQuanLy);
             mainScreenForm.addUser();
-            
             mainScreenForm.addComputer();
-
             mainScreenForm.addBill();
             mainScreenForm.ShowDialog();              
         }
 
         private void categoryManagementPtb_Click(object sender, EventArgs e)
         {
+            FQuanLyDichVu servicesForm = new FQuanLyDichVu(maTaiKhoanNguoiQuanLy);
             servicesForm.ShowDialog();
         }
     }

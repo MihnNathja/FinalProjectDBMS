@@ -99,6 +99,12 @@
     <Compile Include="FThanhToanHoaDon.Designer.cs">
       <DependentUpon>FThanhToanHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FUuDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUuDai.Designer.cs">
+      <DependentUpon>FUuDai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Object\ClassChiTietHoaDon.cs" />
     <Compile Include="Object\ClassDichVu.cs" />
     <Compile Include="Object\ClassHoaDon.cs" />
@@ -158,6 +164,12 @@
     <Compile Include="UCQuanLyDichVu.Designer.cs">
       <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCUuDai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCUuDai.Designer.cs">
+      <DependentUpon>UCUuDai.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FDichVu.resx">
       <DependentUpon>FDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThanhToanHoaDon.resx">
       <DependentUpon>FThanhToanHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUuDai.resx">
+      <DependentUpon>FUuDai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +224,9 @@
     <EmbeddedResource Include="UCQuanLyDichVu.resx">
       <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCUuDai.resx">
+      <DependentUpon>UCUuDai.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -223,19 +241,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\background.png" />
+    <Resource Include="images\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\MainScreen.png" />
+    <Resource Include="images\MainScreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\categoryManagement.png" />
+    <Resource Include="images\categoryManagement.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\User.png" />
+    <Resource Include="images\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\PC.png" />
+    <Resource Include="images\PC.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HoaDon\" />

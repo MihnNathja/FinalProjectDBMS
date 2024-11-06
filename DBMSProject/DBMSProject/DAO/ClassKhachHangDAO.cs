@@ -92,7 +92,7 @@ namespace DBMSProject.DAO
                 db.closeConnection();
             }
         }
-        public string AddKhachHang(string taiKhoan, string matKhau)
+        public string AddKhachHang(string taiKhoan, string matKhau, int maTaiKhoanNguoiQuanLy)
         {
             try
             {
@@ -101,6 +101,7 @@ namespace DBMSProject.DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);
                 cmd.Parameters.AddWithValue("@matKhau", matKhau);
+                cmd.Parameters.AddWithValue("@maNguoiQuanLy", maTaiKhoanNguoiQuanLy);
 
                 db.openConnection();
 
@@ -111,15 +112,7 @@ namespace DBMSProject.DAO
             }
             catch (SqlException ex)
             {
-                // Kiểm tra nếu tài khoản đã tồn tại dựa trên thông báo RAISERROR từ SQL
-                if (ex.Number == 50000)  // Mã lỗi 50000 là mã mặc định của RAISERROR
-                {
-                    return "Tài khoản đã tồn tại";
-                }
-                else
-                {
-                    return "Lỗi: " + ex.Message;
-                }
+                return "Lỗi: " + ex.Message;
             }
             finally
             {

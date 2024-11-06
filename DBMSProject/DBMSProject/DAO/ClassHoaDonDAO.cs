@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DBMSProject.DAO
 {
-    internal class ClassHoaDonDAO
+    public class ClassHoaDonDAO
     {
         DBConnection dBConnection = new DBConnection();
         public DataTable LoadHoaDonChuaThanhToan()
@@ -40,6 +40,29 @@ namespace DBMSProject.DAO
             {
                 MessageBox.Show("Thất bại khi truy xuất hóa đơn: " + ex.Message);
                 return null;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
+        public bool ThemUuDai_HoaDon(int maHoaDon, int maUuDai)
+        {
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("ThemMaUuDaiVaoHoaDon", dBConnection.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
+                cmd.Parameters.AddWithValue("@maUuDai", maUuDai);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm ưu đãi thành công");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("that bai (ThemUuDai_HoaDon)" + ex);
+                return false;
             }
             finally
             {

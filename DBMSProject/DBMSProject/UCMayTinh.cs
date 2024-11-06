@@ -21,7 +21,8 @@ namespace DBMSProject
         private Timer timer;
         private TimeSpan thoiGianConLai;
         private TimeSpan thoiGianDaDung;
-        public UCMayTinh()
+        int maTaiKhoanNguoiQuanLy;
+        public UCMayTinh(int maTaiKhoanNguoiQuanLy)
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
@@ -29,6 +30,7 @@ namespace DBMSProject
             timer = new Timer();
             timer.Interval = 1000; 
             timer.Tick += Timer_Tick; 
+            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
 
 

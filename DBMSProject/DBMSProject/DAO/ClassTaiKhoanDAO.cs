@@ -122,34 +122,31 @@ namespace DBMSProject.DAO
         }
         public int ChuyenDoiMaKhachHangSangMaTaiKhoan(int maKhachHang)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+            try
             {
-                try
+                dBConnection.openConnection();
+                using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", dBConnection.getConnection))
                 {
-                    dBConnection.openConnection();
-                    using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", conn))
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter("@maKhachHang", maKhachHang));
+                    SqlParameter outputParam = new SqlParameter("@maTaiKhoan", SqlDbType.Int)
                     {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add(new SqlParameter("@maKhachHang", maKhachHang));
-                        SqlParameter outputParam = new SqlParameter("@maTaiKhoan", SqlDbType.Int)
-                        {
-                            Direction = ParameterDirection.Output
-                        };
-                        command.Parameters.Add(outputParam);
-                        command.ExecuteNonQuery();
-                        int maTaiKhoan = (int)command.Parameters["@maTaiKhoan"].Value;
-                        return maTaiKhoan;
-                    }
+                        Direction = ParameterDirection.Output
+                    };
+                    command.Parameters.Add(outputParam);
+                    command.ExecuteNonQuery();
+                    int maTaiKhoan = (int)command.Parameters["@maTaiKhoan"].Value;
+                    return maTaiKhoan;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Lỗi: {ex.Message}");
-                    return -1; 
-                }
-                finally
-                {
-                    dBConnection.closeConnection();
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+                return -1;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
             }
         }
         public int ChuyenDoiMaTaiKhoanSangMaKhachHang(int maTaiKhoan)

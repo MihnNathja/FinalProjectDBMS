@@ -59,11 +59,7 @@ namespace DBMSProject
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FKhachHang kh = new FKhachHang();
-            kh.ShowDialog();
-        }
+
 
         private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
         {

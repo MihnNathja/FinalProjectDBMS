@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBMSProject.Object
 {
-    internal class ClassHoaDon
+    public class ClassHoaDon
     {
         int maHoaDon;
         DateTime thoiGianTao;
