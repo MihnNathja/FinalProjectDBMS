@@ -258,5 +258,8 @@
   <ItemGroup>
     <Folder Include="HoaDon\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\food.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
