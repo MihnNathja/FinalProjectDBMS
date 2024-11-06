@@ -83,7 +83,6 @@ namespace DBMSProject.DAO
             {
                 dBConnection.openConnection();
 
-
                 SqlCommand cmdLayMayTinh = new SqlCommand("LayMayTinhTrong", dBConnection.getConnection);
                 cmdLayMayTinh.CommandType = CommandType.StoredProcedure;
                 SqlDataReader readerMayTinh = cmdLayMayTinh.ExecuteReader();

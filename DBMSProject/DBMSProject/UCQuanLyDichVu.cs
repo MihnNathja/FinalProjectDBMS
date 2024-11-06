@@ -14,12 +14,13 @@ namespace DBMSProject
 {
     public partial class UCQuanLyDichVu : UserControl
     {
+        int maTaiKhoanNguoiQuanLy;
         public UCQuanLyDichVu()
         {
             InitializeComponent();
         }
         string LoaiDV;
-        public void LoadDuLieu(string loaiDichVu)
+        public void LoadDuLieu(string loaiDichVu, int maTaiKhoanNguoiQuanLy)
         {
             dgvQuanLyDichVu.DataSource = null;
             ClassDichVuDAO cdvDAO = new ClassDichVuDAO();
@@ -36,6 +37,7 @@ namespace DBMSProject
                 dgvQuanLyDichVu.DataSource = cdvDAO.TruyXuatDanhSachDichVu("DichVuTheCaoView");
             }
             LoaiDV = loaiDichVu;
+            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
         private bool checkRong()
         {
@@ -51,9 +53,9 @@ namespace DBMSProject
             {
                 ClassDichVu dichvu = new ClassDichVu(0, txtTenDichVu.Text, txtLoaiDichVu.Text, Convert.ToDouble(txtDonGia.Text), Convert.ToInt32(txtSoLuong.Text));
                 ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
-                dichvuDao.ThemDichVu(dichvu);
+                dichvuDao.ThemDichVu(dichvu, maTaiKhoanNguoiQuanLy);
 
-                LoadDuLieu(dichvu.LoaiDichVu);
+                LoadDuLieu(dichvu.LoaiDichVu, maTaiKhoanNguoiQuanLy);
                 return;
             }
             MessageBox.Show("Điền đầy đủ thông tin dịch vụ cần thêm");
@@ -65,7 +67,7 @@ namespace DBMSProject
             {
                 ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
                 dichvuDao.XoaDichVu(Convert.ToInt32(txtMaDichVu.Text));
-                LoadDuLieu(txtLoaiDichVu.Text);
+                LoadDuLieu(txtLoaiDichVu.Text, maTaiKhoanNguoiQuanLy);
                 ClearTextBox();
             }
             else
@@ -90,7 +92,7 @@ namespace DBMSProject
                 ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
                 dichvuDao.SuaDichVu(dichvu);
 
-                LoadDuLieu(dichvu.LoaiDichVu);
+                LoadDuLieu(dichvu.LoaiDichVu, maTaiKhoanNguoiQuanLy);
                 
                 return;
             }

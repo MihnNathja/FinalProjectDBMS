@@ -103,9 +103,9 @@
             this.lblSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerial.Location = new System.Drawing.Point(213, 63);
             this.lblSerial.Name = "lblSerial";
-            this.lblSerial.Size = new System.Drawing.Size(18, 20);
+            this.lblSerial.Size = new System.Drawing.Size(21, 20);
             this.lblSerial.TabIndex = 24;
-            this.lblSerial.Text = "1";
+            this.lblSerial.Text = "...";
             this.lblSerial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTinhTrang
@@ -114,9 +114,9 @@
             this.lblTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTinhTrang.Location = new System.Drawing.Point(200, 267);
             this.lblTinhTrang.Name = "lblTinhTrang";
-            this.lblTinhTrang.Size = new System.Drawing.Size(112, 20);
+            this.lblTinhTrang.Size = new System.Drawing.Size(52, 20);
             this.lblTinhTrang.TabIndex = 25;
-            this.lblTinhTrang.Text = "Đang sử dụng";
+            this.lblTinhTrang.Text = "Trống";
             this.lblTinhTrang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThoiGianDaDung
@@ -125,9 +125,9 @@
             this.lblThoiGianDaDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoiGianDaDung.Location = new System.Drawing.Point(200, 309);
             this.lblThoiGianDaDung.Name = "lblThoiGianDaDung";
-            this.lblThoiGianDaDung.Size = new System.Drawing.Size(63, 20);
+            this.lblThoiGianDaDung.Size = new System.Drawing.Size(21, 20);
             this.lblThoiGianDaDung.TabIndex = 26;
-            this.lblThoiGianDaDung.Text = "1h02ph";
+            this.lblThoiGianDaDung.Text = "...";
             this.lblThoiGianDaDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThoiGianConLai
@@ -136,9 +136,9 @@
             this.lblThoiGianConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoiGianConLai.Location = new System.Drawing.Point(200, 352);
             this.lblThoiGianConLai.Name = "lblThoiGianConLai";
-            this.lblThoiGianConLai.Size = new System.Drawing.Size(63, 20);
+            this.lblThoiGianConLai.Size = new System.Drawing.Size(21, 20);
             this.lblThoiGianConLai.TabIndex = 27;
-            this.lblThoiGianConLai.Text = "5h37ph";
+            this.lblThoiGianConLai.Text = "...";
             this.lblThoiGianConLai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMaNguoiDung
@@ -147,9 +147,9 @@
             this.lblMaNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNguoiDung.Location = new System.Drawing.Point(200, 224);
             this.lblMaNguoiDung.Name = "lblMaNguoiDung";
-            this.lblMaNguoiDung.Size = new System.Drawing.Size(18, 20);
+            this.lblMaNguoiDung.Size = new System.Drawing.Size(21, 20);
             this.lblMaNguoiDung.TabIndex = 29;
-            this.lblMaNguoiDung.Text = "1";
+            this.lblMaNguoiDung.Text = "...";
             this.lblMaNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8

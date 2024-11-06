@@ -15,8 +15,6 @@ namespace DBMSProject
 {
     public partial class FNapTien : Form
     {
-        ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO(); 
-        ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO();
         public FNapTien()
         {
             InitializeComponent();

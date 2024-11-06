@@ -50,6 +50,7 @@ namespace DBMSProject
             else if (maTaiKhoanNguoiQuanLy != -1)
             {
                 FQuanLy selectForm = new FQuanLy(maTaiKhoanNguoiQuanLy);
+                this.Hide();
                 selectForm.ShowDialog();
             }
             else
@@ -60,11 +61,7 @@ namespace DBMSProject
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FKhachHang kh = new FKhachHang();
-            kh.ShowDialog();
-        }
+
 
         private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
         {
