@@ -15,26 +15,31 @@ namespace DBMSProject
     public partial class UCQuanLyDichVu : UserControl
     {
         int maTaiKhoanNguoiQuanLy;
+        public string conn;
+        
         public UCQuanLyDichVu()
         {
             InitializeComponent();
+            
         }
+        
         string LoaiDV;
-        public void LoadDuLieu(string loaiDichVu, int maTaiKhoanNguoiQuanLy)
+        public void LoadDuLieu(string loaiDichVu, string conn, int maTaiKhoanNguoiQuanLy)
         {
+            this.conn = conn;
+            ClassDichVuDAO dichvuDao = new ClassDichVuDAO(conn);
             dgvQuanLyDichVu.DataSource = null;
-            ClassDichVuDAO cdvDAO = new ClassDichVuDAO();
             if (loaiDichVu == "Đồ ăn")
             {
-                dgvQuanLyDichVu.DataSource = cdvDAO.TruyXuatDanhSachDichVu("DichVuDoAnView");
+                dgvQuanLyDichVu.DataSource = dichvuDao.TruyXuatDanhSachDichVu("DichVuDoAnView");
             }
             else if (loaiDichVu == "Thức uống")
             {
-                dgvQuanLyDichVu.DataSource = cdvDAO.TruyXuatDanhSachDichVu("DichVuThucUongView");
+                dgvQuanLyDichVu.DataSource = dichvuDao.TruyXuatDanhSachDichVu("DichVuThucUongView");
             }
             else
             {
-                dgvQuanLyDichVu.DataSource = cdvDAO.TruyXuatDanhSachDichVu("DichVuTheCaoView");
+                dgvQuanLyDichVu.DataSource = dichvuDao.TruyXuatDanhSachDichVu("DichVuTheCaoView");
             }
             LoaiDV = loaiDichVu;
             this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
@@ -49,13 +54,14 @@ namespace DBMSProject
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            ClassDichVuDAO dichvuDao = new ClassDichVuDAO(conn);
             if (checkRong())
             {
                 ClassDichVu dichvu = new ClassDichVu(0, txtTenDichVu.Text, txtLoaiDichVu.Text, Convert.ToDouble(txtDonGia.Text), Convert.ToInt32(txtSoLuong.Text));
-                ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
+                
                 dichvuDao.ThemDichVu(dichvu, maTaiKhoanNguoiQuanLy);
 
-                LoadDuLieu(dichvu.LoaiDichVu, maTaiKhoanNguoiQuanLy);
+                LoadDuLieu(dichvu.LoaiDichVu,conn, maTaiKhoanNguoiQuanLy);
                 return;
             }
             MessageBox.Show("Điền đầy đủ thông tin dịch vụ cần thêm");
@@ -63,11 +69,11 @@ namespace DBMSProject
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            ClassDichVuDAO dichvuDao = new ClassDichVuDAO(conn);
             if (txtMaDichVu.Text != "")
             {
-                ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
                 dichvuDao.XoaDichVu(Convert.ToInt32(txtMaDichVu.Text));
-                LoadDuLieu(txtLoaiDichVu.Text, maTaiKhoanNguoiQuanLy);
+                LoadDuLieu(txtLoaiDichVu.Text, conn, maTaiKhoanNguoiQuanLy);
                 ClearTextBox();
             }
             else
@@ -86,13 +92,13 @@ namespace DBMSProject
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            ClassDichVuDAO dichvuDao = new ClassDichVuDAO(conn);
             if (checkRong())
             {
                 ClassDichVu dichvu = new ClassDichVu(Convert.ToInt32(txtMaDichVu.Text), txtTenDichVu.Text, txtLoaiDichVu.Text, Convert.ToDouble(txtDonGia.Text), Convert.ToInt32(txtSoLuong.Text));
-                ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
                 dichvuDao.SuaDichVu(dichvu);
 
-                LoadDuLieu(dichvu.LoaiDichVu, maTaiKhoanNguoiQuanLy);
+                LoadDuLieu(dichvu.LoaiDichVu, conn, maTaiKhoanNguoiQuanLy);
                 
                 return;
             }
@@ -121,7 +127,7 @@ namespace DBMSProject
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
+            ClassDichVuDAO dichvuDao = new ClassDichVuDAO(conn);
             dgvQuanLyDichVu.DataSource = dichvuDao.TimKiemDichVu(txtTimKiem.Text.Trim(), LoaiDV);
         }
     }

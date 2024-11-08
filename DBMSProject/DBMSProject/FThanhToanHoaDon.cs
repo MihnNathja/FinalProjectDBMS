@@ -13,9 +13,11 @@ namespace DBMSProject
 {
     public partial class FThanhToanHoaDon : Form
     {
-        public FThanhToanHoaDon()
+        string conn;
+        public FThanhToanHoaDon(string connStr)
         {
             InitializeComponent();
+            conn = connStr;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace DBMSProject
         private void btnUuDai_Click(object sender, EventArgs e)
         {
             ClassHoaDon hoadon = new ClassHoaDon(1,8,1, Convert.ToDateTime("10/25/2024 10:05:43 AM"), "ChuaThanhToan",160000,null); // Tạm thời
-            FUuDai fUD = new FUuDai(hoadon);
+            FUuDai fUD = new FUuDai(hoadon, conn);
             fUD.ShowDialog();
         }
     }

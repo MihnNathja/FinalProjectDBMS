@@ -15,17 +15,19 @@ namespace DBMSProject
     public partial class FQuanLyDichVu : Form
     {
         int maTaiKhoanNguoiQuanLy;
-        public FQuanLyDichVu(int maTaiKhoanNguoiQuanLy)
+        string conn;
+        public FQuanLyDichVu(int maTaiKhoanNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
+            conn = connStr;
         }
 
         private void ServiceTab_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ucQuanLyDoAn.LoadDuLieu(tabDichVu.SelectedTab.Text, maTaiKhoanNguoiQuanLy);
-            ucQuanLyThucUong.LoadDuLieu(tabDichVu.SelectedTab.Text, maTaiKhoanNguoiQuanLy);
-            ucQuanLyTheCao.LoadDuLieu(tabDichVu.SelectedTab.Text, maTaiKhoanNguoiQuanLy);
+            ucQuanLyDoAn.LoadDuLieu(tabDichVu.SelectedTab.Text, conn, maTaiKhoanNguoiQuanLy);
+            ucQuanLyThucUong.LoadDuLieu(tabDichVu.SelectedTab.Text, conn, maTaiKhoanNguoiQuanLy);
+            ucQuanLyTheCao.LoadDuLieu(tabDichVu.SelectedTab.Text, conn, maTaiKhoanNguoiQuanLy);
         }
 
         private void FQuanLyDichVu_Load(object sender, EventArgs e)

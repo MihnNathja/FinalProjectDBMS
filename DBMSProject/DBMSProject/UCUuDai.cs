@@ -14,10 +14,12 @@ namespace DBMSProject
 {
     public partial class UCUuDai : UserControl
     {
-        public UCUuDai(ClassHoaDon HoaDon)
+        string conn;
+        public UCUuDai(ClassHoaDon HoaDon, string connStr)
         {
             InitializeComponent();
             this.HoaDon = HoaDon;
+            conn = connStr;
         }
 
         private void UCUuDai_Load(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace DBMSProject
 
         private void btnChon_Click(object sender, EventArgs e)
         {
-            ClassHoaDonDAO clHDDAO = new ClassHoaDonDAO();
+            ClassHoaDonDAO clHDDAO = new ClassHoaDonDAO(conn);
             clHDDAO.ThemUuDai_HoaDon(HoaDon.MaHoaDon, UuDai.MaUuDai);
             
         }
