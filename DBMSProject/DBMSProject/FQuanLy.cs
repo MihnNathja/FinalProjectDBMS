@@ -14,19 +14,20 @@ namespace DBMSProject
     public partial class FQuanLy : Form
     {
         int maTaiKhoanNguoiQuanLy;
-        public FQuanLy()
+        string conn;
+        
+        public FQuanLy(int maTaiKhoanNguoiQuanLy, string connStr)
         {
             InitializeComponent();
-        }
-        public FQuanLy(int maTaiKhoanNguoiQuanLy)
-        {
-            InitializeComponent();
+            conn = connStr;
             this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
+            
+            
         }
-        FManHinhChinh mainScreenForm = new FManHinhChinh();
-        FQuanLyDichVu servicesForm = new FQuanLyDichVu();
+        
         private void MainScreenPtb_Click(object sender, EventArgs e)
         {
+            FManHinhChinh mainScreenForm = new FManHinhChinh(conn);
             mainScreenForm.addUser();
             
             mainScreenForm.addComputer();
@@ -37,6 +38,7 @@ namespace DBMSProject
 
         private void categoryManagementPtb_Click(object sender, EventArgs e)
         {
+            FQuanLyDichVu servicesForm = new FQuanLyDichVu(conn);
             servicesForm.ShowDialog();
         }
     }

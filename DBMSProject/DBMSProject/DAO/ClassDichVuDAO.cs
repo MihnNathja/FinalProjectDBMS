@@ -12,8 +12,11 @@ namespace DBMSProject.DAO
 {
     public class ClassDichVuDAO
     {
-        DBConnection dBConnection = new DBConnection();
-        public ClassDichVuDAO() { }
+        DBConnection dBConnection;
+        public ClassDichVuDAO(string connStr) 
+        {
+            dBConnection = new DBConnection(connStr);
+        }
         public List<ClassDichVu> TruyXuatDanhSachDichVu(string loaiDichVu)
         {
             try

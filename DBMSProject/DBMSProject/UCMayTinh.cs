@@ -14,32 +14,35 @@ namespace DBMSProject
 {
     public partial class UCMayTinh : UserControl
     {
-        ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
-        FNapTien timeExtendForm = new FNapTien();
+        ClassTaiKhoanDAO classTaiKhoanDAO;
+        
+        string conn;
         public static int maKHofUCMT;
         public static string typeAdd;
         private Timer timer;
         private TimeSpan thoiGianConLai;
         private TimeSpan thoiGianDaDung;
-        public UCMayTinh()
+        public UCMayTinh(string connStr)
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
-
+            conn = connStr;
             timer = new Timer();
             timer.Interval = 1000; 
-            timer.Tick += Timer_Tick; 
+            timer.Tick += Timer_Tick;
+            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
 
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
+            FNapTien fNapTien = new FNapTien(conn);
             int maKH = classTaiKhoanDAO.ChuyenDoiMaKhachHangSangMaTaiKhoan(Convert.ToInt32(lblMaNguoiDung.Text));
             String taiKhoan = classTaiKhoanDAO.GetTenTaiKhoan(maKH);
-            timeExtendForm.loadTaiKhoangKH(taiKhoan);
+            fNapTien.loadTaiKhoangKH(taiKhoan);
             maKHofUCMT = Convert.ToInt32(lblMaNguoiDung.Text);
             typeAdd = "mayTinh";
-            timeExtendForm.ShowDialog();
+            fNapTien.ShowDialog();
         }
         bool checkBaoTri = false;
         private void btnBaoTri_Click(object sender, EventArgs e)
@@ -49,7 +52,7 @@ namespace DBMSProject
                 checkBaoTri = true;
                 lblTinhTrang.Text = "Đang bảo trì";
                 btnBaoTri.Text = "Đang bảo trì";
-                ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO();
+                ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO(conn);
                 classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri");
             }
             else if (lblTinhTrang.Text == "Đang bảo trì")
@@ -57,7 +60,7 @@ namespace DBMSProject
                 checkBaoTri = false;
                 lblTinhTrang.Text = "Trống";
                 btnBaoTri.Text = "Bảo trì";
-                ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO();
+                ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO(conn);
                 classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong");
             }
         }

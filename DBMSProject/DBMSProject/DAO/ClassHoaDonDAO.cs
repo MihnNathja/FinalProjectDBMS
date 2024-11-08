@@ -13,7 +13,12 @@ namespace DBMSProject.DAO
 {
     internal class ClassHoaDonDAO
     {
-        DBConnection dBConnection = new DBConnection();
+        DBConnection dBConnection;
+
+        public ClassHoaDonDAO(string connStr)
+        {
+            dBConnection = new DBConnection(connStr);
+        }
         public DataTable LoadHoaDonChuaThanhToan()
         {
             string sqlStr = string.Format("SELECT * FROM DichVuChuaThanhToanView");

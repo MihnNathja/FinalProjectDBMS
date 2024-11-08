@@ -18,16 +18,22 @@ namespace DBMSProject
     {
         public static int maTaiKhoanKhachHang;
         public static int maTaiKhoanNguoiQuanLy;
-        public FDangNhap()
+        string conn;
+        /*public FDangNhap()
         {
             InitializeComponent();
+        }*/
+        public FDangNhap(string connStr)
+        {
+            InitializeComponent();
+            conn = connStr;
         }
-        
+
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(userNameTxb.Text, passwordTxb.Text);
-            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
+            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
             
 
             maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
@@ -37,18 +43,18 @@ namespace DBMSProject
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
 
-                ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO();
+                ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO(conn);
                 int maKhachHang = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
                 // Mặc định tạm thời máy này có id là
                 
-                ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO();
+                ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO(conn);
                 classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
-                FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang);
+                FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang, conn);
                 fKhachHang.ShowDialog();
             } 
             else if (maTaiKhoanNguoiQuanLy != -1)
             {
-                FQuanLy selectForm = new FQuanLy(maTaiKhoanNguoiQuanLy);
+                FQuanLy selectForm = new FQuanLy(maTaiKhoanNguoiQuanLy,conn);
                 selectForm.ShowDialog();
             }
             else
@@ -59,11 +65,7 @@ namespace DBMSProject
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FKhachHang kh = new FKhachHang();
-            kh.ShowDialog();
-        }
+        
 
         private void ChBHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
         {

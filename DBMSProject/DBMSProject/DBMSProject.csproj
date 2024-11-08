@@ -57,6 +57,12 @@
     <Compile Include="DAO\ClassTaiKhoanDAO.cs" />
     <Compile Include="DAO\ClassUuDaiDAO.cs" />
     <Compile Include="DAO\DBConnection.cs" />
+    <Compile Include="FDatabaseConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDatabaseConnection.Designer.cs">
+      <DependentUpon>FDatabaseConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="FDoiMatKhau.Designer.cs">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLoadingDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoadingDatabase.Designer.cs">
+      <DependentUpon>FLoadingDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="FManHinhChinh.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,9 @@
     <Compile Include="UCQuanLyDichVu.Designer.cs">
       <DependentUpon>UCQuanLyDichVu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FDatabaseConnection.resx">
+      <DependentUpon>FDatabaseConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDichVu.resx">
       <DependentUpon>FDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDoiMatKhau.resx">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLoadingDatabase.resx">
+      <DependentUpon>FLoadingDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FManHinhChinh.resx">
       <DependentUpon>FManHinhChinh.cs</DependentUpon>

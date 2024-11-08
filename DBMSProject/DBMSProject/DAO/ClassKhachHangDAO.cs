@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -13,14 +14,19 @@ namespace DBMSProject.DAO
 {
     public class ClassKhachHangDAO
     {
-        DBConnection db = new DBConnection();
+        DBConnection dBConnection;
         int maKH = FDangNhap.maTaiKhoanKhachHang;
+
+        public ClassKhachHangDAO(string connStr)
+        {
+            dBConnection = new DBConnection(connStr);
+        }
         public List<ClassKhachHang> loadKhachHang()
         {
             try
             {
-                db.openConnection();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyKhachHangView", db.getConnection);
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyKhachHangView", dBConnection.getConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -50,15 +56,15 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                db.closeConnection();
+                dBConnection.closeConnection();
             }
         }
         public List<ClassKhachHang> searchKhachHang(string taiKhoan)
         {
             try
             {
-                db.openConnection();
-                SqlCommand cmd = new SqlCommand("sp_SearchKhachHangByTaiKhoan", db.getConnection);
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("sp_SearchKhachHangByTaiKhoan", dBConnection.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);
 
@@ -89,20 +95,20 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                db.closeConnection();
+                dBConnection.closeConnection();
             }
         }
         public string AddKhachHang(string taiKhoan, string matKhau)
         {
             try
             {
-                db.openConnection();
-                SqlCommand cmd = new SqlCommand("sp_AddKhachHang", db.getConnection);
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("sp_AddKhachHang", dBConnection.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);
                 cmd.Parameters.AddWithValue("@matKhau", matKhau);
 
-                db.openConnection();
+                dBConnection.openConnection();
 
                 // Thực thi stored procedure
                 cmd.ExecuteNonQuery();
@@ -123,7 +129,7 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                db.closeConnection();
+                dBConnection.closeConnection();
             }
         }
 

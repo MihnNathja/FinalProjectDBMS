@@ -15,11 +15,15 @@ namespace DBMSProject
 {
     public partial class FNapTien : Form
     {
-        ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO(); 
-        ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO();
-        public FNapTien()
+        string conn;
+        ClassTaiKhoanDAO classTaiKhoanDAO;
+        ClassNapTienDAO classNapTienDAO;
+        public FNapTien(string connStr)
         {
             InitializeComponent();
+            conn = connStr;
+            classNapTienDAO = new ClassNapTienDAO(conn);
+            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
 
         private void txbSoTienNap_TextChanged(object sender, EventArgs e)
@@ -65,7 +69,7 @@ namespace DBMSProject
                 classNapTien.ThoiGianQuyDoi = TimeSpan.FromHours(soGioChoi);
                 classNapTien.GhiChu = null;
 
-                ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO();
+                /*ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO(conn);*/
                 classNapTienDAO.napTien(classNapTien);
                 txbSoTienNap.Text = "";
                 this.Close();

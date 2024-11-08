@@ -18,17 +18,22 @@ namespace DBMSProject
     {
         int maTaiKhoanKhachHang;
         int maMayTinh;
-        public FDichVu(int maTaiKhoanKhachHang, int maMayTinh)
+        string conn;
+        ClassDichVuDAO dichvuDao;
+        ClassChiTietHoaDonDAO clCTHDDAO;
+        public FDichVu(int maTaiKhoanKhachHang, int maMayTinh, string connStr)
         {
             InitializeComponent();
+            conn = connStr;
             this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
             this.maMayTinh = maMayTinh;
+            dichvuDao = new ClassDichVuDAO(conn);
+            clCTHDDAO = new ClassChiTietHoaDonDAO(conn);
         }
 
         private void FDichVu_Load(object sender, EventArgs e)
         {
-            ClassDichVuDAO clDVDAO = new ClassDichVuDAO();
-            List<ClassDichVu> listdv = clDVDAO.TruyXuatDanhSachDichVu(CheckSelectedRadioButton().Name);
+            List<ClassDichVu> listdv = dichvuDao.TruyXuatDanhSachDichVu(CheckSelectedRadioButton().Name);
             addFlowLayoutPanel(listdv);
         }
         public void addFlowLayoutPanel(List<ClassDichVu> listdv)
@@ -64,7 +69,7 @@ namespace DBMSProject
 
         private void btnGuiYeuCau_Click(object sender, EventArgs e)
         {
-            ClassChiTietHoaDonDAO clCTHDDAO = new ClassChiTietHoaDonDAO();
+
             bool checkThemDichVu= true;
             foreach(UCDichVu uc in flpnlDichVu.Controls)
             {
@@ -82,7 +87,6 @@ namespace DBMSProject
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            ClassDichVuDAO dichvuDao = new ClassDichVuDAO();
             List<ClassDichVu> listdv = dichvuDao.TimKiemDichVu(txtTimKiem.Text.Trim(), CheckSelectedRadioButton().Text);
             addFlowLayoutPanel(listdv);
         }
