@@ -101,7 +101,7 @@ namespace DBMSProject
 
         private void btnXemHoaDon_Click(object sender, EventArgs e)
         {
-            FThanhToanHoaDon fThanhToanHoaDon = new FThanhToanHoaDon();
+            FThanhToanHoaDon fThanhToanHoaDon = new FThanhToanHoaDon(conn);
             fThanhToanHoaDon.ShowDialog();
         }
     }

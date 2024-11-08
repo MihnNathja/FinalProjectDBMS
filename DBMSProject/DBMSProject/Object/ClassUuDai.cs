@@ -28,6 +28,7 @@ namespace DBMSProject.Object
             this.soLuong = soLuong;
             this.tinhTrang = tinhTrang;
         }
+        public ClassUuDai() { }
 
         public int MaUuDai { get => maUuDai; set => maUuDai = value; }
         public string TenUuDai { get => tenUuDai; set => tenUuDai = value; }

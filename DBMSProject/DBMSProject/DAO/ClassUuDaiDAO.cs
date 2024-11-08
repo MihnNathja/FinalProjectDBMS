@@ -47,7 +47,7 @@ namespace DBMSProject.DAO
             }
         }
 
-        public void ThemUuDai(ClassUuDai UuDai)
+        public void ThemUuDai(ClassUuDai UuDai, int maTaiKhoanNguoiQuanLy)
         {
             try
             {
@@ -61,19 +61,13 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@dieuKien", UuDai.DieuKien);
                 cmd.Parameters.AddWithValue("@soLuong", UuDai.SoLuong);
                 cmd.Parameters.AddWithValue("@tinhTrang", UuDai.TinhTrang);
+                cmd.Parameters.AddWithValue("@maNguoiQuanLy", maTaiKhoanNguoiQuanLy);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm ưu đãi thành công");
             }
             catch (Exception exc)
             {
-                if (exc.Message.Contains("Ưu đãi đã tồn tại"))
-                {
-                    MessageBox.Show("Ưu đãi đã tồn tại");
-                }
-                else
-                {
-                    MessageBox.Show("that bai (ThemUuDai)" + exc);
-                }
+                MessageBox.Show("that bai (ThemUuDai)" + exc);
             }
             finally
             {

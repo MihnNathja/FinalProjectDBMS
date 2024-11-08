@@ -27,18 +27,16 @@ namespace DBMSProject
         
         private void MainScreenPtb_Click(object sender, EventArgs e)
         {
-            FManHinhChinh mainScreenForm = new FManHinhChinh(conn);
+            FManHinhChinh mainScreenForm = new FManHinhChinh(maTaiKhoanNguoiQuanLy,conn);
             mainScreenForm.addUser();
-            
             mainScreenForm.addComputer();
-
             mainScreenForm.addBill();
             mainScreenForm.ShowDialog();              
         }
 
         private void categoryManagementPtb_Click(object sender, EventArgs e)
         {
-            FQuanLyDichVu servicesForm = new FQuanLyDichVu(conn);
+            FQuanLyDichVu servicesForm = new FQuanLyDichVu(maTaiKhoanNguoiQuanLy,conn);
             servicesForm.ShowDialog();
         }
     }

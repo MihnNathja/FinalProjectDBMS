@@ -46,7 +46,7 @@ namespace DBMSProject.DAO
             }
         }
 
-        public void ThemDichVu(ClassDichVu dichvu)
+        public void ThemDichVu(ClassDichVu dichvu, int maTaiKhoanNguoiQuanLy)
         {
             try
             {
@@ -57,20 +57,14 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@loaiDichVu", dichvu.LoaiDichVu);
                 cmd.Parameters.AddWithValue("@donGia", dichvu.DonGia);
                 cmd.Parameters.AddWithValue("@soLuong", dichvu.SoLuong);
+                cmd.Parameters.AddWithValue("@maNguoiQuanLy", maTaiKhoanNguoiQuanLy);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm dịch vụ thành công");
             }
             catch (Exception exc)
             {
-                if (exc.Message.Contains("Dịch vụ đã tồn tại"))
-                {
-                    MessageBox.Show("Dịch vụ đã tồn tại");
-                }
-                else
-                {
-                    MessageBox.Show("that bai (ThemDichVu)" + exc);
-                }
-                
+                MessageBox.Show("that bai (ThemDichVu)" + exc);
+
             }
             finally
             {

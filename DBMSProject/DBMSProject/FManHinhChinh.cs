@@ -19,12 +19,16 @@ namespace DBMSProject
         ClassHoaDonDAO hoaDonDAO;
         ClassUuDaiDAO uuDaiDAO;
         string conn;
-        public FManHinhChinh(string connStr)
+        
+        int maTaiKhoanNguoiQuanLy;
+        public FManHinhChinh(int maTaiKhoanNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             conn = connStr;
             hoaDonDAO = new ClassHoaDonDAO(conn);
             uuDaiDAO = new ClassUuDaiDAO(conn);
+
+            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
         public void addUser()
         {
@@ -56,7 +60,7 @@ namespace DBMSProject
             computerFlp.Controls.Clear();
             foreach (var item in mayTinhs)
             {
-                UCMayTinh ucMayTinh = new UCMayTinh(conn);
+                UCMayTinh ucMayTinh = new UCMayTinh(maTaiKhoanNguoiQuanLy,conn);
                 ucMayTinh.UCMayTinhLoad(ucMayTinh, item);
                 computerFlp.Controls.Add(ucMayTinh);
             }
@@ -127,7 +131,7 @@ namespace DBMSProject
                     Convert.ToDateTime(dtpThoiGianKetThuc.Value), txtDieuKien.Text,
                     Convert.ToInt32(txtSoLuong.Text), txtTinhTrang.Text); 
                 ClassDichVuDAO dichvuDao = new ClassDichVuDAO(conn);
-                uuDaiDAO.ThemUuDai(ud);
+                uuDaiDAO.ThemUuDai(ud, maTaiKhoanNguoiQuanLy);
 
                 LoadUuDai();
                 
@@ -223,7 +227,7 @@ namespace DBMSProject
             else
             {
                 ClassKhachHangDAO khachHangDAO = new ClassKhachHangDAO(conn);
-                string result = khachHangDAO.AddKhachHang(username, password);
+                string result = khachHangDAO.AddKhachHang(username, password, maTaiKhoanNguoiQuanLy);
                 MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

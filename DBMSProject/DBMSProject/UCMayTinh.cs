@@ -22,15 +22,16 @@ namespace DBMSProject
         private Timer timer;
         private TimeSpan thoiGianConLai;
         private TimeSpan thoiGianDaDung;
-        public UCMayTinh(string connStr)
+        int maTaiKhoanNguoiQuanLy;
+        public UCMayTinh(int maTaiKhoanNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
             conn = connStr;
             timer = new Timer();
             timer.Interval = 1000; 
-            timer.Tick += Timer_Tick;
-            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
+            timer.Tick += Timer_Tick; 
+            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
 
 
@@ -53,7 +54,7 @@ namespace DBMSProject
                 lblTinhTrang.Text = "Đang bảo trì";
                 btnBaoTri.Text = "Đang bảo trì";
                 ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO(conn);
-                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri");
+                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri", maTaiKhoanNguoiQuanLy);
             }
             else if (lblTinhTrang.Text == "Đang bảo trì")
             {
@@ -61,7 +62,7 @@ namespace DBMSProject
                 lblTinhTrang.Text = "Trống";
                 btnBaoTri.Text = "Bảo trì";
                 ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO(conn);
-                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong");
+                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong", maTaiKhoanNguoiQuanLy);
             }
         }
         public UCMayTinh UCMayTinhLoad(UCMayTinh ucMayTinh, ClassMayTinh classMayTinh)

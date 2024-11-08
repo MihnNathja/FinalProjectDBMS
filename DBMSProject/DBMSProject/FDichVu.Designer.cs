@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnGuiYeuCau = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.flpnlDichVu = new System.Windows.Forms.FlowLayoutPanel();
@@ -38,26 +36,6 @@
             this.DichVuTheCaoView = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(542, 507);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(54, 25);
-            this.lblTongTien.TabIndex = 23;
-            this.lblTongTien.Text = "VNĐ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(419, 507);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 25);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Tổng tiền:";
             // 
             // btnGuiYeuCau
             // 
@@ -145,8 +123,6 @@
             this.Controls.Add(this.DichVuThucUongView);
             this.Controls.Add(this.DichVuDoAnView);
             this.Controls.Add(this.flpnlDichVu);
-            this.Controls.Add(this.lblTongTien);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGuiYeuCau);
             this.Controls.Add(this.txtTimKiem);
             this.Name = "FDichVu";
@@ -158,9 +134,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuiYeuCau;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.FlowLayoutPanel flpnlDichVu;

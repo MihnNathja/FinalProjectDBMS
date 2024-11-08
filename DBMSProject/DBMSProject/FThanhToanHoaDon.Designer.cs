@@ -43,6 +43,7 @@
             this.lblTriGia = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnUuDai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaGoi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,11 +203,25 @@
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
+            // btnUuDai
+            // 
+            this.btnUuDai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUuDai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUuDai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUuDai.Location = new System.Drawing.Point(27, 522);
+            this.btnUuDai.Name = "btnUuDai";
+            this.btnUuDai.Size = new System.Drawing.Size(197, 42);
+            this.btnUuDai.TabIndex = 37;
+            this.btnUuDai.Text = "Chọn ưu đãi";
+            this.btnUuDai.UseVisualStyleBackColor = false;
+            this.btnUuDai.Click += new System.EventHandler(this.btnUuDai_Click);
+            // 
             // FThanhToanHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 661);
+            this.Controls.Add(this.btnUuDai);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.lblTriGia);
             this.Controls.Add(this.label5);
@@ -246,5 +261,6 @@
         private System.Windows.Forms.Label lblTriGia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnUuDai;
     }
 }

@@ -60,7 +60,7 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }
         }
-        public void CapNhatTinhTrangMayTinh(int maMayTinh, string tinhTrang)
+        public void CapNhatTinhTrangMayTinh(int maMayTinh, string tinhTrang, int maTaiKhoanNguoiQuanLy)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace DBMSProject.DAO
 
                         cmd.Parameters.AddWithValue("@maMayTinh", maMayTinh);
                         cmd.Parameters.AddWithValue("@tinhTrang", tinhTrang);
-
+                        cmd.Parameters.AddWithValue("@maNguoiQuanLy", maTaiKhoanNguoiQuanLy);
                         cmd.ExecuteNonQuery();
                     }
                 }

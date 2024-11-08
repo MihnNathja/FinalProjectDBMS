@@ -54,7 +54,7 @@ namespace DBMSProject.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show("Đã xảy ra lỗi: LayHoaDon " + ex.Message);
                 return null;
             }
             finally
@@ -76,7 +76,7 @@ namespace DBMSProject.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show("Đã xảy ra lỗi: LayChiTietHoaDon " + ex.Message);
                 return null;
             }
             finally
@@ -131,18 +131,7 @@ namespace DBMSProject.DAO
             }
             catch (Exception ex)
             {
-                if (ex.Message.Contains("Dịch vụ không tồn tại"))
-                {
-                    MessageBox.Show("Dịch vụ không tồn tại");
-                }
-                else if (ex.Message.Contains("Số lượng dịch vụ không đủ"))
-                {
-                    MessageBox.Show("Số lượng dịch vụ không đủ");
-                }
-                else
-                {
-                    MessageBox.Show("that bai (ThemDichVu_ChiTietHoaDon)" + ex);
-                }
+                MessageBox.Show("that bai (ThemDichVu_ChiTietHoaDon)" + ex);
                 return false;
             }
             finally
