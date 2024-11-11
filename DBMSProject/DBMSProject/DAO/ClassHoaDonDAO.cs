@@ -13,7 +13,26 @@ namespace DBMSProject.DAO
 {
     public class ClassHoaDonDAO
     {
-        DBConnection dBConnection;
+        DBConnection dBConnection = new DBConnection();
+        public void CapNhatTinhTrangHoaDon(int maHoaDon)
+        {
+            try
+            {
+                dBConnection.openConnection();
+                using (SqlCommand cmd = new SqlCommand("sp_CapNhatTinhTrangHoaDon", dBConnection.getConnection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi CapNhatTinhTrangHoaDon " + ex.Message);
+            }
+        }
+
 
         public ClassHoaDonDAO(string connStr)
         {

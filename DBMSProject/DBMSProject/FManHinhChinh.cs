@@ -26,7 +26,7 @@ namespace DBMSProject
             InitializeComponent();
             conn = connStr;
             hoaDonDAO = new ClassHoaDonDAO(conn);
-            uuDaiDAO = new ClassUuDaiDAO(conn);
+            uuDaiDAO = new ClassUuDaiDAO(maTaiKhoanNguoiQuanLy, conn);
 
             this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
         }
@@ -76,8 +76,7 @@ namespace DBMSProject
             if (e.RowIndex >= 0)
             {
                 int maHoaDon = (int)dgvChuaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
-                MessageBox.Show(maHoaDon.ToString());
-                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon,conn);
+                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon, conn);
                 fChiTietHoaDon.ShowDialog();
             }
         }
@@ -86,8 +85,7 @@ namespace DBMSProject
             if (e.RowIndex >= 0)
             {
                 int maHoaDon = (int)dgvDaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
-                MessageBox.Show(maHoaDon.ToString());
-                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon,conn);
+                FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon, conn);
                 fChiTietHoaDon.ShowDialog();
             }
         }
@@ -156,7 +154,7 @@ namespace DBMSProject
                     Convert.ToDouble(txtGiaTri.Text), Convert.ToDateTime(dtpThoiGianBatDau.Value),
                     Convert.ToDateTime(dtpThoiGianKetThuc.Value), txtDieuKien.Text,
                     Convert.ToInt32(txtSoLuong.Text), txtTinhTrang.Text);
-                ClassUuDaiDAO dichvuDao = new ClassUuDaiDAO(conn);
+                ClassUuDaiDAO dichvuDao = new ClassUuDaiDAO(maTaiKhoanNguoiQuanLy, conn);
                 uuDaiDAO.SuaUuDai(ud);
 
                 LoadUuDai();
@@ -168,7 +166,7 @@ namespace DBMSProject
         private void LoadUuDai()
         {
             dgvQuanLyUuDai.DataSource = null;
-            dgvQuanLyUuDai.DataSource = uuDaiDAO.TruyXuatDanhSachUuDai();
+            dgvQuanLyUuDai.DataSource = uuDaiDAO.TruyXuatDanhSachUuDaiVip();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -207,7 +205,7 @@ namespace DBMSProject
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvQuanLyUuDai.DataSource = uuDaiDAO.TimKiemUuDai(txtTimKiem.Text.Trim());
+            dgvQuanLyUuDai.DataSource = uuDaiDAO.TimKiemUuDaiVip(txtTimKiem.Text.Trim());
         }
         private void btnDangKy_Click(object sender, EventArgs e)
         {

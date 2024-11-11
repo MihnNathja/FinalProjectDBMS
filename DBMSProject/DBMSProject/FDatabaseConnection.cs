@@ -52,7 +52,7 @@ namespace DBMSProject
             string connStr = "";
             if (checkWindow.Checked)
             {
-                connStr = string.Format(@"Server={0};Database=QuanLyDichVuQuanNet;Trusted_Connection=True;", cboServer.Text);
+                connStr = string.Format("Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
             }
             else
             {
@@ -61,7 +61,7 @@ namespace DBMSProject
             }
 
             // Khởi tạo đối tượng DBConnection với chuỗi kết nối
-            /*dBConnection = new DBConnection(connStr);*/
+            dBConnection = new DBConnection(connStr); 
 
             // Hiển thị chuỗi kết nối cho người dùng để kiểm tra
             MessageBox.Show("Chuỗi kết nối: " + connStr);

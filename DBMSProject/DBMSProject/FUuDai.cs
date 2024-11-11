@@ -16,24 +16,48 @@ namespace DBMSProject
     {
         ClassHoaDon HoaDon;
         string conn;
-        public FUuDai(ClassHoaDon hoadon, string connStr)
+        int maTaiKhoanKhachHang;
+        string loaiKhachHang;
+        public FUuDai(ClassHoaDon hoadon, int maTaiKhoanKhachHang, string connStr)
         {
             InitializeComponent();
             HoaDon = hoadon;
             conn = connStr;
+            this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(conn);
-            List<ClassUuDai> listUD = uudaiDao.TimKiemUuDai(txtTimKiem.Text.Trim());
+            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang, conn);
+            ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
+            loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
+            List<ClassUuDai> listUD;
+            if (loaiKhachHang == "Thuong")
+            {
+                listUD = uudaiDao.TimKiemUuDaiThuong(txtTimKiem.Text.Trim());
+            }
+            else
+            {
+                listUD = uudaiDao.TimKiemUuDaiVip(txtTimKiem.Text.Trim());
+            }
             addFlowLayoutPanel(listUD);
         }
 
         private void FUuDai_Load(object sender, EventArgs e)
         {
-            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(conn);
-            List<ClassUuDai> listUD = uudaiDao.TruyXuatDanhSachUuDai();
+            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang, conn);
+            List<ClassUuDai> listUD;
+            ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
+            loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
+            if (loaiKhachHang == "Thường")
+            {
+                listUD = uudaiDao.TruyXuatDanhSachUuDaiThuong();
+            }
+            else
+            {
+                listUD = uudaiDao.TruyXuatDanhSachUuDaiVip();
+            }
+
             addFlowLayoutPanel(listUD);
         }
         public void addFlowLayoutPanel(List<ClassUuDai> listUD)
