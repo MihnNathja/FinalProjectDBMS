@@ -12,14 +12,48 @@ namespace DBMSProject.DAO
 {
     public class ClassUuDaiDAO
     {
+        int maTaiKhoanKhachHang;
         DBConnection dBConnection = new DBConnection();
+        public ClassUuDaiDAO(int maTaiKhoanKhachHang)
+        {
+            this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
+        }
         public ClassUuDaiDAO() { }
-        public List<ClassUuDai> TruyXuatDanhSachUuDai()
+        public List<ClassUuDai> TruyXuatDanhSachUuDaiThuong()
         {
             try
             {
                 dBConnection.openConnection();
-                SqlCommand cmd = new SqlCommand(string.Format($"SELECT * FROM ViewUuDai"), dBConnection.getConnection);
+                SqlCommand cmd = new SqlCommand(string.Format($"SELECT * FROM ViewUuDaiThuong"), dBConnection.getConnection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ClassUuDai> listud = new List<ClassUuDai>();
+                while (reader.Read())
+                {
+                    ClassUuDai dv = new ClassUuDai(Convert.ToInt32(reader["maUuDai"]),
+                        reader["tenUuDai"].ToString(), Convert.ToDouble(reader["giaTri"]),
+                        Convert.ToDateTime(reader["thoiGianBatDau"]), Convert.ToDateTime(reader["thoiGianKetThuc"]),
+                        reader["dieuKien"].ToString(), Convert.ToInt32(reader["soLuong"]), reader["tinhTrang"].ToString());
+                    listud.Add(dv);
+                }
+                reader.Close();
+                return listud;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("that bai (TruyXuatDanhSachUuDai)" + exc);
+                return null;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
+        public List<ClassUuDai> TruyXuatDanhSachUuDaiVip()
+        {
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand(string.Format($"SELECT * FROM ViewUuDaiVip"), dBConnection.getConnection);
                 SqlDataReader reader = cmd.ExecuteReader();
                 List<ClassUuDai> listud = new List<ClassUuDai>();
                 while (reader.Read())
@@ -118,12 +152,12 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }
         }
-        public List<ClassUuDai> TimKiemUuDai(string timkiem)
+        public List<ClassUuDai> TimKiemUuDaiThuong(string timkiem)
         {
             try
             {
                 dBConnection.openConnection();
-                SqlCommand cmd = new SqlCommand("TimKiemUuDaiProcedure", dBConnection.getConnection);
+                SqlCommand cmd = new SqlCommand("TimKiemUuDaiThuongProcedure", dBConnection.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@tenUuDai", timkiem);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -141,7 +175,38 @@ namespace DBMSProject.DAO
             }
             catch (Exception exc)
             {
-                MessageBox.Show("that bai (TimKiemUuDai)" + exc);
+                MessageBox.Show("that bai (TimKiemUuDaiThuong)" + exc);
+                return null;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
+        public List<ClassUuDai> TimKiemUuDaiVip(string timkiem)
+        {
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("TimKiemUuDaiVipProcedure", dBConnection.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@tenUuDai", timkiem);
+                SqlDataReader reader = cmd.ExecuteReader();
+                List<ClassUuDai> listud = new List<ClassUuDai>();
+                while (reader.Read())
+                {
+                    ClassUuDai dv = new ClassUuDai(Convert.ToInt32(reader["maUuDai"]),
+                        reader["tenUuDai"].ToString(), Convert.ToDouble(reader["giaTri"]),
+                        Convert.ToDateTime(reader["thoiGianBatDau"]), Convert.ToDateTime(reader["thoiGianKetThuc"]),
+                        reader["dieuKien"].ToString(), Convert.ToInt32(reader["soLuong"]), reader["tinhTrang"].ToString());
+                    listud.Add(dv);
+                }
+                reader.Close();
+                return listud;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("that bai (TimKiemUuDaiVip)" + exc);
                 return null;
             }
             finally

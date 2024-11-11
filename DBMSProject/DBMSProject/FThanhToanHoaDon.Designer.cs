@@ -174,7 +174,7 @@
             // 
             this.lblTriGia.AutoSize = true;
             this.lblTriGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTriGia.Location = new System.Drawing.Point(359, 528);
+            this.lblTriGia.Location = new System.Drawing.Point(327, 528);
             this.lblTriGia.Name = "lblTriGia";
             this.lblTriGia.Size = new System.Drawing.Size(125, 26);
             this.lblTriGia.TabIndex = 35;
@@ -184,7 +184,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(281, 528);
+            this.label5.Location = new System.Drawing.Point(244, 528);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 26);
             this.label5.TabIndex = 34;

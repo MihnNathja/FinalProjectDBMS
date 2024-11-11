@@ -14,6 +14,24 @@ namespace DBMSProject.DAO
     public class ClassHoaDonDAO
     {
         DBConnection dBConnection = new DBConnection();
+        public void CapNhatTinhTrangHoaDon(int maHoaDon)
+        {
+            try
+            {
+                dBConnection.openConnection();
+                using (SqlCommand cmd = new SqlCommand("sp_CapNhatTinhTrangHoaDon", dBConnection.getConnection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi CapNhatTinhTrangHoaDon " + ex.Message);
+            }
+        }
         public DataTable LoadHoaDonChuaThanhToan()
         {
             string sqlStr = string.Format("SELECT * FROM DichVuChuaThanhToanView");

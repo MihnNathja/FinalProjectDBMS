@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace DBMSProject.DAO
     {
         DBConnection db = new DBConnection();
         int maKH = FDangNhap.maTaiKhoanKhachHang;
+
         public List<ClassKhachHang> loadKhachHang()
         {
             try
@@ -119,8 +121,33 @@ namespace DBMSProject.DAO
                 db.closeConnection();
             }
         }
+        public string GetLoaiKhachHang(int maKhachHang)
+        {
+            try
+            {
+                db.openConnection();
 
-       
+                // Tạo một đối tượng SqlCommand để gọi hàm SQL
+                string SQL = "SELECT dbo.LayLoaiKhachHang(@maKhachHang)";
+                SqlCommand cmd = new SqlCommand(SQL, db.getConnection);
+                // Thêm tham số cho hàm
+                cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
+
+                // Thực thi câu lệnh và lấy giá trị trả về
+                object result = cmd.ExecuteScalar();
+                return result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+                return "";
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
+
 
 
 

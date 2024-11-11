@@ -57,6 +57,43 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }  
         }
+        public ClassHoaDon LayHoaDon_KhachHang(int maKhachHang)
+        {
+
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("sp_XemHoaDon_KhachHang", dBConnection.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    ClassHoaDon classHoaDon = new ClassHoaDon(Convert.ToInt32(reader["maHoaDon"]), Convert.ToInt32(reader["maKhachHang"]), Convert.ToInt32(reader["maMayTinh"]),
+                    DateTime.Parse(reader["thoiGianTao"].ToString()), Convert.ToString(reader["trangThai"]), Convert.ToDecimal(reader["triGia"]),
+                    reader.IsDBNull(reader.GetOrdinal("maUuDai")) ? (int?)null : Convert.ToInt32(reader["maUuDai"]));
+
+                    reader.Close();
+                    return classHoaDon;
+                }
+                else
+                {
+                    reader.Close();
+                    MessageBox.Show("Không tìm thấy hóa đơn với mã khách hàng: " + maKhachHang);
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: LayHoaDon_KhachHang " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
         public DataTable LayChiTietHoaDon(int maHoaDon)
         {
             try

@@ -70,7 +70,6 @@ namespace DBMSProject
             if (e.RowIndex >= 0)
             {
                 int maHoaDon = (int)dgvChuaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
-                MessageBox.Show(maHoaDon.ToString());
                 FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon);
                 fChiTietHoaDon.ShowDialog();
             }
@@ -80,7 +79,6 @@ namespace DBMSProject
             if (e.RowIndex >= 0)
             {
                 int maHoaDon = (int)dgvDaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
-                MessageBox.Show(maHoaDon.ToString());
                 FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon);
                 fChiTietHoaDon.ShowDialog();
             }
@@ -162,7 +160,7 @@ namespace DBMSProject
         private void LoadUuDai()
         {
             dgvQuanLyUuDai.DataSource = null;
-            dgvQuanLyUuDai.DataSource = uuDaiDAO.TruyXuatDanhSachUuDai();
+            dgvQuanLyUuDai.DataSource = uuDaiDAO.TruyXuatDanhSachUuDaiVip();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -201,7 +199,7 @@ namespace DBMSProject
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvQuanLyUuDai.DataSource = uuDaiDAO.TimKiemUuDai(txtTimKiem.Text.Trim());
+            dgvQuanLyUuDai.DataSource = uuDaiDAO.TimKiemUuDaiVip(txtTimKiem.Text.Trim());
         }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
