@@ -32,6 +32,12 @@ namespace DBMSProject.DAO
                 MessageBox.Show("Lỗi CapNhatTinhTrangHoaDon " + ex.Message);
             }
         }
+
+
+        public ClassHoaDonDAO(string connStr)
+        {
+            dBConnection = new DBConnection(connStr);
+        }
         public DataTable LoadHoaDonChuaThanhToan()
         {
             string sqlStr = string.Format("SELECT * FROM DichVuChuaThanhToanView");

@@ -15,21 +15,29 @@ namespace DBMSProject
     public partial class FDoiMatKhau : Form
     {
         int maTaiKhoanKhachHang;
-        public FDoiMatKhau()
+        string conn;
+        ClassTaiKhoanDAO classTaiKhoan;
+        ClassTaiKhoanDAO classTaiKhoanDAO;
+        /* public FDoiMatKhau()
+         {
+             InitializeComponent();
+         }*/
+        public FDoiMatKhau(string connStr)
         {
             InitializeComponent();
+            conn = connStr;
+            classTaiKhoan = new ClassTaiKhoanDAO(conn);
+            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
         public FDoiMatKhau(int maTaiKhoanKhachHang)
         {
             InitializeComponent();
             this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
-            ClassTaiKhoanDAO classTaiKhoan = new ClassTaiKhoanDAO();
             txtTenTaiKhoan.Text = classTaiKhoan.GetTenTaiKhoan(maTaiKhoanKhachHang);
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(txtTenTaiKhoan.Text, txtMatKhau.Text);
-            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
             classTaiKhoanDAO.DoiMatKhau(classTaiKhoan, txtMatKhauMoi.Text);
 
             

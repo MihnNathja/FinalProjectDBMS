@@ -13,7 +13,13 @@ namespace DBMSProject.DAO
 {
     internal class ClassTaiKhoanDAO
     {
-        DBConnection dBConnection = new DBConnection();
+        DBConnection dBConnection;
+
+        public ClassTaiKhoanDAO(string connStr)
+        {
+            dBConnection = new DBConnection(connStr);
+
+        }
         public int KiemTraKhachHangDangNhap(ClassTaiKhoan classTaiKhoan)
         {
             
@@ -88,14 +94,13 @@ namespace DBMSProject.DAO
 
         public void DoiMatKhau(ClassTaiKhoan classTaiKhoan, string matKhauMoi)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
-            {
+            
                 try
                 {
                     dBConnection.openConnection();
 
                     // Tạo một đối tượng SqlCommand để gọi hàm SQL
-                    using (SqlCommand command = new SqlCommand("DoiMatKhau", conn))
+                    using (SqlCommand command = new SqlCommand("DoiMatKhau", dBConnection.getConnection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -118,36 +123,39 @@ namespace DBMSProject.DAO
                 {
                     dBConnection.closeConnection();
                 }
-            }
+            
         }
         public int ChuyenDoiMaKhachHangSangMaTaiKhoan(int maKhachHang)
         {
-            try
-            {
-                dBConnection.openConnection();
-                using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", dBConnection.getConnection))
+            
+            
+                try
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.Add(new SqlParameter("@maKhachHang", maKhachHang));
-                    SqlParameter outputParam = new SqlParameter("@maTaiKhoan", SqlDbType.Int)
+                    dBConnection.openConnection();
+                    using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", dBConnection.getConnection))
                     {
-                        Direction = ParameterDirection.Output
-                    };
-                    command.Parameters.Add(outputParam);
-                    command.ExecuteNonQuery();
-                    int maTaiKhoan = (int)command.Parameters["@maTaiKhoan"].Value;
-                    return maTaiKhoan;
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new SqlParameter("@maKhachHang", maKhachHang));
+                        SqlParameter outputParam = new SqlParameter("@maTaiKhoan", SqlDbType.Int)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        command.Parameters.Add(outputParam);
+                        command.ExecuteNonQuery();
+                        int maTaiKhoan = (int)command.Parameters["@maTaiKhoan"].Value;
+                        return maTaiKhoan;
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}");
-                return -1;
-            }
-            finally
-            {
-                dBConnection.closeConnection();
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}");
+                    return -1; 
+                }
+                finally
+                {
+                    dBConnection.closeConnection();
+                }
+            
         }
         public int ChuyenDoiMaTaiKhoanSangMaKhachHang(int maTaiKhoan)
         {
@@ -177,6 +185,6 @@ namespace DBMSProject.DAO
             }
         }
 
-        public ClassTaiKhoanDAO() { }
+        
     }
 }

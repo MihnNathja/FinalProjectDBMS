@@ -14,25 +14,30 @@ namespace DBMSProject
 {
     public partial class UCKhachHang : UserControl
     {
-        FNapTien timeExtendForm = new FNapTien();
+ 
         public static int maKHofUCKH;
         public static string typeAdd;
-        public UCKhachHang()
+        string conn;
+        ClassTaiKhoanDAO classTaiKhoanDAO;
+        public UCKhachHang(string connStr)
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
+            conn = connStr;
+            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
-            timeExtendForm.loadTaiKhoangKH(lblTaiKhoan.Text);
+            FNapTien fNapTien = new FNapTien(conn);
+            fNapTien.loadTaiKhoangKH(lblTaiKhoan.Text);
             maKHofUCKH = Convert.ToInt32(lblMaKH.Text);
             typeAdd = "khachHang";
-            timeExtendForm.ShowDialog();
+            fNapTien.ShowDialog();
         }
         public UCKhachHang UCKhachHangLoad(UCKhachHang ucKhachHang, ClassKhachHang classKhachHang)
         {
-            ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO();
+            
             ucKhachHang.lblMaKH.Text = classKhachHang.MaKhachHang.ToString();
             ucKhachHang.lblTaiKhoan.Text = classTaiKhoanDAO.GetTenTaiKhoan(classKhachHang.MaTaiKhoan);
             ucKhachHang.lblLoaiThanhVien.Text = classKhachHang.LoaiKhachHang.ToString();

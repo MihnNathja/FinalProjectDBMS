@@ -16,17 +16,19 @@ namespace DBMSProject
 {
     public partial class FChiTietHoaDon : Form
     {
-        ClassChiTietHoaDonDAO chiTietHoaDonDAO = new ClassChiTietHoaDonDAO();
-        ClassChiTietHoaDon chiTietHoaDon;
+        /*ClassChiTietHoaDon chiTietHoaDon;*/
+        string conn;
         
         List<ClassChiTietHoaDon> danhSachChiTietHoaDon;
-        public FChiTietHoaDon()
+        /*public FChiTietHoaDon()
         {
             InitializeComponent();
-        }
-        public FChiTietHoaDon(int maHoaDon)
+        }*/
+       
+        public FChiTietHoaDon(int maHoaDon, string connStr)
         {
             InitializeComponent();
+            conn = connStr;
             LoadChiTietHoaDon(maHoaDon);
         }
 
@@ -40,6 +42,7 @@ namespace DBMSProject
         }
         public void LoadChiTietHoaDon(int maHoaDon)
         {
+            ClassChiTietHoaDonDAO chiTietHoaDonDAO = new ClassChiTietHoaDonDAO(conn);
             ClassHoaDon classHoaDon = chiTietHoaDonDAO.LayHoaDon(maHoaDon);
             
             lblMaHoaDon.Text = classHoaDon.MaHoaDon.ToString();

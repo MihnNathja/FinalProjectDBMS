@@ -12,14 +12,18 @@ namespace DBMSProject.DAO
 {
     public class ClassMayTinhDAO
     {
-        DBConnection db = new DBConnection();
+        DBConnection dBConnection;
+        public ClassMayTinhDAO(string connStr) 
+        {
+            dBConnection = new DBConnection(connStr);
+        }
 
         public List<ClassMayTinh> loadMayTinh()
         {
             try
             {
-                db.openConnection();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyMayTinhView", db.getConnection);
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM QuanLyMayTinhView", dBConnection.getConnection);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -53,14 +57,14 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                db.closeConnection();
+                dBConnection.closeConnection();
             }
         }
         public void CapNhatTinhTrangMayTinh(int maMayTinh, string tinhTrang, int maTaiKhoanNguoiQuanLy)
         {
             try
             {
-                using (SqlConnection conn = db.getConnection)
+                using (SqlConnection conn = dBConnection.getConnection)
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand("sp_UpdateTinhTrangMayTinh", conn))

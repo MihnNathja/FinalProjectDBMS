@@ -14,11 +14,13 @@ namespace DBMSProject
 {
     public partial class FThanhToanHoaDon : Form
     {
+        string conn;
         int maTaiKhoanKhachHang;
         public bool HoaDonTonTai = true;
-        public FThanhToanHoaDon(int maTaiKhoanKhachHang)
+        public FThanhToanHoaDon(int maTaiKhoanKhachHang, string connStr)
         {
             InitializeComponent();
+            conn = connStr;
             this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
             LoadChiTietHoaDon();
         }
@@ -31,23 +33,23 @@ namespace DBMSProject
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            ClassHoaDonDAO hdDAO = new ClassHoaDonDAO();
+            ClassHoaDonDAO hdDAO = new ClassHoaDonDAO(conn);
             hdDAO.CapNhatTinhTrangHoaDon(Convert.ToInt32(lblMaHoaDon.Text));
             this.Close();
         }
 
         private void btnUuDai_Click(object sender, EventArgs e)
         {
-            FUuDai fUD = new FUuDai(hoadon, maTaiKhoanKhachHang);
+            FUuDai fUD = new FUuDai(hoadon, maTaiKhoanKhachHang, conn);
             fUD.ShowDialog();
             LoadChiTietHoaDon();
         }
         private void LoadChiTietHoaDon()
         {
-            ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO();
+            ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO(conn);
             int makh = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
 
-            ClassChiTietHoaDonDAO cthdDAO = new ClassChiTietHoaDonDAO();
+            ClassChiTietHoaDonDAO cthdDAO = new ClassChiTietHoaDonDAO(conn);
             ClassHoaDon classHoaDon = cthdDAO.LayHoaDon_KhachHang(makh);
             if(classHoaDon == null)
             {

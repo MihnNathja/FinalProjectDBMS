@@ -14,10 +14,15 @@ namespace DBMSProject.DAO
 {
     internal class ClassChiTietHoaDonDAO
     {
-        DBConnection dBConnection = new DBConnection();
+        DBConnection dBConnection;
 
         List<ClassChiTietHoaDon> listChiTietHoaDon = new List<ClassChiTietHoaDon>();
         string sqlStr = string.Format("XemChiTietHoaDonProcedure");
+
+        public ClassChiTietHoaDonDAO(string connStr)
+        {
+            dBConnection = new DBConnection(connStr);
+        }
         public ClassHoaDon LayHoaDon(int maHoaDon)
         {
             

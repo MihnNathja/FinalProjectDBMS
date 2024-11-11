@@ -15,19 +15,21 @@ namespace DBMSProject
     public partial class FUuDai : Form
     {
         ClassHoaDon HoaDon;
+        string conn;
         int maTaiKhoanKhachHang;
         string loaiKhachHang;
-        public FUuDai(ClassHoaDon hoadon, int maTaiKhoanKhachHang)
+        public FUuDai(ClassHoaDon hoadon, int maTaiKhoanKhachHang, string connStr)
         {
             InitializeComponent();
             HoaDon = hoadon;
+            conn = connStr;
             this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang);
-            ClassKhachHangDAO khDAO = new ClassKhachHangDAO();
+            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang, conn);
+            ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
             loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
             List<ClassUuDai> listUD;
             if (loaiKhachHang == "Thuong")
@@ -43,9 +45,9 @@ namespace DBMSProject
 
         private void FUuDai_Load(object sender, EventArgs e)
         {
-            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang);
+            ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang, conn);
             List<ClassUuDai> listUD;
-            ClassKhachHangDAO khDAO = new ClassKhachHangDAO();
+            ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
             loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
             if (loaiKhachHang == "Thường")
             {
@@ -55,6 +57,7 @@ namespace DBMSProject
             {
                 listUD = uudaiDao.TruyXuatDanhSachUuDaiVip();
             }
+
             addFlowLayoutPanel(listUD);
         }
         public void addFlowLayoutPanel(List<ClassUuDai> listUD)
@@ -62,7 +65,7 @@ namespace DBMSProject
             flpnlUuDai.Controls.Clear();
             foreach (var item in listUD)
             {
-                UCUuDai uc = new UCUuDai(HoaDon);
+                UCUuDai uc = new UCUuDai(HoaDon, conn);
                 uc.LoadUCUuDai(item);
                 flpnlUuDai.Controls.Add(uc);
             }

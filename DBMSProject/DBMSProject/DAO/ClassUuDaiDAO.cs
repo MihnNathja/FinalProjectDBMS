@@ -12,11 +12,13 @@ namespace DBMSProject.DAO
 {
     public class ClassUuDaiDAO
     {
+        DBConnection dBConnection;
+
         int maTaiKhoanKhachHang;
-        DBConnection dBConnection = new DBConnection();
-        public ClassUuDaiDAO(int maTaiKhoanKhachHang)
+        public ClassUuDaiDAO(int maTaiKhoanKhachHang, string connStr)
         {
             this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
+            dBConnection = new DBConnection(connStr);
         }
         public ClassUuDaiDAO() { }
         public List<ClassUuDai> TruyXuatDanhSachUuDaiThuong()

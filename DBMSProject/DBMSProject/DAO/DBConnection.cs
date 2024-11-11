@@ -12,9 +12,19 @@ using System.Windows.Forms;
 
 namespace DBMSProject.DAO
 {
+
     public class DBConnection
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        private SqlConnection conn;
+        public DBConnection(string connStr)
+        {
+
+            conn = new SqlConnection(connStr);
+        }
+        public DBConnection()
+        {
+
+        }
         public SqlConnection getConnection
         {
             get
@@ -22,6 +32,8 @@ namespace DBMSProject.DAO
                 return conn;
             }
         }
+
+
         public void openConnection()
         {
             if (conn.State == ConnectionState.Closed)
@@ -29,11 +41,30 @@ namespace DBMSProject.DAO
                 conn.Open();
             }
         }
+
         public void closeConnection()
         {
             if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
+            }
+        }
+
+        public bool testConnection()
+        {
+            try
+            {
+                openConnection();
+                return true;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+            finally
+            {
+                closeConnection();
             }
         }
     }

@@ -13,10 +13,11 @@ namespace DBMSProject.DAO
 {
     internal class ClassPhienDangNhapDAO
     {
-        DBConnection dBConnection = new DBConnection();
-        public ClassPhienDangNhapDAO()
-        {
+        DBConnection dBConnection;
 
+        public ClassPhienDangNhapDAO(string connStr)
+        {
+            dBConnection = new DBConnection(connStr);
         }
 
         public ClassPhienDangNhap LapPhienDangNhap(int maTaiKhoan)
