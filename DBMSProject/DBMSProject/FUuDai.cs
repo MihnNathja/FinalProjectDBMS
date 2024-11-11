@@ -32,7 +32,7 @@ namespace DBMSProject
             ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
             loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
             List<ClassUuDai> listUD;
-            if (loaiKhachHang == "Thuong")
+            if (loaiKhachHang == "Thường")
             {
                 listUD = uudaiDao.TimKiemUuDaiThuong(txtTimKiem.Text.Trim());
             }

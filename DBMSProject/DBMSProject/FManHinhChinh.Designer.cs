@@ -394,7 +394,7 @@
             // 
             // dtpThoiGianKetThuc
             // 
-            this.dtpThoiGianKetThuc.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtpThoiGianKetThuc.CustomFormat = "yyyy-MM-dd";
             this.dtpThoiGianKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpThoiGianKetThuc.Location = new System.Drawing.Point(177, 143);
             this.dtpThoiGianKetThuc.Name = "dtpThoiGianKetThuc";
@@ -403,7 +403,7 @@
             // 
             // dtpThoiGianBatDau
             // 
-            this.dtpThoiGianBatDau.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtpThoiGianBatDau.CustomFormat = "yyyy-MM-dd";
             this.dtpThoiGianBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpThoiGianBatDau.Location = new System.Drawing.Point(177, 82);
             this.dtpThoiGianBatDau.Name = "dtpThoiGianBatDau";
