@@ -73,20 +73,26 @@ namespace DBMSProject
 
         private void dgvChuaThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            object cellValue = dgvChuaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
+            if (e.RowIndex >= 0 && cellValue != null && cellValue != DBNull.Value)
             {
-                int maHoaDon = (int)dgvChuaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
+                int maHoaDon = (int)cellValue;
                 FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon, conn);
+                fChiTietHoaDon.HideButton= true;
                 fChiTietHoaDon.ShowDialog();
+                addBill();
             }
         }
         private void dgvDaThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            object cellValue = dgvDaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
+            if (e.RowIndex >= 0 && cellValue != null && cellValue != DBNull.Value)
             {
-                int maHoaDon = (int)dgvDaThanhToan.Rows[e.RowIndex].Cells["MaHoaDon"].Value;
+                int maHoaDon = (int)cellValue;
                 FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon, conn);
+                fChiTietHoaDon.HideButton = false;
                 fChiTietHoaDon.ShowDialog();
+                addBill();
             }
         }
       

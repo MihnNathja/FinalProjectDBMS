@@ -134,6 +134,7 @@
             // cboServer
             // 
             this.cboServer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboServer.Enabled = false;
             this.cboServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cboServer.FormattingEnabled = true;
@@ -142,6 +143,7 @@
             this.cboServer.Name = "cboServer";
             this.cboServer.Size = new System.Drawing.Size(449, 37);
             this.cboServer.TabIndex = 24;
+            this.cboServer.Text = "Server của Quế";
             this.cboServer.DropDown += new System.EventHandler(this.CboServerDropDownEventHandler);
             this.cboServer.SelectedIndexChanged += new System.EventHandler(this.CboServerSelectedIndexChanged);
             // 
@@ -172,6 +174,7 @@
             // cboDatabase
             // 
             this.cboDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cboDatabase.Enabled = false;
             this.cboDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cboDatabase.FormattingEnabled = true;
@@ -180,6 +183,7 @@
             this.cboDatabase.Name = "cboDatabase";
             this.cboDatabase.Size = new System.Drawing.Size(449, 37);
             this.cboDatabase.TabIndex = 32;
+            this.cboDatabase.Text = "Database của Quế";
             // 
             // label3
             // 

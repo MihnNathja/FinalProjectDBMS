@@ -42,6 +42,7 @@
             this.lblTenTaiKhoan = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblMaMayTinh = new System.Windows.Forms.Label();
+            this.btnDaNhanThanhToan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaGoi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,11 +189,25 @@
             this.lblMaMayTinh.TabIndex = 19;
             this.lblMaMayTinh.Text = "Mã Máy";
             // 
+            // btnDaNhanThanhToan
+            // 
+            this.btnDaNhanThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDaNhanThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDaNhanThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaNhanThanhToan.Location = new System.Drawing.Point(264, 527);
+            this.btnDaNhanThanhToan.Name = "btnDaNhanThanhToan";
+            this.btnDaNhanThanhToan.Size = new System.Drawing.Size(205, 53);
+            this.btnDaNhanThanhToan.TabIndex = 20;
+            this.btnDaNhanThanhToan.Text = "Đã nhận thanh toán";
+            this.btnDaNhanThanhToan.UseVisualStyleBackColor = false;
+            this.btnDaNhanThanhToan.Click += new System.EventHandler(this.btnDaNhanThanhToan_Click);
+            // 
             // FChiTietHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 606);
+            this.Controls.Add(this.btnDaNhanThanhToan);
             this.Controls.Add(this.lblMaMayTinh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTenTaiKhoan);
@@ -233,5 +248,6 @@
         private System.Windows.Forms.Label lblTenTaiKhoan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblMaMayTinh;
+        private System.Windows.Forms.Button btnDaNhanThanhToan;
     }
 }

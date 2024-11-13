@@ -38,7 +38,13 @@ namespace DBMSProject
             if (HideButton == true)
             {
                 btnXuatHoaDon.Visible = false;
+                btnDaNhanThanhToan.Visible = true;
             }
+            else
+            {
+                btnXuatHoaDon.Visible = true;
+                btnDaNhanThanhToan.Visible = false;
+            }    
         }
         public void LoadChiTietHoaDon(int maHoaDon)
         {
@@ -72,7 +78,6 @@ namespace DBMSProject
             string filePath = Path.Combine("C:/VUONG_LAP_QUE/Nam 3/HK I/DBMS/project/FinalProjectDBMS/DBMSProject/DBMSProject/HoaDon", $"HoaDon_{maHoaDon}.txt");
             if (File.Exists(filePath))
             {
-            
                 MessageBox.Show($"Hóa đơn với mã {maHoaDon} đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
                 return;
@@ -112,6 +117,13 @@ namespace DBMSProject
 
             MessageBox.Show("Hóa đơn đã được xuất ra file: ");
             Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+        }
+
+        private void btnDaNhanThanhToan_Click(object sender, EventArgs e)
+        {
+            ClassHoaDonDAO hdDAO = new ClassHoaDonDAO(conn);
+            hdDAO.CapNhatTinhTrangHoaDon(Convert.ToInt32(lblMaHoaDon.Text));
+            this.Close();
         }
     }
 }
