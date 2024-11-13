@@ -52,7 +52,8 @@ namespace DBMSProject
             string connStr = "";
             if (checkWindow.Checked)
             {
-                connStr = string.Format("Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
+                // Connection string bên dưới là để kết nối vào database local
+                connStr = string.Format("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
             }
             else
             {
@@ -64,7 +65,7 @@ namespace DBMSProject
             dBConnection = new DBConnection(connStr); 
 
             // Hiển thị chuỗi kết nối cho người dùng để kiểm tra
-            MessageBox.Show("Chuỗi kết nối: " + connStr);
+            //MessageBox.Show("Chuỗi kết nối: " + connStr);
 
             // Kiểm tra kết nối
             if (!dBConnection.testConnection())
@@ -82,6 +83,7 @@ namespace DBMSProject
             }
         }
 
+        // Đoạn code bên dưới sẽ không chạy trong luồng đăng nhập của khách hàng
         private void CboServerDropDownEventHandler(object sender, EventArgs e)
         {
             if (cboServer.Items.Count == 0)
