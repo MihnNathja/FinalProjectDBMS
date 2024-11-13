@@ -184,7 +184,48 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }
         }
+        public bool KiemTraThoiGianConLai(int maKhachHang)
+        {
+            bool result = false;
+            SqlConnection connection = null;
+            SqlCommand cmd = null;
 
-        
+            try
+            {
+                connection = dBConnection.getConnection;
+                dBConnection.openConnection();
+
+                cmd = new SqlCommand("sp_KiemTraThoiGianConLai", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
+
+                SqlParameter outputParam = new SqlParameter("@result", SqlDbType.Bit)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outputParam);
+
+                cmd.ExecuteNonQuery();
+
+                result = Convert.ToBoolean(outputParam.Value);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi kiểm tra thời gian còn lại: " + ex.Message);
+            }
+            finally
+            {
+                if (cmd != null)
+                {
+                    cmd.Dispose();
+                }
+                dBConnection.closeConnection();
+            }
+
+            return result;
+        }
+
+
     }
 }

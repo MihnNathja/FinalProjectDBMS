@@ -52,7 +52,7 @@ namespace DBMSProject
             string connStr = "";
             if (checkWindow.Checked)
             {
-                connStr = string.Format("Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
+                connStr = string.Format("Data Source = localhost\\SQLEXPRESS01; Initial Catalog = QuanLyDichVuQuanNet; Integrated Security = True");
             }
             else
             {
