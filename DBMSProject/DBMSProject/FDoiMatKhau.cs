@@ -16,8 +16,7 @@ namespace DBMSProject
     {
         int maTaiKhoanKhachHang;
         string conn;
-        ClassTaiKhoanDAO classTaiKhoan;
-        ClassTaiKhoanDAO classTaiKhoanDAO;
+        private static ClassTaiKhoanDAO classTaiKhoan;
         /* public FDoiMatKhau()
          {
              InitializeComponent();
@@ -27,20 +26,18 @@ namespace DBMSProject
             InitializeComponent();
             conn = connStr;
             classTaiKhoan = new ClassTaiKhoanDAO(conn);
-            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
-        public FDoiMatKhau(int maTaiKhoanKhachHang)
+        public FDoiMatKhau(int maTaiKhoanKhachHang, string connStr)
         {
             InitializeComponent();
             this.maTaiKhoanKhachHang = maTaiKhoanKhachHang;
+            classTaiKhoan = new ClassTaiKhoanDAO(connStr);
             txtTenTaiKhoan.Text = classTaiKhoan.GetTenTaiKhoan(maTaiKhoanKhachHang);
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(txtTenTaiKhoan.Text, txtMatKhau.Text);
-            classTaiKhoanDAO.DoiMatKhau(classTaiKhoan, txtMatKhauMoi.Text);
-
-            
+            ClassTaiKhoan classTK = new ClassTaiKhoan(txtTenTaiKhoan.Text, txtMatKhau.Text);
+            classTaiKhoan.DoiMatKhau(classTK, txtMatKhauMoi.Text);
             this.Close();
         }
 

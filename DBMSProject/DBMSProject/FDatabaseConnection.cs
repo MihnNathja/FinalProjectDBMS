@@ -53,7 +53,7 @@ namespace DBMSProject
             if (checkWindow.Checked)
             {
                 // Connection string bên dưới là để kết nối vào database local
-                connStr = string.Format("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
+                connStr = string.Format("Data Source=localhost\\SQLEXPRESS01;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
             }
             else
             {
