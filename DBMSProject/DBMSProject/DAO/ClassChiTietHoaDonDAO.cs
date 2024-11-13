@@ -104,7 +104,9 @@ namespace DBMSProject.DAO
             try
             {
                 dBConnection.openConnection();
-                SqlCommand cmd = new SqlCommand($"SELECT * FROM ChiTietHoaDonView WHERE maHoaDon = {maHoaDon}", dBConnection.getConnection);
+                SqlCommand cmd = new SqlCommand("sp_GetChiTietHoaDon", dBConnection.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maHoaDon", maHoaDon);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
