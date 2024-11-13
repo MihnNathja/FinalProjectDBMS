@@ -42,16 +42,21 @@ namespace DBMSProject
 
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
-
                 ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO(conn);
                 int maKhachHang = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
-                // Mặc định tạm thời máy này có id là
-                
-                ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO(conn);
-                classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
-                FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang, conn);
-                this.Hide();
-                fKhachHang.ShowDialog();
+                bool checkTGCL = tkDAO.KiemTraThoiGianConLai(maKhachHang);
+                if (!checkTGCL)
+                {
+                    MessageBox.Show("Vui lòng nạp tiền vào tài khoản để đăng nhập!");
+                }
+                else
+                {
+                    ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO(conn);
+                    classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
+                    FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang, conn);
+                    this.Hide();
+                    fKhachHang.ShowDialog();
+                }
             } 
             else if (maTaiKhoanNguoiQuanLy != -1)
             {

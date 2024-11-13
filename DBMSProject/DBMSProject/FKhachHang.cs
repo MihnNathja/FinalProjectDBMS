@@ -69,6 +69,7 @@ namespace DBMSProject
                 
                 timer.Stop();
                 MessageBox.Show("Thời gian còn lại đã hết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
         
