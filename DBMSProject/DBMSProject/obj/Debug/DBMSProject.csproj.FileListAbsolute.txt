@@ -55,3 +55,31 @@ C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
 F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
 F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FLoadingDatabase.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.g.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDichVu.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FChiTietHoaDon.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDangNhap.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDoiMatKhau.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FLoadingDatabase.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FManHinhChinh.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FKhachHang.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThanhToanHoaDon.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FUuDai.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLy.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLyDichVu.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FNapTien.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCMayTinh.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCKhachHang.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCQuanLyDichVu.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCUuDai.resources
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
+D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
