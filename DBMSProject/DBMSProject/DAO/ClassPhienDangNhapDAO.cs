@@ -24,8 +24,8 @@ namespace DBMSProject.DAO
         {
             try
             {
-                dBConnection.openConnection();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.LayPhienDangNhap(@maTaiKhoan)", dBConnection.getConnection);
+                dBConnection.openConnectionAdmin();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.LayPhienDangNhap(@maTaiKhoan)", dBConnection.getConnectionAdmin);
                 cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
@@ -46,16 +46,16 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                dBConnection.closeConnection();
+                dBConnection.closeConnectionAdmin();
             }
         }
         public string getTenTaiKhoan(int maTaiKhoan)
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT dbo.GetTenTaiKhoan(@maTaiKhoan)", dBConnection.getConnection);
+                SqlCommand cmd = new SqlCommand("SELECT dbo.GetTenTaiKhoan(@maTaiKhoan)", dBConnection.getConnectionAdmin);
                 cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
-                dBConnection.openConnection();
+                dBConnection.openConnectionAdmin();
                 object result = cmd.ExecuteScalar();
 
                 if (result != null)
@@ -75,34 +75,19 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                dBConnection.closeConnection();
+                dBConnection.closeConnectionAdmin();
             }
         }
         public void ThemPhienDangNhap(int maKhachHang)
         {
             try
             {
-                dBConnection.openConnection();
+                dBConnection.openConnectionAdmin();
 
-                SqlCommand cmdLayMayTinh = new SqlCommand("LayMayTinhTrong", dBConnection.getConnection);
-                cmdLayMayTinh.CommandType = CommandType.StoredProcedure;
-                SqlDataReader readerMayTinh = cmdLayMayTinh.ExecuteReader();
-
-                int maMayTinh = -1;
-                if (readerMayTinh.Read())
-                {
-                    maMayTinh = Convert.ToInt32(readerMayTinh["maMayTinh"]);
-                }
-                readerMayTinh.Close();
-
-                if (maMayTinh == -1)
-                {
-                    MessageBox.Show("Không có máy tính trống!", "Thông báo");
-                    return;
-                }
+                int maMayTinh = 0;
 
 
-                SqlCommand cmd = new SqlCommand("ThemPhienDangNhap", dBConnection.getConnection);
+                SqlCommand cmd = new SqlCommand("ThemPhienDangNhap", dBConnection.getConnectionAdmin);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
                 cmd.Parameters.AddWithValue("@maMayTinh", maMayTinh);
@@ -117,7 +102,7 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                dBConnection.closeConnection();
+                dBConnection.closeConnectionAdmin();
             }
 
         }
@@ -125,8 +110,8 @@ namespace DBMSProject.DAO
         {
             try
             {
-                dBConnection.openConnection();
-                SqlCommand cmd = new SqlCommand("XoaPhienDangNhap", dBConnection.getConnection);
+                dBConnection.openConnectionAdmin();
+                SqlCommand cmd = new SqlCommand("XoaPhienDangNhap", dBConnection.getConnectionAdmin);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
                 cmd.Parameters.AddWithValue("@thoiGianConLai", thoiGianConLai);
@@ -139,7 +124,7 @@ namespace DBMSProject.DAO
             {
                 MessageBox.Show("Đã xảy ra lỗi khi đăng xuất: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally { dBConnection.closeConnection();}
+            finally { dBConnection.closeConnectionAdmin();}
         }
 
     }

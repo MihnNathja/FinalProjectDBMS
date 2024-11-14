@@ -26,6 +26,36 @@ D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSPro
 D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
 D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
 D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+<<<<<<< HEAD
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.g.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDichVu.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FChiTietHoaDon.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDangNhap.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDoiMatKhau.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FLoadingDatabase.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FManHinhChinh.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FKhachHang.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThanhToanHoaDon.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FUuDai.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLy.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLyDichVu.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FNapTien.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCMayTinh.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCKhachHang.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCQuanLyDichVu.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCUuDai.resources
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+=======
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
@@ -54,3 +84,4 @@ D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debu
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
 D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+>>>>>>> 335249770439b6dbe20e385a4003c086ced82e46

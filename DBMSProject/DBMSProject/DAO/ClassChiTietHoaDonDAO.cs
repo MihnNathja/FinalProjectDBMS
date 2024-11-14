@@ -128,10 +128,10 @@ namespace DBMSProject.DAO
             try
             {
                 object maKhachHang = -1;
-                dBConnection.openConnection();
+                dBConnection.openConnectionAdmin();
 
 
-                using (SqlCommand cmd = new SqlCommand("SELECT dbo.fn_LayMaKhachHang(@maTaiKhoan)", dBConnection.getConnection))
+                using (SqlCommand cmd = new SqlCommand("SELECT dbo.fn_LayMaKhachHang(@maTaiKhoan)", dBConnection.getConnectionAdmin))
                 {
                     cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
 
@@ -147,7 +147,7 @@ namespace DBMSProject.DAO
             }
             finally
             {
-                dBConnection.closeConnection();
+                dBConnection.closeConnectionAdmin();
             }
         }
 

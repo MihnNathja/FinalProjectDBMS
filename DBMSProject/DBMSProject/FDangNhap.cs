@@ -19,6 +19,7 @@ namespace DBMSProject
         public static int maTaiKhoanKhachHang;
         public static int maTaiKhoanNguoiQuanLy;
         string conn;
+        DBConnection connAdmin;
         /*public FDangNhap()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace DBMSProject
         {
             InitializeComponent();
             conn = connStr;
+            connAdmin = new DBConnection(conn);
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
@@ -35,10 +37,10 @@ namespace DBMSProject
             ClassTaiKhoan classTaiKhoan = new ClassTaiKhoan(userNameTxb.Text, passwordTxb.Text);
             ClassTaiKhoanDAO classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
             
-
+            
             maTaiKhoanKhachHang = classTaiKhoanDAO.KiemTraKhachHangDangNhap(classTaiKhoan);
             
-            maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+            
 
             if (maTaiKhoanKhachHang != -1) // -1 tính là không tìm thấy
             {
@@ -51,14 +53,18 @@ namespace DBMSProject
                 }
                 else
                 {
+
                     ClassPhienDangNhapDAO classPhienDangNhapDAO = new ClassPhienDangNhapDAO(conn);
                     classPhienDangNhapDAO.ThemPhienDangNhap(maKhachHang);
                     FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang, conn);
                     this.Hide();
                     fKhachHang.ShowDialog();
+
                 }
-            } 
-            else if (maTaiKhoanNguoiQuanLy != -1)
+                return;
+            }
+            maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+            if (maTaiKhoanNguoiQuanLy != -1)
             {
                 FQuanLy selectForm = new FQuanLy(maTaiKhoanNguoiQuanLy,conn);
                 this.Hide();

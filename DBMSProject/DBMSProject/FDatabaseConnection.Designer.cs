@@ -134,7 +134,6 @@
             // cboServer
             // 
             this.cboServer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboServer.Enabled = false;
             this.cboServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cboServer.FormattingEnabled = true;
@@ -174,7 +173,6 @@
             // cboDatabase
             // 
             this.cboDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboDatabase.Enabled = false;
             this.cboDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cboDatabase.FormattingEnabled = true;

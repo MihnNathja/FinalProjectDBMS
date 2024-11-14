@@ -24,7 +24,7 @@ namespace DBMSProject.DAO
         {
             
             string SQLFunctionName = "KiemTraKhachHangDangNhap";
-            return KiemTraDangNhap(classTaiKhoan, SQLFunctionName); ;
+            return KiemTraDangNhap(classTaiKhoan, SQLFunctionName);
         }
         public int KiemTraNguoiQuanLyDangNhap(ClassTaiKhoan classTaiKhoan)
         {
@@ -64,6 +64,7 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }
         }
+        
 
         public string GetTenTaiKhoan(int maTaiKhoan)
         {
@@ -131,8 +132,8 @@ namespace DBMSProject.DAO
             
                 try
                 {
-                    dBConnection.openConnection();
-                    using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", dBConnection.getConnection))
+                    dBConnection.openConnectionAdmin();
+                    using (SqlCommand command = new SqlCommand("sp_ChuyenDoiMaKhachHangSangMaTaiKhoan", dBConnection.getConnectionAdmin))
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add(new SqlParameter("@maKhachHang", maKhachHang));
@@ -153,7 +154,7 @@ namespace DBMSProject.DAO
                 }
                 finally
                 {
-                    dBConnection.closeConnection();
+                    dBConnection.closeConnectionAdmin();
                 }
             
         }
@@ -163,9 +164,9 @@ namespace DBMSProject.DAO
             try
             {
                 object maKhachHang = -1;
-                dBConnection.openConnection();
+                dBConnection.openConnectionAdmin();
 
-                using (SqlCommand cmd = new SqlCommand("SELECT dbo.fn_LayMaKhachHang(@maTaiKhoan)", dBConnection.getConnection))
+                using (SqlCommand cmd = new SqlCommand("SELECT dbo.fn_LayMaKhachHang(@maTaiKhoan)", dBConnection.getConnectionAdmin))
                 {
                     cmd.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
 
@@ -192,8 +193,8 @@ namespace DBMSProject.DAO
 
             try
             {
-                connection = dBConnection.getConnection;
-                dBConnection.openConnection();
+                connection = dBConnection.getConnectionAdmin;
+                dBConnection.openConnectionAdmin();
 
                 cmd = new SqlCommand("sp_KiemTraThoiGianConLai", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -220,7 +221,7 @@ namespace DBMSProject.DAO
                 {
                     cmd.Dispose();
                 }
-                dBConnection.closeConnection();
+                dBConnection.closeConnectionAdmin();
             }
 
             return result;

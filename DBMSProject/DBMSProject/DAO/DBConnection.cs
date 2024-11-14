@@ -16,15 +16,17 @@ namespace DBMSProject.DAO
     public class DBConnection
     {
         private SqlConnection conn;
+        static SqlConnection connAdmin = new SqlConnection("Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
         public DBConnection(string connStr)
         {
 
             conn = new SqlConnection(connStr);
         }
         public DBConnection()
-        {
-
+        { 
+            
         }
+
         public SqlConnection getConnection
         {
             get
@@ -32,13 +34,26 @@ namespace DBMSProject.DAO
                 return conn;
             }
         }
-
+        public SqlConnection getConnectionAdmin
+        {
+            get
+            {
+                return connAdmin;
+            }
+        }
 
         public void openConnection()
         {
             if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
+            }
+        }
+        public void openConnectionAdmin()
+        {
+            if (connAdmin.State == ConnectionState.Closed)
+            {
+                connAdmin.Open();
             }
         }
 
@@ -49,6 +64,14 @@ namespace DBMSProject.DAO
                 conn.Close();
             }
         }
+        public void closeConnectionAdmin()
+        {
+            if (connAdmin.State == ConnectionState.Open)
+            {
+                connAdmin.Close();
+            }
+        }
+
 
         public bool testConnection()
         {
