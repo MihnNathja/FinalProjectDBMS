@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMSProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,6 @@ namespace DBMSProject
             InitializeComponent();
             conn = connStr;
             this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
-            
             
         }
         

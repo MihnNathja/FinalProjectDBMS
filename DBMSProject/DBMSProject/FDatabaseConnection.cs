@@ -48,17 +48,25 @@ namespace DBMSProject
 
         private void btnKetNoi_Click(object sender, EventArgs e)
         {
+            
             // Chuỗi kết nối
             string connStr = "";
             if (checkWindow.Checked)
             {
                 // Connection string bên dưới là để kết nối vào database local
                 connStr = string.Format("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
+                
             }
             else
             {
-                connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
-                                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+                //connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
+                //                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+                connStr = string.Format(@"Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;User ID={0};Password={1};",
+                                         txtTaiKhoan.Text, txtMatKhau.Text);
+                //MessageBox.Show(connStr);
+
+                //Data Source = HARRY; Initial Catalog = QuanLyDichVuQuanNet; Integrated Security = True; Encrypt = True; Trust Server Certificate = True
+
             }
 
             // Khởi tạo đối tượng DBConnection với chuỗi kết nối
