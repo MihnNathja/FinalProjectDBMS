@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.ObjectModel;
 
 namespace DBMSProject.DAO
 {
     internal class ClassPhienDangNhapDAO
     {
         DBConnection dBConnection;
+        ClassPhienDangNhap classPhienDangNhap;
 
         public ClassPhienDangNhapDAO(string connStr)
         {
@@ -104,6 +106,36 @@ namespace DBMSProject.DAO
             {
                 dBConnection.closeConnectionAdmin();
             }
+
+        }
+        public void CapNhatPhienDangNhap(int maKhachHang, TimeSpan thoiGianSuDung, TimeSpan thoiGianConLai)
+        {
+            dBConnection.openConnectionAdmin();
+            try
+            {
+                
+                dBConnection.openConnectionAdmin();
+
+                // Tạo đối tượng SqlCommand để gọi stored procedure
+                using (SqlCommand command = new SqlCommand("CapNhatPhienDangNhap", dBConnection.getConnectionAdmin))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    
+                    command.Parameters.AddWithValue("@maKhachHang", maKhachHang);
+                    command.Parameters.AddWithValue("@thoiGianSuDung", thoiGianSuDung);
+                    command.Parameters.AddWithValue("@thoiGianConLai", thoiGianConLai);
+
+                    command.ExecuteNonQuery();
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show( ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { dBConnection.closeConnectionAdmin(); }
 
         }
         public void XoaPhienDangNhap(int maKhachHang, TimeSpan thoiGianConLai)

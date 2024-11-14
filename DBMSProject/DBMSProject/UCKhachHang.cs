@@ -14,7 +14,7 @@ namespace DBMSProject
 {
     public partial class UCKhachHang : UserControl
     {
- 
+        
         public static int maKHofUCKH;
         public static string typeAdd;
         string conn;
@@ -36,6 +36,7 @@ namespace DBMSProject
             maKHofUCKH = Convert.ToInt32(lblMaKH.Text);
             typeAdd = "khachHang";
             fNapTien.ShowDialog();
+            
         }
         public UCKhachHang UCKhachHangLoad(UCKhachHang ucKhachHang, ClassKhachHang classKhachHang)
         {

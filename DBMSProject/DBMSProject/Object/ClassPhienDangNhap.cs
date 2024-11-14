@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBMSProject.Object
 {
-    internal class ClassPhienDangNhap
+    public class ClassPhienDangNhap
     {
         int maKhachHang;
         int maMayTinh;

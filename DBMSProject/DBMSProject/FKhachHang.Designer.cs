@@ -253,6 +253,7 @@
             this.Name = "FKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhachHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FKhachHang_FormClosing);
             this.Load += new System.EventHandler(this.KhachHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
