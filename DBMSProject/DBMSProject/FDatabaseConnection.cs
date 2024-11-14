@@ -54,7 +54,7 @@ namespace DBMSProject
             if (checkWindow.Checked)
             {
                 // Connection string bên dưới là để kết nối vào database local
-                connStr = string.Format("Data Source=localhost\\SQLEXPRESS01;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
+                connStr = string.Format("Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
                 //connStr = string.Format("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
                 
             }
@@ -62,7 +62,7 @@ namespace DBMSProject
             {
                 //connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
                 //                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
-                connStr = string.Format(@"Data Source=localhost\SQLEXPRESS01;Initial Catalog=QuanLyDichVuQuanNet;User ID={0};Password={1};",
+                connStr = string.Format(@"Data Source=DESKTOP-LCVENON\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;User ID={0};Password={1};",
                                          txtTaiKhoan.Text, txtMatKhau.Text);
                 
 

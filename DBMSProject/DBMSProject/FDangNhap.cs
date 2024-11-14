@@ -17,7 +17,7 @@ namespace DBMSProject
     public partial class FDangNhap : Form
     {
         public static int maTaiKhoanKhachHang;
-        public static int maTaiKhoanNguoiQuanLy;
+        public static int maNguoiQuanLy;
         string conn;
         DBConnection connAdmin;
         /*public FDangNhap()
@@ -63,10 +63,10 @@ namespace DBMSProject
                 }
                 return;
             }
-            maTaiKhoanNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
-            if (maTaiKhoanNguoiQuanLy != -1)
+            maNguoiQuanLy = classTaiKhoanDAO.KiemTraNguoiQuanLyDangNhap(classTaiKhoan);
+            if (maNguoiQuanLy != -1)
             {
-                FQuanLy selectForm = new FQuanLy(maTaiKhoanNguoiQuanLy,conn);
+                FQuanLy selectForm = new FQuanLy(maNguoiQuanLy, conn);
                 this.Hide();
                 selectForm.ShowDialog();
             }

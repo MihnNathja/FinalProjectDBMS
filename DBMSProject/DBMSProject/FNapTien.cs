@@ -18,12 +18,14 @@ namespace DBMSProject
         string conn;
         ClassTaiKhoanDAO classTaiKhoanDAO;
         ClassNapTienDAO classNapTienDAO;
-        public FNapTien(string connStr)
+        public int maNguoiQuanLy;
+        public FNapTien(string connStr, int maNguoiQuanLy)
         {
             InitializeComponent();
             conn = connStr;
             classNapTienDAO = new ClassNapTienDAO(conn);
             classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
+            this.maNguoiQuanLy = maNguoiQuanLy;
         }
 
         private void txbSoTienNap_TextChanged(object sender, EventArgs e)
@@ -67,10 +69,9 @@ namespace DBMSProject
 
                 double soGioChoi = (double)(soTienNap / 5000);
                 classNapTien.ThoiGianQuyDoi = TimeSpan.FromHours(soGioChoi);
-                classNapTien.GhiChu = null;
 
                 /*ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO(conn);*/
-                classNapTienDAO.napTien(classNapTien);
+                classNapTienDAO.napTien(classNapTien, maNguoiQuanLy);
                 txbSoTienNap.Text = "";
                 this.Close();
             }

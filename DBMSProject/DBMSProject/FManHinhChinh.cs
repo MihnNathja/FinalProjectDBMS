@@ -22,7 +22,7 @@ namespace DBMSProject
     public partial class FManHinhChinh : Form
     {
         public SqlTableDependency<ClassHoaDon> hoaDon_table_dependency;
-        string connection_string_hoaDon = "Data Source=localhost\\SQLEXPRESS01;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True";
+        string connection_string_hoaDon = "Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True";
 
         /*DBConnection db = new DBConnection();*/
         ClassHoaDonDAO hoaDonDAO;
@@ -30,14 +30,14 @@ namespace DBMSProject
         string conn;
         
         int maTaiKhoanNguoiQuanLy;
-        public FManHinhChinh(int maTaiKhoanNguoiQuanLy, string connStr)
+        public FManHinhChinh(int maNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             conn = connStr;
             hoaDonDAO = new ClassHoaDonDAO(conn);
-            uuDaiDAO = new ClassUuDaiDAO(maTaiKhoanNguoiQuanLy, conn);
+            uuDaiDAO = new ClassUuDaiDAO(maNguoiQuanLy, conn);
 
-            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
+            this.maTaiKhoanNguoiQuanLy = maNguoiQuanLy;
         }
         public void addUser()
         {
@@ -57,7 +57,7 @@ namespace DBMSProject
             UserFlp.Controls.Clear();
             foreach (var item in khachHangs)
             {
-                UCKhachHang uCKhachHang = new UCKhachHang(conn);
+                UCKhachHang uCKhachHang = new UCKhachHang(conn, maTaiKhoanNguoiQuanLy);
                 uCKhachHang.UCKhachHangLoad(uCKhachHang, item);
                 UserFlp.Controls.Add(uCKhachHang);
             }
@@ -547,6 +547,51 @@ namespace DBMSProject
         private void SelectMenuscript_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDataAndDisplayCharts();
+        }
+
+        private void btnDangKyQuanLy_Click(object sender, EventArgs e)
+        {
+            string username = txtTaiKhoan.Text;
+            string password = txtMatKhau.Text;
+            string rePassword = txtNhapLaiMatKhau.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(rePassword))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+            }
+            else if (password != rePassword)
+            {
+                MessageBox.Show("Mật khẩu không khớp. Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                ClassNguoiQuanLyDAO quanLyDAO = new ClassNguoiQuanLyDAO(conn);
+                string result = quanLyDAO.AddQuanLy(username, password);
+                MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnThoatQLy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChBHienThiMatKhauQly_CheckedChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra trạng thái của CheckBox
+            if (ChBHienThiMatKhauQly.Checked)
+            {
+                // Hiển thị mật khẩu
+                txtMatKhau.UseSystemPasswordChar = false;
+                txtNhapLaiMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Ẩn mật khẩu
+                txtMatKhau.UseSystemPasswordChar = true;
+                txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            }
         }
     }
 }

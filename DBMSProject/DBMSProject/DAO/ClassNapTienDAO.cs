@@ -18,7 +18,7 @@ namespace DBMSProject.DAO
         {
             dBConnection = new DBConnection(connStr);
         }
-        public void napTien(ClassNapTien classNapTien)
+        public void napTien(ClassNapTien classNapTien, int maNguoiQuanLy)
         {
             try
             {
@@ -30,8 +30,7 @@ namespace DBMSProject.DAO
                 cmd.Parameters.AddWithValue("@thoiGianNapTien", classNapTien.ThoiGianNapTien);
                 cmd.Parameters.AddWithValue("@giaTriNap", classNapTien.GiaTriNap);
                 cmd.Parameters.AddWithValue("@thoiGianQuyDoi", classNapTien.ThoiGianQuyDoi);
-                cmd.Parameters.AddWithValue("@ghiChu", (object)classNapTien.GhiChu ?? DBNull.Value);
-
+                cmd.Parameters.AddWithValue("@maNguoiQuanLy", maNguoiQuanLy);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Nạp tiền thành công");
