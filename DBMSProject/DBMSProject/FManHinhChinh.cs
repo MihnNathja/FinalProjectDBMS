@@ -79,6 +79,7 @@ namespace DBMSProject
                 int maHoaDon = (int)cellValue;
                 FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon, conn);
                 fChiTietHoaDon.HideButton= true;
+                if (!fChiTietHoaDon.checkCTHD) return;
                 fChiTietHoaDon.ShowDialog();
                 addBill();
             }
@@ -91,6 +92,7 @@ namespace DBMSProject
                 int maHoaDon = (int)cellValue;
                 FChiTietHoaDon fChiTietHoaDon = new FChiTietHoaDon(maHoaDon, conn);
                 fChiTietHoaDon.HideButton = false;
+                if (!fChiTietHoaDon.checkCTHD) return;
                 fChiTietHoaDon.ShowDialog();
                 addBill();
             }

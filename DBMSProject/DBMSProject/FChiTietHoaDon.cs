@@ -18,6 +18,7 @@ namespace DBMSProject
     {
         /*ClassChiTietHoaDon chiTietHoaDon;*/
         string conn;
+        public bool checkCTHD = true;
         
         List<ClassChiTietHoaDon> danhSachChiTietHoaDon;
         /*public FChiTietHoaDon()
@@ -29,7 +30,7 @@ namespace DBMSProject
         {
             InitializeComponent();
             conn = connStr;
-            LoadChiTietHoaDon(maHoaDon);
+            checkCTHD = LoadChiTietHoaDon(maHoaDon);
         }
 
         public bool HideButton { get; set; } = false;
@@ -46,11 +47,11 @@ namespace DBMSProject
                 btnDaNhanThanhToan.Visible = false;
             }    
         }
-        public void LoadChiTietHoaDon(int maHoaDon)
+        public bool LoadChiTietHoaDon(int maHoaDon)
         {
             ClassChiTietHoaDonDAO chiTietHoaDonDAO = new ClassChiTietHoaDonDAO(conn);
             ClassHoaDon classHoaDon = chiTietHoaDonDAO.LayHoaDon(maHoaDon);
-            
+            if (classHoaDon == null) return false;
             lblMaHoaDon.Text = classHoaDon.MaHoaDon.ToString();
             lblMaMayTinh.Text = classHoaDon.MaMayTinh.ToString();
             lblNgayTao.Text = classHoaDon.ThoiGianTao.ToString();
@@ -59,7 +60,7 @@ namespace DBMSProject
 
 
             dgvDichVuDaGoi.DataSource = chiTietHoaDonDAO.LayChiTietHoaDon(maHoaDon);
-
+            return true;
 
         }
         private void btnXuatHoaDon_Click(object sender, EventArgs e)
