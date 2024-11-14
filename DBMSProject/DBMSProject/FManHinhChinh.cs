@@ -21,7 +21,7 @@ namespace DBMSProject
     public partial class FManHinhChinh : Form
     {
         public SqlTableDependency<ClassHoaDon> hoaDon_table_dependency;
-        string connection_string_hoaDon = "Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;User ID=cuDB;Password=cuDB;";
+        string connection_string_hoaDon = "Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True";
 
         /*DBConnection db = new DBConnection();*/
         ClassHoaDonDAO hoaDonDAO;
@@ -29,14 +29,14 @@ namespace DBMSProject
         string conn;
         
         int maTaiKhoanNguoiQuanLy;
-        public FManHinhChinh(int maTaiKhoanNguoiQuanLy, string connStr)
+        public FManHinhChinh(int maNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             conn = connStr;
             hoaDonDAO = new ClassHoaDonDAO(conn);
-            uuDaiDAO = new ClassUuDaiDAO(maTaiKhoanNguoiQuanLy, conn);
+            uuDaiDAO = new ClassUuDaiDAO(maNguoiQuanLy, conn);
 
-            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
+            this.maTaiKhoanNguoiQuanLy = maNguoiQuanLy;
         }
         public void addUser()
         {
@@ -56,7 +56,7 @@ namespace DBMSProject
             UserFlp.Controls.Clear();
             foreach (var item in khachHangs)
             {
-                UCKhachHang uCKhachHang = new UCKhachHang(conn);
+                UCKhachHang uCKhachHang = new UCKhachHang(conn, maTaiKhoanNguoiQuanLy);
                 uCKhachHang.UCKhachHangLoad(uCKhachHang, item);
                 UserFlp.Controls.Add(uCKhachHang);
             }
@@ -481,11 +481,23 @@ namespace DBMSProject
                 totalNapTien += Convert.ToDecimal(row["NapTien"]);
             }
             decimal tong = totalDoAn + totalThucUong + totalTheCao + totalNapTien;
-            // Thêm dữ liệu vào biểu đồ tròn
-            series.Points.AddXY("Đồ ăn", (decimal)totalDoAn / tong);
-            series.Points.AddXY("Thức uống", (decimal)totalThucUong / tong);
-            series.Points.AddXY("Thẻ cào", (decimal)totalTheCao / tong);
-            series.Points.AddXY("Nạp tiền", (decimal)totalNapTien / tong);
+
+            if (tong == 0)
+            {
+                // Nếu tổng = 0, gán giá trị mặc định cho tỷ lệ phần trăm (ví dụ: 0)
+                series.Points.AddXY("Đồ ăn", 0);
+                series.Points.AddXY("Thức uống", 0);
+                series.Points.AddXY("Thẻ cào", 0);
+                series.Points.AddXY("Nạp tiền", 0);
+            }
+            else
+            {
+                // Nếu tổng không bằng 0, tính tỷ lệ phần trăm và thêm vào biểu đồ
+                series.Points.AddXY("Đồ ăn", totalDoAn / tong);
+                series.Points.AddXY("Thức uống", totalThucUong / tong);
+                series.Points.AddXY("Thẻ cào", totalTheCao / tong);
+                series.Points.AddXY("Nạp tiền", totalNapTien / tong);
+            }
 
             // Hiển thị nhãn và định dạng phần trăm
             series.IsValueShownAsLabel = true;
@@ -498,6 +510,51 @@ namespace DBMSProject
         private void SelectMenuscript_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDataAndDisplayCharts();
+        }
+
+        private void btnDangKyQuanLy_Click(object sender, EventArgs e)
+        {
+            string username = txtTaiKhoan.Text;
+            string password = txtMatKhau.Text;
+            string rePassword = txtNhapLaiMatKhau.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(rePassword))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+            }
+            else if (password != rePassword)
+            {
+                MessageBox.Show("Mật khẩu không khớp. Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                ClassNguoiQuanLyDAO quanLyDAO = new ClassNguoiQuanLyDAO(conn);
+                string result = quanLyDAO.AddQuanLy(username, password);
+                MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnThoatQLy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChBHienThiMatKhauQly_CheckedChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra trạng thái của CheckBox
+            if (ChBHienThiMatKhauQly.Checked)
+            {
+                // Hiển thị mật khẩu
+                txtMatKhau.UseSystemPasswordChar = false;
+                txtNhapLaiMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Ẩn mật khẩu
+                txtMatKhau.UseSystemPasswordChar = true;
+                txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            }
         }
     }
 }

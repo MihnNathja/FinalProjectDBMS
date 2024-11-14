@@ -38,5 +38,31 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }
         }
+        public string AddQuanLy(string taiKhoan, string matKhau)
+        {
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("sp_AddQuanLy", dBConnection.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@taiKhoan", taiKhoan);
+                cmd.Parameters.AddWithValue("@matKhau", matKhau);
+
+                dBConnection.openConnection();
+
+                // Thực thi stored procedure
+                cmd.ExecuteNonQuery();
+
+                return "Thêm quản lý thành công";
+            }
+            catch (SqlException ex)
+            {
+                return "Lỗi: " + ex.Message;
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
     }
 }

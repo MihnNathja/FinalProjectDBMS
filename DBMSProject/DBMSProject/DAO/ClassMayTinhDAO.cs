@@ -38,7 +38,6 @@ namespace DBMSProject.DAO
                         maMayTinh: Convert.ToInt32(row["maMayTinh"]),
                         maKhachHang: maKhachHang, 
                         tinhTrang: row["tinhTrang"].ToString(),
-                        ghiChu: row["ghiChu"].ToString(),
                         thoiGianBatDau: TimeSpan.Parse(row["thoiGianBatDau"].ToString()),
                         thoiGianDaDung: TimeSpan.Parse(row["thoiGianSuDung"].ToString()),
                         thoiGianConLai: TimeSpan.Parse(row["thoiGianConLai"].ToString())

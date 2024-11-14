@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SelectMenuscript = new System.Windows.Forms.TabControl();
             this.QuanLyThanhVienTab = new System.Windows.Forms.TabPage();
             this.UserFlp = new System.Windows.Forms.FlowLayoutPanel();
@@ -86,6 +86,17 @@
             this.chartBDTron = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartBDCot = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ThoatTab = new System.Windows.Forms.TabPage();
+            this.DangKyQuanLyTab = new System.Windows.Forms.TabPage();
+            this.ChBHienThiMatKhauQly = new System.Windows.Forms.CheckBox();
+            this.btnThoatQLy = new System.Windows.Forms.Button();
+            this.btnDangKyQuanLy = new System.Windows.Forms.Button();
+            this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SelectMenuscript.SuspendLayout();
             this.QuanLyThanhVienTab.SuspendLayout();
             this.ĐangKyThanhVienTab.SuspendLayout();
@@ -101,12 +112,14 @@
             this.ThongKeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartBDTron)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBDCot)).BeginInit();
+            this.DangKyQuanLyTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // SelectMenuscript
             // 
             this.SelectMenuscript.Controls.Add(this.QuanLyThanhVienTab);
             this.SelectMenuscript.Controls.Add(this.ĐangKyThanhVienTab);
+            this.SelectMenuscript.Controls.Add(this.DangKyQuanLyTab);
             this.SelectMenuscript.Controls.Add(this.QuanLyMayTab);
             this.SelectMenuscript.Controls.Add(this.QuanLyGoiDichVuTab);
             this.SelectMenuscript.Controls.Add(this.QuanLyUuDaiTab);
@@ -624,38 +637,38 @@
             // 
             // chartBDTron
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartBDTron.ChartAreas.Add(chartArea1);
+            chartArea5.Name = "ChartArea1";
+            this.chartBDTron.ChartAreas.Add(chartArea5);
             this.chartBDTron.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartBDTron.Legends.Add(legend1);
+            legend5.Name = "Legend1";
+            this.chartBDTron.Legends.Add(legend5);
             this.chartBDTron.Location = new System.Drawing.Point(572, 0);
             this.chartBDTron.Name = "chartBDTron";
             this.chartBDTron.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Biều đồ tròn";
-            series1.Name = "chartBDTron";
-            this.chartBDTron.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.LegendText = "Biều đồ tròn";
+            series5.Name = "chartBDTron";
+            this.chartBDTron.Series.Add(series5);
             this.chartBDTron.Size = new System.Drawing.Size(502, 488);
             this.chartBDTron.TabIndex = 37;
             this.chartBDTron.Text = "chart2";
             // 
             // chartBDCot
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartBDCot.ChartAreas.Add(chartArea2);
+            chartArea6.Name = "ChartArea1";
+            this.chartBDCot.ChartAreas.Add(chartArea6);
             this.chartBDCot.Dock = System.Windows.Forms.DockStyle.Left;
-            legend2.Name = "Legend1";
-            this.chartBDCot.Legends.Add(legend2);
+            legend6.Name = "Legend1";
+            this.chartBDCot.Legends.Add(legend6);
             this.chartBDCot.Location = new System.Drawing.Point(0, 0);
             this.chartBDCot.Name = "chartBDCot";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.LegendText = "Biểu đồ cột";
-            series2.Name = "chartBDCot";
-            this.chartBDCot.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.LegendText = "Biểu đồ cột";
+            series6.Name = "chartBDCot";
+            this.chartBDCot.Series.Add(series6);
             this.chartBDCot.Size = new System.Drawing.Size(572, 488);
             this.chartBDCot.TabIndex = 36;
             this.chartBDCot.Text = "chart1";
@@ -670,6 +683,125 @@
             this.ThoatTab.Text = "Quay lại trang chủ";
             this.ThoatTab.UseVisualStyleBackColor = true;
             this.ThoatTab.Enter += new System.EventHandler(this.ThoatTab_Enter);
+            // 
+            // DangKyQuanLyTab
+            // 
+            this.DangKyQuanLyTab.Controls.Add(this.ChBHienThiMatKhauQly);
+            this.DangKyQuanLyTab.Controls.Add(this.btnThoatQLy);
+            this.DangKyQuanLyTab.Controls.Add(this.btnDangKyQuanLy);
+            this.DangKyQuanLyTab.Controls.Add(this.txtNhapLaiMatKhau);
+            this.DangKyQuanLyTab.Controls.Add(this.txtMatKhau);
+            this.DangKyQuanLyTab.Controls.Add(this.txtTaiKhoan);
+            this.DangKyQuanLyTab.Controls.Add(this.label7);
+            this.DangKyQuanLyTab.Controls.Add(this.label8);
+            this.DangKyQuanLyTab.Controls.Add(this.label9);
+            this.DangKyQuanLyTab.Controls.Add(this.label10);
+            this.DangKyQuanLyTab.Location = new System.Drawing.Point(4, 25);
+            this.DangKyQuanLyTab.Name = "DangKyQuanLyTab";
+            this.DangKyQuanLyTab.Size = new System.Drawing.Size(1074, 488);
+            this.DangKyQuanLyTab.TabIndex = 7;
+            this.DangKyQuanLyTab.Text = "Đăng ký quản lý";
+            this.DangKyQuanLyTab.UseVisualStyleBackColor = true;
+            // 
+            // ChBHienThiMatKhauQly
+            // 
+            this.ChBHienThiMatKhauQly.AutoSize = true;
+            this.ChBHienThiMatKhauQly.Location = new System.Drawing.Point(790, 180);
+            this.ChBHienThiMatKhauQly.Name = "ChBHienThiMatKhauQly";
+            this.ChBHienThiMatKhauQly.Size = new System.Drawing.Size(130, 20);
+            this.ChBHienThiMatKhauQly.TabIndex = 21;
+            this.ChBHienThiMatKhauQly.Text = "Hiển thị mật khẩu";
+            this.ChBHienThiMatKhauQly.UseVisualStyleBackColor = true;
+            this.ChBHienThiMatKhauQly.CheckedChanged += new System.EventHandler(this.ChBHienThiMatKhauQly_CheckedChanged);
+            // 
+            // btnThoatQLy
+            // 
+            this.btnThoatQLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThoatQLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoatQLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoatQLy.Location = new System.Drawing.Point(593, 331);
+            this.btnThoatQLy.Name = "btnThoatQLy";
+            this.btnThoatQLy.Size = new System.Drawing.Size(108, 31);
+            this.btnThoatQLy.TabIndex = 20;
+            this.btnThoatQLy.Text = "Thoát";
+            this.btnThoatQLy.UseVisualStyleBackColor = false;
+            this.btnThoatQLy.Click += new System.EventHandler(this.btnThoatQLy_Click);
+            // 
+            // btnDangKyQuanLy
+            // 
+            this.btnDangKyQuanLy.BackColor = System.Drawing.Color.Cyan;
+            this.btnDangKyQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKyQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKyQuanLy.Location = new System.Drawing.Point(446, 331);
+            this.btnDangKyQuanLy.Name = "btnDangKyQuanLy";
+            this.btnDangKyQuanLy.Size = new System.Drawing.Size(108, 31);
+            this.btnDangKyQuanLy.TabIndex = 19;
+            this.btnDangKyQuanLy.Text = "Đăng ký";
+            this.btnDangKyQuanLy.UseVisualStyleBackColor = false;
+            this.btnDangKyQuanLy.Click += new System.EventHandler(this.btnDangKyQuanLy_Click);
+            // 
+            // txtNhapLaiMatKhau
+            // 
+            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(418, 241);
+            this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
+            this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(331, 22);
+            this.txtNhapLaiMatKhau.TabIndex = 18;
+            this.txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Location = new System.Drawing.Point(418, 178);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(331, 22);
+            this.txtMatKhau.TabIndex = 17;
+            this.txtMatKhau.UseSystemPasswordChar = true;
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.Location = new System.Drawing.Point(418, 120);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(331, 22);
+            this.txtTaiKhoan.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(191, 238);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 25);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Nhập lại mật khẩu:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(191, 178);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Mật khẩu:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(191, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(137, 25);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Tên tài khoản:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(399, 52);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(197, 32);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Thêm quản lý";
             // 
             // FManHinhChinh
             // 
@@ -699,6 +831,8 @@
             this.ThongKeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartBDTron)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBDCot)).EndInit();
+            this.DangKyQuanLyTab.ResumeLayout(false);
+            this.DangKyQuanLyTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -757,5 +891,16 @@
         private System.Windows.Forms.TabPage ThongKeTab;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBDTron;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBDCot;
+        private System.Windows.Forms.TabPage DangKyQuanLyTab;
+        private System.Windows.Forms.CheckBox ChBHienThiMatKhauQly;
+        private System.Windows.Forms.Button btnThoatQLy;
+        private System.Windows.Forms.Button btnDangKyQuanLy;
+        private System.Windows.Forms.TextBox txtNhapLaiMatKhau;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

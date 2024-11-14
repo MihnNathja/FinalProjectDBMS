@@ -19,17 +19,19 @@ namespace DBMSProject
         public static string typeAdd;
         string conn;
         ClassTaiKhoanDAO classTaiKhoanDAO;
-        public UCKhachHang(string connStr)
+        public int maNguoiQuanLy;
+        public UCKhachHang(string connStr, int maNguoiQuanLy)
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
             conn = connStr;
             classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
+            this.maNguoiQuanLy = maNguoiQuanLy;
         }
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
-            FNapTien fNapTien = new FNapTien(conn);
+            FNapTien fNapTien = new FNapTien(conn, maNguoiQuanLy);
             fNapTien.loadTaiKhoangKH(lblTaiKhoan.Text);
             maKHofUCKH = Convert.ToInt32(lblMaKH.Text);
             typeAdd = "khachHang";
