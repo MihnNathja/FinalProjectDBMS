@@ -15,6 +15,7 @@ using System.Data.SqlClient;
 using TableDependency.SqlClient.Base.Enums;
 using TableDependency.SqlClient.Base.EventArgs;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 namespace DBMSProject
 {
@@ -287,6 +288,33 @@ namespace DBMSProject
                 return false;
             }
         }
+        private void WriteLogToFile(string logMessage)
+        {
+            try
+            {
+                // Lấy đường dẫn đến thư mục chứa file .exe (bin\Debug hoặc bin\Release)
+                string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+                string logFilePath = Path.Combine(executablePath, "HoaDonChangesLog.txt");
+
+                // Kiểm tra và tạo file log nếu chưa tồn tại
+                if (!File.Exists(logFilePath))
+                {
+                    using (File.Create(logFilePath)) { }
+                }
+
+                // Ghi log vào file
+                using (StreamWriter writer = new StreamWriter(logFilePath, true))
+                {
+                    writer.WriteLine($"{DateTime.Now}: {logMessage}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi ghi log vào file: {ex.Message}");
+            }
+        }
+
+
         private bool stop_hoaDon_table_dependency()
         {
             try
@@ -306,16 +334,24 @@ namespace DBMSProject
             return false;
 
         }
-        private void hoaDon_table_dependency_OnError(object sender, ErrorEventArgs e)
+        private void hoaDon_table_dependency_OnError(object sender, TableDependency.SqlClient.Base.EventArgs.ErrorEventArgs e)
         {
             MessageBox.Show(e.Error.Message.ToString());
         }
+
         private void hoaDon_table_dependency_Changed(object sender, RecordChangedEventArgs<ClassHoaDon> e)
         {
             try
             {
                 if (e.ChangeType != ChangeType.None)
                 {
+                    // Ghi thông tin thay đổi vào file log
+                    string changeType = e.ChangeType.ToString();
+                    string logMessage = $"ChangeType: {changeType}, MaHoaDon: {e.Entity?.MaHoaDon}, TriGia: {e.Entity?.TriGia}, TrangThai: {e.Entity?.TrangThai}";
+
+                    WriteLogToFile(logMessage);
+
+                    // Cập nhật giao diện
                     refresh_table();
                 }
             }
@@ -324,6 +360,7 @@ namespace DBMSProject
                 MessageBox.Show(ex.ToString());
             }
         }
+
 
 
         //common funcion
@@ -481,7 +518,7 @@ namespace DBMSProject
                 totalNapTien += Convert.ToDecimal(row["NapTien"]);
             }
             decimal tong = totalDoAn + totalThucUong + totalTheCao + totalNapTien;
-
+            // Thêm dữ liệu vào biểu đồ tròn
             if (tong == 0)
             {
                 // Nếu tổng = 0, gán giá trị mặc định cho tỷ lệ phần trăm (ví dụ: 0)
