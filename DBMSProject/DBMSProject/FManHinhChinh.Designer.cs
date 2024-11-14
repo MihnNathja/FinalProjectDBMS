@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SelectMenuscript = new System.Windows.Forms.TabControl();
             this.QuanLyThanhVienTab = new System.Windows.Forms.TabPage();
             this.UserFlp = new System.Windows.Forms.FlowLayoutPanel();
@@ -76,6 +82,9 @@
             this.lblMaUuDai = new System.Windows.Forms.Label();
             this.txtMaUuDai = new System.Windows.Forms.TextBox();
             this.dgvQuanLyUuDai = new System.Windows.Forms.DataGridView();
+            this.ThongKeTab = new System.Windows.Forms.TabPage();
+            this.chartBDTron = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartBDCot = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ThoatTab = new System.Windows.Forms.TabPage();
             this.SelectMenuscript.SuspendLayout();
             this.QuanLyThanhVienTab.SuspendLayout();
@@ -89,6 +98,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaThanhToan)).BeginInit();
             this.QuanLyUuDaiTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyUuDai)).BeginInit();
+            this.ThongKeTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBDTron)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBDCot)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectMenuscript
@@ -98,6 +110,7 @@
             this.SelectMenuscript.Controls.Add(this.QuanLyMayTab);
             this.SelectMenuscript.Controls.Add(this.QuanLyGoiDichVuTab);
             this.SelectMenuscript.Controls.Add(this.QuanLyUuDaiTab);
+            this.SelectMenuscript.Controls.Add(this.ThongKeTab);
             this.SelectMenuscript.Controls.Add(this.ThoatTab);
             this.SelectMenuscript.Location = new System.Drawing.Point(0, 2);
             this.SelectMenuscript.Name = "SelectMenuscript";
@@ -105,6 +118,7 @@
             this.SelectMenuscript.Size = new System.Drawing.Size(1082, 517);
             this.SelectMenuscript.TabIndex = 0;
             this.SelectMenuscript.Tag = "";
+            this.SelectMenuscript.SelectedIndexChanged += new System.EventHandler(this.SelectMenuscript_SelectedIndexChanged);
             // 
             // QuanLyThanhVienTab
             // 
@@ -597,6 +611,55 @@
             this.dgvQuanLyUuDai.TabIndex = 22;
             this.dgvQuanLyUuDai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyUuDai_CellClick);
             // 
+            // ThongKeTab
+            // 
+            this.ThongKeTab.Controls.Add(this.chartBDTron);
+            this.ThongKeTab.Controls.Add(this.chartBDCot);
+            this.ThongKeTab.Location = new System.Drawing.Point(4, 25);
+            this.ThongKeTab.Name = "ThongKeTab";
+            this.ThongKeTab.Size = new System.Drawing.Size(1074, 488);
+            this.ThongKeTab.TabIndex = 6;
+            this.ThongKeTab.Text = "Thống kê trong tuần";
+            this.ThongKeTab.UseVisualStyleBackColor = true;
+            // 
+            // chartBDTron
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartBDTron.ChartAreas.Add(chartArea1);
+            this.chartBDTron.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartBDTron.Legends.Add(legend1);
+            this.chartBDTron.Location = new System.Drawing.Point(572, 0);
+            this.chartBDTron.Name = "chartBDTron";
+            this.chartBDTron.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Biều đồ tròn";
+            series1.Name = "chartBDTron";
+            this.chartBDTron.Series.Add(series1);
+            this.chartBDTron.Size = new System.Drawing.Size(502, 488);
+            this.chartBDTron.TabIndex = 37;
+            this.chartBDTron.Text = "chart2";
+            // 
+            // chartBDCot
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartBDCot.ChartAreas.Add(chartArea2);
+            this.chartBDCot.Dock = System.Windows.Forms.DockStyle.Left;
+            legend2.Name = "Legend1";
+            this.chartBDCot.Legends.Add(legend2);
+            this.chartBDCot.Location = new System.Drawing.Point(0, 0);
+            this.chartBDCot.Name = "chartBDCot";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.LegendText = "Biểu đồ cột";
+            series2.Name = "chartBDCot";
+            this.chartBDCot.Series.Add(series2);
+            this.chartBDCot.Size = new System.Drawing.Size(572, 488);
+            this.chartBDCot.TabIndex = 36;
+            this.chartBDCot.Text = "chart1";
+            // 
             // ThoatTab
             // 
             this.ThoatTab.Location = new System.Drawing.Point(4, 25);
@@ -633,6 +696,9 @@
             this.QuanLyUuDaiTab.ResumeLayout(false);
             this.QuanLyUuDaiTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyUuDai)).EndInit();
+            this.ThongKeTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartBDTron)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBDCot)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -688,5 +754,8 @@
         private System.Windows.Forms.Label lblThoiGianKetThuc;
         private System.Windows.Forms.DateTimePicker dtpThoiGianKetThuc;
         private System.Windows.Forms.DateTimePicker dtpThoiGianBatDau;
+        private System.Windows.Forms.TabPage ThongKeTab;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBDTron;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBDCot;
     }
 }
