@@ -142,7 +142,6 @@
             this.cboServer.Name = "cboServer";
             this.cboServer.Size = new System.Drawing.Size(449, 37);
             this.cboServer.TabIndex = 24;
-            this.cboServer.Text = "Server của Quế";
             this.cboServer.DropDown += new System.EventHandler(this.CboServerDropDownEventHandler);
             this.cboServer.SelectedIndexChanged += new System.EventHandler(this.CboServerSelectedIndexChanged);
             // 
@@ -181,7 +180,6 @@
             this.cboDatabase.Name = "cboDatabase";
             this.cboDatabase.Size = new System.Drawing.Size(449, 37);
             this.cboDatabase.TabIndex = 32;
-            this.cboDatabase.Text = "Database của Quế";
             // 
             // label3
             // 

@@ -21,7 +21,7 @@ namespace DBMSProject
     public partial class FManHinhChinh : Form
     {
         public SqlTableDependency<ClassHoaDon> hoaDon_table_dependency;
-        string connection_string_hoaDon = "Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;User ID=cuDB;Password=cuDB;";
+        string connection_string_hoaDon = "Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;";
 
         /*DBConnection db = new DBConnection();*/
         ClassHoaDonDAO hoaDonDAO;
@@ -50,6 +50,10 @@ namespace DBMSProject
             ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO(conn);
             List<ClassKhachHang> khachHangs = classKhachHangDAO.searchKhachHang(searchValue);
             addFlowLayoutPanel(khachHangs);
+        }
+        public void loadKhachHang()
+        {
+
         }
         public void addFlowLayoutPanel(List<ClassKhachHang> khachHangs)
         {

@@ -14,7 +14,7 @@ namespace DBMSProject
 {
     public partial class UCKhachHang : UserControl
     {
- 
+        
         public static int maKHofUCKH;
         public static string typeAdd;
         string conn;
@@ -25,6 +25,7 @@ namespace DBMSProject
             this.BorderStyle = BorderStyle.FixedSingle;
             conn = connStr;
             classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
+            
         }
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace DBMSProject
             maKHofUCKH = Convert.ToInt32(lblMaKH.Text);
             typeAdd = "khachHang";
             fNapTien.ShowDialog();
+            
         }
         public UCKhachHang UCKhachHangLoad(UCKhachHang ucKhachHang, ClassKhachHang classKhachHang)
         {
