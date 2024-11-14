@@ -88,9 +88,10 @@ namespace DBMSProject
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau(maTaiKhoanKhachHang);
+            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau(maTaiKhoanKhachHang, conn);
             fDoiMatKhau.ShowDialog();
         }
+
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
