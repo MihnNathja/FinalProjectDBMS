@@ -16,7 +16,7 @@ namespace DBMSProject.DAO
     public class DBConnection
     {
         private SqlConnection conn;
-        static SqlConnection connAdmin = new SqlConnection("Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
+        static SqlConnection connAdmin = new SqlConnection("Data Source=localhost\\SQLEXPRESS01;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
         public DBConnection(string connStr)
         {
 
