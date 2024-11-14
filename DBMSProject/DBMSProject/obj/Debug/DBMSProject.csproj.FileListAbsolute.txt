@@ -114,3 +114,4 @@ F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProje
 F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
 F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
 F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThongKe.resources

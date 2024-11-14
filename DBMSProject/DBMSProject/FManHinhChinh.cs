@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DBMSProject
 {
@@ -246,6 +248,110 @@ namespace DBMSProject
         private void QuanLyThanhVienTab_Enter(object sender, EventArgs e)
         {
             addUser();
+        }
+
+        // Hàm tải dữ liệu từ thủ tục SQL và hiển thị biểu đồ
+        private void LoadDataAndDisplayCharts()
+        {
+            ClassNguoiQuanLyDAO clNQLDAO = new ClassNguoiQuanLyDAO(conn);
+            try
+            {
+                DataTable data = clNQLDAO.GetThongKeDoanhThu();
+                DisplayBarChart(data);
+                DisplayPieChart(data);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+            }
+        }
+
+        
+
+        // Hàm hiển thị biểu đồ cột
+        private void DisplayBarChart(DataTable data)
+        {
+            chartBDCot.Series.Clear();
+            chartBDCot.Titles.Clear();
+            chartBDCot.Titles.Add("Doanh Thu Theo Ngày Trong Tuần");
+
+            // Tạo Series cho từng loại doanh thu
+            Series seriesDoAn = new Series("Đồ ăn");
+            Series seriesThucUong = new Series("Thức uống");
+            Series seriesTheCao = new Series("Thẻ cào");
+            Series seriesNapTien = new Series("Nạp tiền");
+
+            // Đặt kiểu biểu đồ là cột
+            seriesDoAn.ChartType = SeriesChartType.Column;
+            seriesThucUong.ChartType = SeriesChartType.Column;
+            seriesTheCao.ChartType = SeriesChartType.Column;
+            seriesNapTien.ChartType = SeriesChartType.Column;
+
+            // Thêm dữ liệu vào Series
+            foreach (DataRow row in data.Rows)
+            {
+                string day = row["NgayTrongTuan"].ToString();
+                decimal doanhThuDoAn = Convert.ToDecimal(row["DoAn"]);
+                decimal doanhThuThucUong = Convert.ToDecimal(row["ThucUong"]);
+                decimal doanhThuTheCao = Convert.ToDecimal(row["TheCao"]);
+                decimal doanhThuNapTien = Convert.ToDecimal(row["NapTien"]);
+
+                seriesDoAn.Points.AddXY(day, doanhThuDoAn);
+                seriesThucUong.Points.AddXY(day, doanhThuThucUong);
+                seriesTheCao.Points.AddXY(day, doanhThuTheCao);
+                seriesNapTien.Points.AddXY(day, doanhThuNapTien);
+            }
+
+            // Thêm Series vào biểu đồ
+            chartBDCot.Series.Add(seriesDoAn);
+            chartBDCot.Series.Add(seriesThucUong);
+            chartBDCot.Series.Add(seriesTheCao);
+            chartBDCot.Series.Add(seriesNapTien);
+
+            // Thiết lập trục X và Y
+            chartBDCot.ChartAreas[0].AxisX.Title = "Ngày Trong Tuần";
+            chartBDCot.ChartAreas[0].AxisY.Title = "Doanh Thu (VND)";
+            chartBDCot.ChartAreas[0].AxisY.LabelStyle.Format = "{0:N0}";
+        }
+
+        // Hàm hiển thị biểu đồ tròn
+        private void DisplayPieChart(DataTable data)
+        {
+            chartBDTron.Series.Clear();
+            chartBDTron.Titles.Clear();
+            chartBDTron.Titles.Add("Tỷ Lệ % Doanh Thu Dịch Vụ và Nạp Tiền");
+
+            Series series = new Series("Doanh Thu");
+            series.ChartType = SeriesChartType.Pie;
+
+            decimal totalDoAn = 0, totalThucUong = 0, totalTheCao = 0, totalNapTien = 0;
+
+            // Tính tổng doanh thu từ từng loại dịch vụ
+            foreach (DataRow row in data.Rows)
+            {
+                totalDoAn += Convert.ToDecimal(row["DoAn"]);
+                totalThucUong += Convert.ToDecimal(row["ThucUong"]);
+                totalTheCao += Convert.ToDecimal(row["TheCao"]);
+                totalNapTien += Convert.ToDecimal(row["NapTien"]);
+            }
+            decimal tong = totalDoAn + totalThucUong + totalTheCao + totalNapTien;
+            // Thêm dữ liệu vào biểu đồ tròn
+            series.Points.AddXY("Đồ ăn", (decimal)totalDoAn / tong);
+            series.Points.AddXY("Thức uống", (decimal)totalThucUong / tong);
+            series.Points.AddXY("Thẻ cào", (decimal)totalTheCao / tong);
+            series.Points.AddXY("Nạp tiền", (decimal)totalNapTien / tong);
+
+            // Hiển thị nhãn và định dạng phần trăm
+            series.IsValueShownAsLabel = true;
+
+            series.LabelFormat = "{0:0%}";
+
+            chartBDTron.Series.Add(series);
+        }
+
+        private void SelectMenuscript_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadDataAndDisplayCharts();
         }
     }
 }
