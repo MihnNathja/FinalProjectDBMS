@@ -1,35 +1,9 @@
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.g.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDichVu.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FChiTietHoaDon.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDangNhap.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDoiMatKhau.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FLoadingDatabase.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FManHinhChinh.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FKhachHang.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThanhToanHoaDon.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FUuDai.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLy.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLyDichVu.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FNapTien.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCMayTinh.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCKhachHang.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCQuanLyDichVu.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCUuDai.resources
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
-D:\UNIVERSITY\JUNIOR\DATABASE MANAGEMENT SYSTEM\PROJECT\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
-<<<<<<< HEAD
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\System.ComponentModel.Annotations.dll
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\System.Data.SqlClient.dll
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\TableDependency.SqlClient.dll
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.g.resources
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
@@ -53,73 +27,6 @@ C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCUuDai.resources
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProj.332F19EA.Up2Date
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
-=======
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.g.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDichVu.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FChiTietHoaDon.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDangNhap.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDoiMatKhau.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FLoadingDatabase.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FManHinhChinh.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FKhachHang.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThanhToanHoaDon.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FUuDai.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLy.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLyDichVu.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FNapTien.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCMayTinh.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCKhachHang.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCQuanLyDichVu.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCUuDai.resources
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
-D:\Hệ quản trị CSDL DBMS\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
->>>>>>> 335249770439b6dbe20e385a4003c086ced82e46
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe.config
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.exe
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\DBMSProject.pdb
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.AssemblyReference.cache
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.SuggestedBindingRedirects.cache
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.g.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDatabaseConnection.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDichVu.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FChiTietHoaDon.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDangNhap.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FDoiMatKhau.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FLoadingDatabase.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FManHinhChinh.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FKhachHang.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThanhToanHoaDon.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FUuDai.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.Properties.Resources.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLy.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FQuanLyDichVu.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FNapTien.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCDichVu.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCMayTinh.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCKhachHang.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCQuanLyDichVu.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.UCUuDai.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.GenerateResource.cache
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CoreCompileInputs.cache
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FThongKe.resources
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\System.ComponentModel.Annotations.dll
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\System.Data.SqlClient.dll
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\TableDependency.SqlClient.dll
-F:\22110372_DoPhuLuan\nam3\HeQuanTriCSDL\FinalProject\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.csproj.CopyComplete
-C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\System.ComponentModel.Annotations.dll
-C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\System.Data.SqlClient.dll
-C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\bin\Debug\TableDependency.SqlClient.dll
-C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProj.332F19EA.Up2Date

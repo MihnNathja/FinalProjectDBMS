@@ -15,6 +15,7 @@ using System.Data.SqlClient;
 using TableDependency.SqlClient.Base.Enums;
 using TableDependency.SqlClient.Base.EventArgs;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 namespace DBMSProject
 {
@@ -29,14 +30,14 @@ namespace DBMSProject
         string conn;
         
         int maTaiKhoanNguoiQuanLy;
-        public FManHinhChinh(int maTaiKhoanNguoiQuanLy, string connStr)
+        public FManHinhChinh(int maNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             conn = connStr;
             hoaDonDAO = new ClassHoaDonDAO(conn);
-            uuDaiDAO = new ClassUuDaiDAO(maTaiKhoanNguoiQuanLy, conn);
+            uuDaiDAO = new ClassUuDaiDAO(maNguoiQuanLy, conn);
 
-            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
+            this.maTaiKhoanNguoiQuanLy = maNguoiQuanLy;
         }
         public void addUser()
         {
@@ -60,7 +61,7 @@ namespace DBMSProject
             UserFlp.Controls.Clear();
             foreach (var item in khachHangs)
             {
-                UCKhachHang uCKhachHang = new UCKhachHang(conn);
+                UCKhachHang uCKhachHang = new UCKhachHang(conn, maTaiKhoanNguoiQuanLy);
                 uCKhachHang.UCKhachHangLoad(uCKhachHang, item);
                 UserFlp.Controls.Add(uCKhachHang);
             }
@@ -291,6 +292,33 @@ namespace DBMSProject
                 return false;
             }
         }
+        private void WriteLogToFile(string logMessage)
+        {
+            try
+            {
+                // Lấy đường dẫn đến thư mục chứa file .exe (bin\Debug hoặc bin\Release)
+                string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+                string logFilePath = Path.Combine(executablePath, "HoaDonChangesLog.txt");
+
+                // Kiểm tra và tạo file log nếu chưa tồn tại
+                if (!File.Exists(logFilePath))
+                {
+                    using (File.Create(logFilePath)) { }
+                }
+
+                // Ghi log vào file
+                using (StreamWriter writer = new StreamWriter(logFilePath, true))
+                {
+                    writer.WriteLine($"{DateTime.Now}: {logMessage}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi ghi log vào file: {ex.Message}");
+            }
+        }
+
+
         private bool stop_hoaDon_table_dependency()
         {
             try
@@ -310,16 +338,24 @@ namespace DBMSProject
             return false;
 
         }
-        private void hoaDon_table_dependency_OnError(object sender, ErrorEventArgs e)
+        private void hoaDon_table_dependency_OnError(object sender, TableDependency.SqlClient.Base.EventArgs.ErrorEventArgs e)
         {
             MessageBox.Show(e.Error.Message.ToString());
         }
+
         private void hoaDon_table_dependency_Changed(object sender, RecordChangedEventArgs<ClassHoaDon> e)
         {
             try
             {
                 if (e.ChangeType != ChangeType.None)
                 {
+                    // Ghi thông tin thay đổi vào file log
+                    string changeType = e.ChangeType.ToString();
+                    string logMessage = $"ChangeType: {changeType}, MaHoaDon: {e.Entity?.MaHoaDon}, TriGia: {e.Entity?.TriGia}, TrangThai: {e.Entity?.TrangThai}";
+
+                    WriteLogToFile(logMessage);
+
+                    // Cập nhật giao diện
                     refresh_table();
                 }
             }
@@ -328,6 +364,7 @@ namespace DBMSProject
                 MessageBox.Show(ex.ToString());
             }
         }
+
 
 
         //common funcion
@@ -486,10 +523,22 @@ namespace DBMSProject
             }
             decimal tong = totalDoAn + totalThucUong + totalTheCao + totalNapTien;
             // Thêm dữ liệu vào biểu đồ tròn
-            series.Points.AddXY("Đồ ăn", (decimal)totalDoAn / tong);
-            series.Points.AddXY("Thức uống", (decimal)totalThucUong / tong);
-            series.Points.AddXY("Thẻ cào", (decimal)totalTheCao / tong);
-            series.Points.AddXY("Nạp tiền", (decimal)totalNapTien / tong);
+            if (tong == 0)
+            {
+                // Nếu tổng = 0, gán giá trị mặc định cho tỷ lệ phần trăm (ví dụ: 0)
+                series.Points.AddXY("Đồ ăn", 0);
+                series.Points.AddXY("Thức uống", 0);
+                series.Points.AddXY("Thẻ cào", 0);
+                series.Points.AddXY("Nạp tiền", 0);
+            }
+            else
+            {
+                // Nếu tổng không bằng 0, tính tỷ lệ phần trăm và thêm vào biểu đồ
+                series.Points.AddXY("Đồ ăn", totalDoAn / tong);
+                series.Points.AddXY("Thức uống", totalThucUong / tong);
+                series.Points.AddXY("Thẻ cào", totalTheCao / tong);
+                series.Points.AddXY("Nạp tiền", totalNapTien / tong);
+            }
 
             // Hiển thị nhãn và định dạng phần trăm
             series.IsValueShownAsLabel = true;
@@ -502,6 +551,51 @@ namespace DBMSProject
         private void SelectMenuscript_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadDataAndDisplayCharts();
+        }
+
+        private void btnDangKyQuanLy_Click(object sender, EventArgs e)
+        {
+            string username = txtTaiKhoan.Text;
+            string password = txtMatKhau.Text;
+            string rePassword = txtNhapLaiMatKhau.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(rePassword))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+            }
+            else if (password != rePassword)
+            {
+                MessageBox.Show("Mật khẩu không khớp. Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                ClassNguoiQuanLyDAO quanLyDAO = new ClassNguoiQuanLyDAO(conn);
+                string result = quanLyDAO.AddQuanLy(username, password);
+                MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnThoatQLy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChBHienThiMatKhauQly_CheckedChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra trạng thái của CheckBox
+            if (ChBHienThiMatKhauQly.Checked)
+            {
+                // Hiển thị mật khẩu
+                txtMatKhau.UseSystemPasswordChar = false;
+                txtNhapLaiMatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Ẩn mật khẩu
+                txtMatKhau.UseSystemPasswordChar = true;
+                txtNhapLaiMatKhau.UseSystemPasswordChar = true;
+            }
         }
     }
 }

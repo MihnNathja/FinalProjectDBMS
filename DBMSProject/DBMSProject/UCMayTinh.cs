@@ -22,8 +22,8 @@ namespace DBMSProject
         private Timer timer;
         private TimeSpan thoiGianConLai;
         private TimeSpan thoiGianDaDung;
-        int maTaiKhoanNguoiQuanLy;
-        public UCMayTinh(int maTaiKhoanNguoiQuanLy, string connStr)
+        int maNguoiQuanLy;
+        public UCMayTinh(int maNguoiQuanLy, string connStr)
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
@@ -31,13 +31,13 @@ namespace DBMSProject
             timer = new Timer();
             timer.Interval = 1000; 
             timer.Tick += Timer_Tick; 
-            this.maTaiKhoanNguoiQuanLy = maTaiKhoanNguoiQuanLy;
+            this.maNguoiQuanLy = maNguoiQuanLy;
         }
 
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
-            FNapTien fNapTien = new FNapTien(conn);
+            FNapTien fNapTien = new FNapTien(conn, maNguoiQuanLy);
             int maKH = classTaiKhoanDAO.ChuyenDoiMaKhachHangSangMaTaiKhoan(Convert.ToInt32(lblMaNguoiDung.Text));
             String taiKhoan = classTaiKhoanDAO.GetTenTaiKhoan(maKH);
             fNapTien.loadTaiKhoangKH(taiKhoan);
@@ -54,7 +54,7 @@ namespace DBMSProject
                 lblTinhTrang.Text = "Đang bảo trì";
                 btnBaoTri.Text = "Đang bảo trì";
                 ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO(conn);
-                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri", maTaiKhoanNguoiQuanLy);
+                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "DangBaoTri", maNguoiQuanLy);
             }
             else if (lblTinhTrang.Text == "Đang bảo trì")
             {
@@ -62,7 +62,7 @@ namespace DBMSProject
                 lblTinhTrang.Text = "Trống";
                 btnBaoTri.Text = "Bảo trì";
                 ClassMayTinhDAO classMayTinhDAO = new ClassMayTinhDAO(conn);
-                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong", maTaiKhoanNguoiQuanLy);
+                classMayTinhDAO.CapNhatTinhTrangMayTinh(Convert.ToInt32(lblSerial.Text), "Trong", maNguoiQuanLy);
             }
         }
         public UCMayTinh UCMayTinhLoad(UCMayTinh ucMayTinh, ClassMayTinh classMayTinh)
