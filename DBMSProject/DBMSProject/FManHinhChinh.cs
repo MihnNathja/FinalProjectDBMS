@@ -10,13 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TableDependency.SqlClient;
 using System.Data.SqlClient;
+using TableDependency.SqlClient.Base.Enums;
+using TableDependency.SqlClient.Base.EventArgs;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DBMSProject
 {
     public partial class FManHinhChinh : Form
     {
+        public SqlTableDependency<ClassHoaDon> hoaDon_table_dependency;
+        string connection_string_hoaDon = "Data Source=DESKTOP-LCVENON\\LUAAN;Initial Catalog=QuanLyDichVuQuanNet;User ID=cuDB;Password=cuDB;";
+
         /*DBConnection db = new DBConnection();*/
         ClassHoaDonDAO hoaDonDAO;
         ClassUuDaiDAO uuDaiDAO;
@@ -98,14 +104,6 @@ namespace DBMSProject
                 fChiTietHoaDon.ShowDialog();
                 addBill();
             }
-        }
-      
-        private void FManHinhChinh_Load(object sender, EventArgs e)
-        {
-            SelectMenuscript.SelectedIndex = 0;
-            dgvDaThanhToan.CellClick += dgvDaThanhToan_CellClick;
-            dgvChuaThanhToan.CellClick += dgvChuaThanhToan_CellClick;
-            LoadUuDai();
         }
 
         private void ThoatTab_Enter(object sender, EventArgs e)
@@ -248,6 +246,154 @@ namespace DBMSProject
         private void QuanLyThanhVienTab_Enter(object sender, EventArgs e)
         {
             addUser();
+        }
+
+        private void FManHinhChinh_Load(object sender, EventArgs e)
+        {
+            SelectMenuscript.SelectedIndex = 0;
+            dgvDaThanhToan.CellClick += dgvDaThanhToan_CellClick;
+            dgvChuaThanhToan.CellClick += dgvChuaThanhToan_CellClick;
+            refresh_table();
+            start_hoaDon_table_dependency();
+            LoadUuDai();
+        }
+
+        private void FManHinhChinh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                stop_hoaDon_table_dependency();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        // start , stop , error, changed 
+        private bool start_hoaDon_table_dependency()
+        {
+            try
+            {
+                hoaDon_table_dependency = new SqlTableDependency<ClassHoaDon>(connection_string_hoaDon, "HoaDon");
+                hoaDon_table_dependency.OnChanged += hoaDon_table_dependency_Changed;
+                hoaDon_table_dependency.OnError += hoaDon_table_dependency_OnError;
+                hoaDon_table_dependency.Start();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+        private bool stop_hoaDon_table_dependency()
+        {
+            try
+            {
+                if (hoaDon_table_dependency != null)
+                {
+                    hoaDon_table_dependency.Stop();
+
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            return false;
+
+        }
+        private void hoaDon_table_dependency_OnError(object sender, ErrorEventArgs e)
+        {
+            MessageBox.Show(e.Error.Message.ToString());
+        }
+        private void hoaDon_table_dependency_Changed(object sender, RecordChangedEventArgs<ClassHoaDon> e)
+        {
+            try
+            {
+                if (e.ChangeType != ChangeType.None)
+                {
+                    refresh_table();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        //common funcion
+        private void refresh_table()
+        {
+            refresh("DichVuChuaThanhToanView", "chuaThanhToan");
+            refresh("DichVuDaThanhToanView", "daThanhToan");
+            refresh("ViewUuDaiVip", "uuDai");
+        }
+
+        private void refresh(String typeTable, String typeDgv)
+        {
+            try
+            {
+                string sql = string.Format("SELECT * FROM {0}", typeTable);
+                using (SqlConnection connection = new SqlConnection(connection_string_hoaDon))
+                {
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+                    if (typeDgv == "chuaThanhToan")
+                    {
+                        if (InvokeRequired)
+                        {
+                            Invoke(new Action(() => dgvChuaThanhToan.DataSource = dataTable));
+                        }
+                        else
+                        {
+                            dgvChuaThanhToan.DataSource = dataTable;
+                        }
+                    }
+                    else if (typeDgv == "daThanhToan")
+                    {
+                        if (InvokeRequired)
+                        {
+                            Invoke(new Action(() => dgvDaThanhToan.DataSource = dataTable));
+                        }
+                        else
+                        {
+                            dgvDaThanhToan.DataSource = dataTable;
+                        }
+                    }
+                    else
+                    {
+                        if (InvokeRequired)
+                        {
+                            Invoke(new Action(() => dgvQuanLyUuDai.DataSource = dataTable));
+                        }
+                        else
+                        {
+                            dgvQuanLyUuDai.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi làm mới bảng: {ex.Message}");
+            }
+        }
+        private void ThreadSafe(MethodInvoker method)
+        {
+            try
+            {
+                if (InvokeRequired)
+                    Invoke(method);
+                else
+                    method();
+            }
+            catch (ObjectDisposedException) { }
         }
 
         // Hàm tải dữ liệu từ thủ tục SQL và hiển thị biểu đồ
