@@ -32,6 +32,7 @@ namespace DBMSProject
             timer.Interval = 1000; 
             timer.Tick += Timer_Tick; 
             this.maNguoiQuanLy = maNguoiQuanLy;
+            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
 
 

@@ -46,6 +46,7 @@ namespace DBMSProject.DAO
                 else
                 {
                     reader.Close();
+                    
                     MessageBox.Show("Không tìm thấy hóa đơn với mã: " + maHoaDon);
                     return null;
                 }

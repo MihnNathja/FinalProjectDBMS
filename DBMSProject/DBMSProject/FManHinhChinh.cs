@@ -597,5 +597,11 @@ namespace DBMSProject
                 txtNhapLaiMatKhau.UseSystemPasswordChar = true;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FPhanTich fPhanTich = new FPhanTich();
+            fPhanTich.ShowDialog();
+        }
     }
 }

@@ -121,6 +121,12 @@
     <Compile Include="FKhachHang.Designer.cs">
       <DependentUpon>FKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FPhanTich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPhanTich.Designer.cs">
+      <DependentUpon>FPhanTich.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThanhToanHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FKhachHang.resx">
       <DependentUpon>FKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPhanTich.resx">
+      <DependentUpon>FPhanTich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThanhToanHoaDon.resx">
       <DependentUpon>FThanhToanHoaDon.cs</DependentUpon>

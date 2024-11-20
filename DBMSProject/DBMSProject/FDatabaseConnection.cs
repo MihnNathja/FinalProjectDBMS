@@ -37,12 +37,7 @@ namespace DBMSProject
 
             }
         }
-        private void FDatabaseConnectionLoadEventHandler(object sender, EventArgs e)
-        {
-            this.Location = new Point(100, 100);
-            DBMSProject.Properties.Settings.Default.ConnectType = true;
-            MessageBox.Show("Bạn hãy chắc chắn đã bật Server Browser của SQL trước thì mới tải được Server lên\r\nĐể bật, hãy vào CMD gõ: net start SQLBrowser ", "Nhắc Nhở", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        
 
 
 
@@ -72,8 +67,8 @@ namespace DBMSProject
             // Khởi tạo đối tượng DBConnection với chuỗi kết nối
             dBConnection = new DBConnection(connStr); 
 
-            // Hiển thị chuỗi kết nối cho người dùng để kiểm tra
-            //MessageBox.Show("Chuỗi kết nối: " + connStr);
+            
+
 
             // Kiểm tra kết nối
             if (!dBConnection.testConnection())
@@ -108,7 +103,7 @@ namespace DBMSProject
         {
 /*            string serverName = cboServer.SelectedItem.ToString();
             List<string> databases = GetDatabases(serverName);
-            MessageBox.Show(databases.ToString());
+            
             cboDatabase.Items.Clear();
             cboDatabase.Items.AddRange(databases.ToArray());*/
         }
