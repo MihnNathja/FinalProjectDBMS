@@ -131,6 +131,7 @@ namespace DBMSProject.DAO
             {
                 dBConnection.openConnection();
 
+                
                 // Tạo một đối tượng SqlCommand để gọi hàm SQL
                 string SQL = "SELECT dbo.LayLoaiKhachHang(@maKhachHang)";
                 SqlCommand cmd = new SqlCommand(SQL, dBConnection.getConnection);
@@ -151,11 +152,32 @@ namespace DBMSProject.DAO
                 dBConnection.closeConnection();
             }
         }
+        public string GetDanhHieuKhachHang(int maKhachHang)
+        {
+            try
+            {
+                dBConnection.openConnection();
 
+                // Tạo một đối tượng SqlCommand để gọi hàm SQL
+                string SQL = "SELECT dbo.GetDanhHieuKhachHang(@maKhachHang)";
+                SqlCommand cmd = new SqlCommand(SQL, dBConnection.getConnection);
+                // Thêm tham số cho hàm
+                cmd.Parameters.AddWithValue("@maKhachHang", maKhachHang);
 
-
-
-
+                // Thực thi câu lệnh và lấy giá trị trả về
+                object result = cmd.ExecuteScalar();
+                return result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}");
+                return "";
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+        }
     }
 }
 

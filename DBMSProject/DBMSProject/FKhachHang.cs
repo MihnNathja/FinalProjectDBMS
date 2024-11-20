@@ -19,7 +19,8 @@ namespace DBMSProject
     public partial class FKhachHang : Form
     {
         public SqlTableDependency<ClassPhienDangNhap> phiendangnhap_table_dependency;
-        string connStrAdmin = "Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;";
+        //string connStrAdmin = "Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;";
+        string connStrAdmin = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;";
         int maKhachHang;
         int maTaiKhoanKhachHang;
         string conn;
@@ -37,6 +38,7 @@ namespace DBMSProject
             conn = connStr;
             classPhienDangNhapDAO = new ClassPhienDangNhapDAO(conn);
             tkDAO = new ClassTaiKhoanDAO(conn);
+            ClassKhachHangDAO classKhachHangDAO = new ClassKhachHangDAO(conn);
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 0);
@@ -59,6 +61,8 @@ namespace DBMSProject
             txtThoiGianBatDau.Text = thoiGianBatDau.ToString(@"hh\:mm\:ss");
             TimeSpan thoiGianConLai = classPhienDangNhap.ThoiGianConLai;
             txtThoiGianConLai.Text = thoiGianConLai.ToString(@"hh\:mm\:ss");
+            txtDanhHieu.Text = classKhachHangDAO.GetDanhHieuKhachHang(maKhachHang);
+
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -85,7 +89,6 @@ namespace DBMSProject
         {
             refresh();
             start_phiendangnhap_table_dependency();
-
         }
 
         private void FKhachHang_FormClosing(object sender, FormClosingEventArgs e)
@@ -191,7 +194,6 @@ namespace DBMSProject
         private void refresh()
         {
             LoadThoiGianConLai();
-            
         }
         private void LoadThoiGianConLai()
         {
@@ -237,11 +239,6 @@ namespace DBMSProject
                 }
             }
         }
-        private void UpdatePhienDangNhap()
-        {
-            int maKhachHang = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
-            classPhienDangNhapDAO.CapNhatPhienDangNhap(maKhachHang, classPhienDangNhap.ThoiGianSuDung, classPhienDangNhap.ThoiGianConLai);
-        }
 
 
         private void ThreadSafe(MethodInvoker method)
@@ -255,6 +252,5 @@ namespace DBMSProject
             }
             catch (ObjectDisposedException) { }
         }
-
     }
 }

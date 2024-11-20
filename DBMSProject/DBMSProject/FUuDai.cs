@@ -30,7 +30,9 @@ namespace DBMSProject
         {
             ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang, conn);
             ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
-            loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
+            ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO(conn);
+            int maKH = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
+            loaiKhachHang = khDAO.GetLoaiKhachHang(maKH);
             List<ClassUuDai> listUD;
             if (loaiKhachHang == "Thường")
             {
@@ -48,7 +50,9 @@ namespace DBMSProject
             ClassUuDaiDAO uudaiDao = new ClassUuDaiDAO(maTaiKhoanKhachHang, conn);
             List<ClassUuDai> listUD;
             ClassKhachHangDAO khDAO = new ClassKhachHangDAO(conn);
-            loaiKhachHang = khDAO.GetLoaiKhachHang(maTaiKhoanKhachHang);
+            ClassTaiKhoanDAO tkDAO = new ClassTaiKhoanDAO(conn);
+            int maKH = tkDAO.ChuyenDoiMaTaiKhoanSangMaKhachHang(maTaiKhoanKhachHang);
+            loaiKhachHang = khDAO.GetLoaiKhachHang(maKH);
             if (loaiKhachHang == "Thường")
             {
                 listUD = uudaiDao.TruyXuatDanhSachUuDaiThuong();

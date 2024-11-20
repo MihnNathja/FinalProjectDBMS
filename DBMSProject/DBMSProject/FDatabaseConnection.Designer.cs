@@ -137,6 +137,8 @@
             this.cboServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cboServer.FormattingEnabled = true;
+            this.cboServer.Items.AddRange(new object[] {
+            "26.221.50.203"});
             this.cboServer.Location = new System.Drawing.Point(342, 126);
             this.cboServer.Margin = new System.Windows.Forms.Padding(4);
             this.cboServer.Name = "cboServer";
@@ -175,6 +177,8 @@
             this.cboDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cboDatabase.FormattingEnabled = true;
+            this.cboDatabase.Items.AddRange(new object[] {
+            "QuanLyDichVuQuanNet"});
             this.cboDatabase.Location = new System.Drawing.Point(342, 240);
             this.cboDatabase.Margin = new System.Windows.Forms.Padding(4);
             this.cboDatabase.Name = "cboDatabase";
