@@ -40,5 +40,33 @@ namespace DBMSProject.DAO
                 MessageBox.Show("Lỗi khi nạp tiền vào tài khoản khách hàng: " + ex.Message);
             }
         }
+        public int tongBonus(int maKH, decimal giaTriNap)
+        {
+            int tongBonus = 0;
+            try
+            {
+                dBConnection.openConnection();
+                SqlCommand cmd = new SqlCommand("SELECT dbo.TinhTongBonus(@MaKhachHang, @GiaTriNap, @ThoiGianNapTien)", dBConnection.getConnection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@MaKhachHang", maKH);
+                cmd.Parameters.AddWithValue("@GiaTriNap", giaTriNap);
+                cmd.Parameters.AddWithValue("@ThoiGianNapTien", DateTime.Now);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    tongBonus = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tính toán bonus: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dBConnection.closeConnection();
+            }
+            return tongBonus;
+        }
     }
 }
