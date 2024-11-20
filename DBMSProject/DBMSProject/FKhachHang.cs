@@ -19,7 +19,7 @@ namespace DBMSProject
     public partial class FKhachHang : Form
     {
         public SqlTableDependency<ClassPhienDangNhap> phiendangnhap_table_dependency;
-        string connStrAdmin = "Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;";
+        string connStrAdmin = "Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;";
         int maKhachHang;
         int maTaiKhoanKhachHang;
         string conn;

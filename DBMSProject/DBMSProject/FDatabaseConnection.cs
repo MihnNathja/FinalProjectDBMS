@@ -37,12 +37,7 @@ namespace DBMSProject
 
             }
         }
-        private void FDatabaseConnectionLoadEventHandler(object sender, EventArgs e)
-        {
-            this.Location = new Point(100, 100);
-            DBMSProject.Properties.Settings.Default.ConnectType = true;
-            MessageBox.Show("Bạn hãy chắc chắn đã bật Server Browser của SQL trước thì mới tải được Server lên\r\nĐể bật, hãy vào CMD gõ: net start SQLBrowser ", "Nhắc Nhở", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        
 
 
 
@@ -55,16 +50,15 @@ namespace DBMSProject
             {
                 // Connection string bên dưới là để kết nối vào database local
                 connStr = string.Format("Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;");
-                //connStr = string.Format("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True");
                 
             }
             else
             {
-                //connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
-                //                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
-                connStr = string.Format(@"Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;User ID={0};Password={1};",
-                                         txtTaiKhoan.Text, txtMatKhau.Text);
-                
+                connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
+                                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+                //connStr = string.Format(@"Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;User ID={0};Password={1};",
+                //                         txtTaiKhoan.Text, txtMatKhau.Text);
+
 
                 //Data Source = HARRY; Initial Catalog = QuanLyDichVuQuanNet; Integrated Security = True; Encrypt = True; Trust Server Certificate = True
 
@@ -73,8 +67,8 @@ namespace DBMSProject
             // Khởi tạo đối tượng DBConnection với chuỗi kết nối
             dBConnection = new DBConnection(connStr); 
 
-            // Hiển thị chuỗi kết nối cho người dùng để kiểm tra
-            //MessageBox.Show("Chuỗi kết nối: " + connStr);
+            
+
 
             // Kiểm tra kết nối
             if (!dBConnection.testConnection())
@@ -109,7 +103,7 @@ namespace DBMSProject
         {
             string serverName = cboServer.SelectedItem.ToString();
             List<string> databases = GetDatabases(serverName);
-            MessageBox.Show(databases.ToString());
+            
             cboDatabase.Items.Clear();
             cboDatabase.Items.AddRange(databases.ToArray());
         }

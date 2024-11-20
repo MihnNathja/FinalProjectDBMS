@@ -30,3 +30,4 @@ C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProj.332F19EA.Up2Date
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.exe
 C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.pdb
+C:\VUONG_LAP_QUE\Nam3\HKI\DBMS\project\FinalProjectDBMS\DBMSProject\DBMSProject\obj\Debug\DBMSProject.FPhanTich.resources

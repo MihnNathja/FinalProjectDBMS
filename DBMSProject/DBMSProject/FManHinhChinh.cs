@@ -22,7 +22,7 @@ namespace DBMSProject
     public partial class FManHinhChinh : Form
     {
         public SqlTableDependency<ClassHoaDon> hoaDon_table_dependency;
-        string connection_string_hoaDon = "Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;";
+        string connection_string_hoaDon = "Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;";
 
         /*DBConnection db = new DBConnection();*/
         ClassHoaDonDAO hoaDonDAO;
@@ -596,6 +596,12 @@ namespace DBMSProject
                 txtMatKhau.UseSystemPasswordChar = true;
                 txtNhapLaiMatKhau.UseSystemPasswordChar = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FPhanTich fPhanTich = new FPhanTich();
+            fPhanTich.ShowDialog();
         }
     }
 }

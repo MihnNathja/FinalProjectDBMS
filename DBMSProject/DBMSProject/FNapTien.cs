@@ -19,6 +19,7 @@ namespace DBMSProject
         ClassTaiKhoanDAO classTaiKhoanDAO;
         ClassNapTienDAO classNapTienDAO;
         public int maNguoiQuanLy;
+        
         public FNapTien(string connStr, int maNguoiQuanLy)
         {
             InitializeComponent();

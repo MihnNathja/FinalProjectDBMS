@@ -32,11 +32,13 @@ namespace DBMSProject
             timer.Interval = 1000; 
             timer.Tick += Timer_Tick; 
             this.maNguoiQuanLy = maNguoiQuanLy;
+            classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
         }
 
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
+
             FNapTien fNapTien = new FNapTien(conn, maNguoiQuanLy);
             int maKH = classTaiKhoanDAO.ChuyenDoiMaKhachHangSangMaTaiKhoan(Convert.ToInt32(lblMaNguoiDung.Text));
             String taiKhoan = classTaiKhoanDAO.GetTenTaiKhoan(maKH);
