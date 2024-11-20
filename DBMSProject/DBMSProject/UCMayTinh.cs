@@ -37,12 +37,10 @@ namespace DBMSProject
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
-            FNapTien fNapTien = new FNapTien(conn, maNguoiQuanLy);
+            FNapTien fNapTien = new FNapTien(conn, Convert.ToInt32(lblMaNguoiDung.Text), maNguoiQuanLy);
             int maKH = classTaiKhoanDAO.ChuyenDoiMaKhachHangSangMaTaiKhoan(Convert.ToInt32(lblMaNguoiDung.Text));
             String taiKhoan = classTaiKhoanDAO.GetTenTaiKhoan(maKH);
             fNapTien.loadTaiKhoangKH(taiKhoan);
-            maKHofUCMT = Convert.ToInt32(lblMaNguoiDung.Text);
-            typeAdd = "mayTinh";
             fNapTien.ShowDialog();
         }
         bool checkBaoTri = false;
