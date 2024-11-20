@@ -32,10 +32,10 @@
             this.txtThoiGianSuDung = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.txtChiPhiDichVu = new System.Windows.Forms.TextBox();
+            this.txtDanhHieu = new System.Windows.Forms.TextBox();
             this.txtThoiGianConLai = new System.Windows.Forms.TextBox();
             this.txtThoiGianBatDau = new System.Windows.Forms.TextBox();
-            this.lblServiceFee = new System.Windows.Forms.Label();
+            this.lblDanhHieu = new System.Windows.Forms.Label();
             this.lblRemainTime = new System.Windows.Forms.Label();
             this.lblUseTime = new System.Windows.Forms.Label();
             this.lblTotalTime = new System.Windows.Forms.Label();
@@ -53,10 +53,10 @@
             this.groupBox1.Controls.Add(this.txtThoiGianSuDung);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblUserName);
-            this.groupBox1.Controls.Add(this.txtChiPhiDichVu);
+            this.groupBox1.Controls.Add(this.txtDanhHieu);
             this.groupBox1.Controls.Add(this.txtThoiGianConLai);
             this.groupBox1.Controls.Add(this.txtThoiGianBatDau);
-            this.groupBox1.Controls.Add(this.lblServiceFee);
+            this.groupBox1.Controls.Add(this.lblDanhHieu);
             this.groupBox1.Controls.Add(this.lblRemainTime);
             this.groupBox1.Controls.Add(this.lblUseTime);
             this.groupBox1.Controls.Add(this.lblTotalTime);
@@ -101,15 +101,16 @@
             this.lblUserName.TabIndex = 10;
             this.lblUserName.Text = "UserName:";
             // 
-            // txtChiPhiDichVu
+            // txtDanhHieu
             // 
-            this.txtChiPhiDichVu.Enabled = false;
-            this.txtChiPhiDichVu.Location = new System.Drawing.Point(165, 154);
-            this.txtChiPhiDichVu.Margin = new System.Windows.Forms.Padding(4);
-            this.txtChiPhiDichVu.Name = "txtChiPhiDichVu";
-            this.txtChiPhiDichVu.ReadOnly = true;
-            this.txtChiPhiDichVu.Size = new System.Drawing.Size(178, 22);
-            this.txtChiPhiDichVu.TabIndex = 9;
+            this.txtDanhHieu.Enabled = false;
+            this.txtDanhHieu.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtDanhHieu.Location = new System.Drawing.Point(165, 154);
+            this.txtDanhHieu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDanhHieu.Name = "txtDanhHieu";
+            this.txtDanhHieu.ReadOnly = true;
+            this.txtDanhHieu.Size = new System.Drawing.Size(178, 22);
+            this.txtDanhHieu.TabIndex = 9;
             // 
             // txtThoiGianConLai
             // 
@@ -131,17 +132,17 @@
             this.txtThoiGianBatDau.Size = new System.Drawing.Size(178, 22);
             this.txtThoiGianBatDau.TabIndex = 6;
             // 
-            // lblServiceFee
+            // lblDanhHieu
             // 
-            this.lblServiceFee.AutoSize = true;
-            this.lblServiceFee.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblServiceFee.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblServiceFee.Location = new System.Drawing.Point(15, 154);
-            this.lblServiceFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblServiceFee.Name = "lblServiceFee";
-            this.lblServiceFee.Size = new System.Drawing.Size(127, 19);
-            this.lblServiceFee.TabIndex = 4;
-            this.lblServiceFee.Text = "Chi phí dịch vụ:";
+            this.lblDanhHieu.AutoSize = true;
+            this.lblDanhHieu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhHieu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDanhHieu.Location = new System.Drawing.Point(15, 154);
+            this.lblDanhHieu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDanhHieu.Name = "lblDanhHieu";
+            this.lblDanhHieu.Size = new System.Drawing.Size(89, 19);
+            this.lblDanhHieu.TabIndex = 4;
+            this.lblDanhHieu.Text = "Danh hiệu:";
             // 
             // lblRemainTime
             // 
@@ -265,10 +266,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtChiPhiDichVu;
+        private System.Windows.Forms.TextBox txtDanhHieu;
         private System.Windows.Forms.TextBox txtThoiGianConLai;
         private System.Windows.Forms.TextBox txtThoiGianBatDau;
-        private System.Windows.Forms.Label lblServiceFee;
+        private System.Windows.Forms.Label lblDanhHieu;
         private System.Windows.Forms.Label lblRemainTime;
         private System.Windows.Forms.Label lblUseTime;
         private System.Windows.Forms.Label lblTotalTime;

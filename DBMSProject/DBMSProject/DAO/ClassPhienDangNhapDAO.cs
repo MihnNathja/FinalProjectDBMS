@@ -86,7 +86,7 @@ namespace DBMSProject.DAO
             {
                 dBConnection.openConnectionAdmin();
 
-                int maMayTinh = 0;
+                int maMayTinh = 1;
 
 
                 SqlCommand cmd = new SqlCommand("ThemPhienDangNhap", dBConnection.getConnectionAdmin);
@@ -96,7 +96,7 @@ namespace DBMSProject.DAO
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Thêm phiên đăng nhập thành công vào máy: " + maMayTinh, "Thông báo");
+                
             }
             catch (Exception ex)
             {
