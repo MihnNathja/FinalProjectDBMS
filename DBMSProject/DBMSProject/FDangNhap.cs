@@ -59,7 +59,7 @@ namespace DBMSProject
                     FKhachHang fKhachHang = new FKhachHang(maTaiKhoanKhachHang, conn);
                     this.Hide();
                     fKhachHang.ShowDialog();
-
+                    this.Show();
                 }
                 return;
             }

@@ -31,12 +31,10 @@ namespace DBMSProject
 
         private void ThemThoiGianBtn_Click(object sender, EventArgs e)
         {
-            FNapTien fNapTien = new FNapTien(conn, maNguoiQuanLy);
+            FNapTien fNapTien = new FNapTien(conn, Convert.ToInt32(lblMaKH.Text), maNguoiQuanLy);
             fNapTien.loadTaiKhoangKH(lblTaiKhoan.Text);
-            maKHofUCKH = Convert.ToInt32(lblMaKH.Text);
-            typeAdd = "khachHang";
             fNapTien.ShowDialog();
-            
+
         }
         public UCKhachHang UCKhachHangLoad(UCKhachHang ucKhachHang, ClassKhachHang classKhachHang)
         {

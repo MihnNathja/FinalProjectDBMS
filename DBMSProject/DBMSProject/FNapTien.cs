@@ -19,22 +19,34 @@ namespace DBMSProject
         ClassTaiKhoanDAO classTaiKhoanDAO;
         ClassNapTienDAO classNapTienDAO;
         public int maNguoiQuanLy;
-        
-        public FNapTien(string connStr, int maNguoiQuanLy)
+        public int maKhachHang;
+        public FNapTien(string connStr, int maKhachHang, int maNguoiQuanLy)
         {
             InitializeComponent();
             conn = connStr;
             classNapTienDAO = new ClassNapTienDAO(conn);
             classTaiKhoanDAO = new ClassTaiKhoanDAO(conn);
             this.maNguoiQuanLy = maNguoiQuanLy;
+            this.maKhachHang = maKhachHang;
         }
 
         private void txbSoTienNap_TextChanged(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txbSoTienNap.Text, out decimal inputValue) && inputValue != 0)
+            if (decimal.TryParse(txbSoTienNap.Text, out decimal inputValue) && inputValue > 0)
             {
-                decimal convertedValue = inputValue / 5000;
-                txbThoiGianQuyDoi.Text = convertedValue.ToString() +"h";
+                try
+                {
+                    int tongBonus = classNapTienDAO.tongBonus(maKhachHang, Convert.ToDecimal(txbSoTienNap.Text));
+
+                    decimal soTienSauBonus = inputValue * (1 + (decimal)tongBonus / 100);
+                    decimal convertedValue = soTienSauBonus / 5000;
+
+                    txbThoiGianQuyDoi.Text = $"{convertedValue:F2}h";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi tính toán giờ chơi: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -52,20 +64,10 @@ namespace DBMSProject
             try
             {
                 ClassNapTien classNapTien = new ClassNapTien();
-
-                if (UCMayTinh.typeAdd == "mayTinh")
-                {
-                    classNapTien.MaKhachHang = UCMayTinh.maKHofUCMT; // Lấy mã khách hàng từ UCMayTinh
-                    UCMayTinh.typeAdd = null; // Đặt lại về null sau khi sử dụng
-                }
-                else if (UCKhachHang.typeAdd == "khachHang")
-                {
-                    classNapTien.MaKhachHang = UCKhachHang.maKHofUCKH; // Lấy mã khách hàng từ UCKhachHang
-                    UCKhachHang.typeAdd = null; // Đặt lại về null sau khi sử dụng
-                }
-
+                classNapTien.MaKhachHang = maKhachHang;
                 classNapTien.ThoiGianNapTien = DateTime.Now;
-                decimal soTienNap = Convert.ToDecimal(txbSoTienNap.Text);
+                int tongBonus = classNapTienDAO.tongBonus(maKhachHang, Convert.ToDecimal(txbSoTienNap.Text));
+                decimal soTienNap = Convert.ToDecimal(txbSoTienNap.Text) * (1 + (decimal)tongBonus / 100);
                 classNapTien.GiaTriNap = soTienNap;
 
                 double soGioChoi = (double)(soTienNap / 5000);
