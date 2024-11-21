@@ -21,7 +21,7 @@ namespace DBMSProject
         private void btnPhanTich_Click(object sender, EventArgs e)
         {
             // Chuỗi kết nối SQL
-            string connectionString = "Server=HARRY;Database=QuanLyDichVuQuanNet;Trusted_Connection=True;";
+            string connectionString = "Server=26.221.50.203;Database=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sa;Password=123456;";
 
             // Nhập tháng hiện tại và tháng trước
             //string thang = "2024-10";
@@ -58,7 +58,7 @@ namespace DBMSProject
         private void btnDuDoan_Click(object sender, EventArgs e)
         {
             // Chuỗi kết nối SQL
-            string connectionString = "Server=HARRY;Database=QuanLyDichVuQuanNet;Trusted_Connection=True;";
+            string connectionString = "Server=26.221.50.203;Database=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sa;Password=123456;";
 
             try
             {
