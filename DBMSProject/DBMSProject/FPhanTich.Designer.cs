@@ -36,12 +36,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbNam1 = new System.Windows.Forms.ComboBox();
-            this.cbbNam2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbbThangTruoc = new System.Windows.Forms.ComboBox();
+            this.dataGridViewDuDoan1 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhanTich)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDuDoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDuDoan1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPhanTich
@@ -71,17 +71,17 @@
             this.dataGridViewPhanTich.Name = "dataGridViewPhanTich";
             this.dataGridViewPhanTich.RowHeadersWidth = 51;
             this.dataGridViewPhanTich.RowTemplate.Height = 24;
-            this.dataGridViewPhanTich.Size = new System.Drawing.Size(1151, 117);
+            this.dataGridViewPhanTich.Size = new System.Drawing.Size(963, 117);
             this.dataGridViewPhanTich.TabIndex = 2;
             // 
             // dataGridViewDuDoan
             // 
             this.dataGridViewDuDoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDuDoan.Location = new System.Drawing.Point(29, 310);
+            this.dataGridViewDuDoan.Location = new System.Drawing.Point(29, 330);
             this.dataGridViewDuDoan.Name = "dataGridViewDuDoan";
             this.dataGridViewDuDoan.RowHeadersWidth = 51;
             this.dataGridViewDuDoan.RowTemplate.Height = 24;
-            this.dataGridViewDuDoan.Size = new System.Drawing.Size(1151, 132);
+            this.dataGridViewDuDoan.Size = new System.Drawing.Size(963, 132);
             this.dataGridViewDuDoan.TabIndex = 3;
             // 
             // cbbThang
@@ -140,70 +140,42 @@
             this.cbbNam1.Size = new System.Drawing.Size(62, 24);
             this.cbbNam1.TabIndex = 7;
             // 
-            // cbbNam2
+            // dataGridViewDuDoan1
             // 
-            this.cbbNam2.FormattingEnabled = true;
-            this.cbbNam2.Items.AddRange(new object[] {
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030"});
-            this.cbbNam2.Location = new System.Drawing.Point(1091, 26);
-            this.cbbNam2.Name = "cbbNam2";
-            this.cbbNam2.Size = new System.Drawing.Size(62, 24);
-            this.cbbNam2.TabIndex = 11;
+            this.dataGridViewDuDoan1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDuDoan1.Location = new System.Drawing.Point(29, 527);
+            this.dataGridViewDuDoan1.Name = "dataGridViewDuDoan1";
+            this.dataGridViewDuDoan1.RowHeadersWidth = 51;
+            this.dataGridViewDuDoan1.RowTemplate.Height = 24;
+            this.dataGridViewDuDoan1.Size = new System.Drawing.Size(963, 132);
+            this.dataGridViewDuDoan1.TabIndex = 12;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1036, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Năm:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Dự đoán doanh thu tháng tới:";
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(857, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tháng trước:";
-            // 
-            // cbbThangTruoc
-            // 
-            this.cbbThangTruoc.FormattingEnabled = true;
-            this.cbbThangTruoc.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cbbThangTruoc.Location = new System.Drawing.Point(947, 26);
-            this.cbbThangTruoc.Name = "cbbThangTruoc";
-            this.cbbThangTruoc.Size = new System.Drawing.Size(62, 24);
-            this.cbbThangTruoc.TabIndex = 8;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 497);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Dự đoán về khách hàng, hóa đơn";
             // 
             // FPhanTich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 494);
-            this.Controls.Add(this.cbbNam2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbbThangTruoc);
+            this.ClientSize = new System.Drawing.Size(1023, 697);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dataGridViewDuDoan1);
             this.Controls.Add(this.cbbNam1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -214,8 +186,10 @@
             this.Controls.Add(this.btnPhanTich);
             this.Name = "FPhanTich";
             this.Text = "FPhanTich";
+            this.Load += new System.EventHandler(this.FPhanTich_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhanTich)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDuDoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDuDoan1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,9 +205,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbbNam1;
-        private System.Windows.Forms.ComboBox cbbNam2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbbThangTruoc;
+        private System.Windows.Forms.DataGridView dataGridViewDuDoan1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

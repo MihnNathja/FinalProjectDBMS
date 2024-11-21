@@ -26,7 +26,7 @@ namespace DBMSProject
             // Nhập tháng hiện tại và tháng trước
             //string thang = "2024-10";
             string thang = cbbNam1.SelectedItem.ToString() + "-" +  cbbThang.SelectedItem.ToString();
-            string thangTruoc = cbbNam2.SelectedItem.ToString() + "-" + cbbThangTruoc.SelectedItem.ToString();
+            string thangTruoc = cbbNam1.SelectedItem.ToString() + "-" + (int.Parse(cbbThang.SelectedItem.ToString()) - 1).ToString();
 
             try
             {
@@ -72,13 +72,22 @@ namespace DBMSProject
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
-                            DataSet dataSet = new DataSet();
+                            DataSet ds = new DataSet();
+                            adapter.Fill(ds);
 
-                           
-                            adapter.Fill(dataSet, "DuDoan");
+                            // Check if two result sets are returned
+                            if (ds.Tables.Count >= 2)
+                            {
+                                // Bind first table to Phân Tích Doanh Thu
+                                dataGridViewDuDoan.DataSource = ds.Tables[0];
 
-                            
-                            dataGridViewDuDoan.DataSource = dataSet.Tables["DuDoan"];
+                                // Bind second table to Dự Đoán Doanh Thu
+                                dataGridViewDuDoan1.DataSource = ds.Tables[1];
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy dữ liệu phù hợp từ procedure.", "Thông báo");
+                            }
                         }
                     }
                 }
@@ -90,6 +99,11 @@ namespace DBMSProject
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FPhanTich_Load(object sender, EventArgs e)
         {
 
         }
