@@ -292,32 +292,6 @@ namespace DBMSProject
                 return false;
             }
         }
-        private void WriteLogToFile(string logMessage)
-        {
-            try
-            {
-                // Lấy đường dẫn đến thư mục chứa file .exe (bin\Debug hoặc bin\Release)
-                string executablePath = AppDomain.CurrentDomain.BaseDirectory;
-                string logFilePath = Path.Combine(executablePath, "HoaDonChangesLog.txt");
-
-                // Kiểm tra và tạo file log nếu chưa tồn tại
-                if (!File.Exists(logFilePath))
-                {
-                    using (File.Create(logFilePath)) { }
-                }
-
-                // Ghi log vào file
-                using (StreamWriter writer = new StreamWriter(logFilePath, true))
-                {
-                    writer.WriteLine($"{DateTime.Now}: {logMessage}");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi ghi log vào file: {ex.Message}");
-            }
-        }
-
 
         private bool stop_hoaDon_table_dependency()
         {
@@ -349,13 +323,6 @@ namespace DBMSProject
             {
                 if (e.ChangeType != ChangeType.None)
                 {
-                    // Ghi thông tin thay đổi vào file log
-                    string changeType = e.ChangeType.ToString();
-                    string logMessage = $"ChangeType: {changeType}, MaHoaDon: {e.Entity?.MaHoaDon}, TriGia: {e.Entity?.TriGia}, TrangThai: {e.Entity?.TrangThai}";
-
-                    WriteLogToFile(logMessage);
-
-                    // Cập nhật giao diện
                     refresh_table();
                 }
             }
