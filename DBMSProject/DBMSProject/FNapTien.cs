@@ -66,15 +66,14 @@ namespace DBMSProject
                 ClassNapTien classNapTien = new ClassNapTien();
                 classNapTien.MaKhachHang = maKhachHang;
                 classNapTien.ThoiGianNapTien = DateTime.Now;
+                decimal soTienNap = Convert.ToDecimal(txbSoTienNap.Text);
+                classNapTien.GiaTriNap = soTienNap;
+
                 int tongBonus = classNapTienDAO.tongBonus(maKhachHang, Convert.ToDecimal(txbSoTienNap.Text));
-                decimal soTienNap = Convert.ToDecimal(txbSoTienNap.Text) * (1 + (decimal)tongBonus / 100);
-                int sotiennap_int = ((int)soTienNap / 1000)*1000;
+                decimal tongThoiGian = Convert.ToDecimal(txbSoTienNap.Text) * (1 + (decimal)tongBonus / 100);
+                tongThoiGian = (tongThoiGian / 5000);
+                classNapTien.ThoiGianQuyDoi = TimeSpan.FromHours((double)tongThoiGian);
 
-                classNapTien.GiaTriNap = (decimal)sotiennap_int;
-
-                double soGioChoi = (double)(soTienNap / 5000);
-                classNapTien.ThoiGianQuyDoi = TimeSpan.FromHours(soGioChoi);
-                
                 /*ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO(conn);*/
                 classNapTienDAO.napTien(classNapTien, maNguoiQuanLy);
                 txbSoTienNap.Text = "";
