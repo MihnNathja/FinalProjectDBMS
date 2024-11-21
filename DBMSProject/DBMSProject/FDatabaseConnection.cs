@@ -50,15 +50,15 @@ namespace DBMSProject
             {
                 // Connection string bên dưới là để kết nối vào database local
                 //connStr = string.Format("Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;");
-                connStr = string.Format("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;User ID=sqlDependency;Password=sqlDependency;");
+                connStr = string.Format("Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;User ID=sqlDependency;Password=sqlDependency;");
 
             }
             else
             {
-                //connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
-                //                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+                connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
+                                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
                 //connStr = string.Format(@"Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID={0};Password={1};",txtTaiKhoan.Text, txtMatKhau.Text);
-                connStr = string.Format(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID={0};Password={1};", txtTaiKhoan.Text, txtMatKhau.Text);
+                //connStr = string.Format(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID={0};Password={1};", txtTaiKhoan.Text, txtMatKhau.Text);
 
                 //Data Source = HARRY; Initial Catalog = QuanLyDichVuQuanNet; Integrated Security = True; Encrypt = True; Trust Server Certificate = True
 
@@ -99,13 +99,13 @@ namespace DBMSProject
             }
         }
 
-        private void CboServerSelectedIndexChanged(object sender, EventArgs e)
+        private void cboDatabaseDropDownEventHandler(object sender, EventArgs e)
         {
-/*            string serverName = cboServer.SelectedItem.ToString();
+            string serverName = "HARRY";
             List<string> databases = GetDatabases(serverName);
-            
+
             cboDatabase.Items.Clear();
-            cboDatabase.Items.AddRange(databases.ToArray());*/
+            cboDatabase.Items.AddRange(databases.ToArray());
         }
 
         private List<string> GetDatabases(string serverName)

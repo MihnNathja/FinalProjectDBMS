@@ -25,8 +25,8 @@ namespace DBMSProject
 
             // Nhập tháng hiện tại và tháng trước
             //string thang = "2024-10";
-            string thang = cbbNam1.SelectedItem.ToString() + "-" +  cbbThangTruoc.SelectedItem.ToString();
-            string thangTruoc = cbbNam2.SelectedItem.ToString() + "-" + cbbThang.SelectedItem.ToString();
+            string thang = cbbNam1.SelectedItem.ToString() + "-" +  cbbThang.SelectedItem.ToString();
+            string thangTruoc = cbbNam2.SelectedItem.ToString() + "-" + cbbThangTruoc.SelectedItem.ToString();
 
             try
             {
