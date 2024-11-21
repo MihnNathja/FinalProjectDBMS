@@ -184,6 +184,7 @@ namespace DBMSProject
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (txtMaUuDai == null) return;
             uuDaiDAO.XoaUuDai(Convert.ToInt32(txtMaUuDai.Text));
             LoadUuDai();
             

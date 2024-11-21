@@ -50,13 +50,13 @@ namespace DBMSProject
             {
                 // Connection string bên dưới là để kết nối vào database local
                 //connStr = string.Format("Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;");
-                connStr = string.Format("Data Source=HARRY;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;User ID=sqlDependency;Password=sqlDependency;");
+                connStr = string.Format(@"Data Source={0};Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;User ID=sqlDependency;Password=sqlDependency;", cboServer.SelectedItem.ToString());
 
             }
             else
             {
                 connStr = string.Format(@"Data Source={0};Initial Catalog={1};User ID={2};Password={3};",
-                                        cboServer.Text, cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
+                                        cboServer.SelectedItem.ToString(), cboDatabase.Text, txtTaiKhoan.Text, txtMatKhau.Text);
                 //connStr = string.Format(@"Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID={0};Password={1};",txtTaiKhoan.Text, txtMatKhau.Text);
                 //connStr = string.Format(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID={0};Password={1};", txtTaiKhoan.Text, txtMatKhau.Text);
 
@@ -89,19 +89,19 @@ namespace DBMSProject
         // Đoạn code bên dưới sẽ không chạy trong luồng đăng nhập của khách hàng
         private void CboServerDropDownEventHandler(object sender, EventArgs e)
         {
-            if (cboServer.Items.Count == 0)
+            /*if (cboServer.Items.Count == 0)
             {
                 FLoadingDatabase fLoadingDatabase = new FLoadingDatabase();
                 fLoadingDatabase.ShowDialog();
                 while (!fLoadingDatabase.IsFinish) { }
                 cboServer.Items.AddRange(fLoadingDatabase.Servers.ToArray());
 
-            }
+            }*/
         }
 
         private void cboDatabaseDropDownEventHandler(object sender, EventArgs e)
         {
-            string serverName = "HARRY";
+            string serverName = "26.221.50.203";
             List<string> databases = GetDatabases(serverName);
 
             cboDatabase.Items.Clear();
@@ -111,7 +111,8 @@ namespace DBMSProject
         private List<string> GetDatabases(string serverName)
         {
             List<string> databases = new List<string>();
-            string connectionString = $"Server={serverName};Trusted_Connection=True;";
+            string connectionString = $"Data Source={serverName};Persist Security Info=True;User ID=sa;Password=123456;";
+            MessageBox.Show(connectionString);
             dBConnection = new DBConnection(connectionString); // truyền chuỗi kết nối vào DBConnection
 
             try

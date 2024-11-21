@@ -17,7 +17,8 @@ namespace DBMSProject.DAO
     {
         private SqlConnection conn;
         //static SqlConnection connAdmin = new SqlConnection("Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;");
-        static SqlConnection connAdmin = new SqlConnection("Data Source=localhost\\SQLEXPRESS01;Initial Catalog=QuanLyDichVuQuanNet;Integrated Security=True;User ID=sqlDependency;Password=sqlDependency;");
+        static SqlConnection connAdmin = new SqlConnection("Data Source=26.221.50.203;Initial Catalog=QuanLyDichVuQuanNet;Persist Security Info=True;User ID=sqlDependency;Password=sqlDependency;");
+
         public DBConnection(string connStr)
         {
 

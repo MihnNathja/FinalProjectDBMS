@@ -68,11 +68,13 @@ namespace DBMSProject
                 classNapTien.ThoiGianNapTien = DateTime.Now;
                 int tongBonus = classNapTienDAO.tongBonus(maKhachHang, Convert.ToDecimal(txbSoTienNap.Text));
                 decimal soTienNap = Convert.ToDecimal(txbSoTienNap.Text) * (1 + (decimal)tongBonus / 100);
-                classNapTien.GiaTriNap = soTienNap;
+                int sotiennap_int = ((int)soTienNap / 1000)*1000;
+
+                classNapTien.GiaTriNap = (decimal)sotiennap_int;
 
                 double soGioChoi = (double)(soTienNap / 5000);
                 classNapTien.ThoiGianQuyDoi = TimeSpan.FromHours(soGioChoi);
-
+                
                 /*ClassNapTienDAO classNapTienDAO = new ClassNapTienDAO(conn);*/
                 classNapTienDAO.napTien(classNapTien, maNguoiQuanLy);
                 txbSoTienNap.Text = "";
