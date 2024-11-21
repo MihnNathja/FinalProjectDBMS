@@ -145,7 +145,6 @@
             this.cboServer.Size = new System.Drawing.Size(449, 37);
             this.cboServer.TabIndex = 24;
             this.cboServer.DropDown += new System.EventHandler(this.CboServerDropDownEventHandler);
-            this.cboServer.SelectedIndexChanged += new System.EventHandler(this.CboServerSelectedIndexChanged);
             // 
             // label2
             // 
@@ -184,6 +183,7 @@
             this.cboDatabase.Name = "cboDatabase";
             this.cboDatabase.Size = new System.Drawing.Size(449, 37);
             this.cboDatabase.TabIndex = 32;
+            this.cboDatabase.DropDown += new System.EventHandler(this.cboDatabaseDropDownEventHandler);
             // 
             // label3
             // 
